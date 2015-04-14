@@ -1,7 +1,9 @@
 ##### FTP Access:
-ftp.steftervelde.nl
-nlg@steftervelde.nl
-3zjkkA4fp
+Adress: ftp.steftervelde.nl
+
+User: nlg@steftervelde.nl
+
+Pass: 3zjkkA4fp
 
 Languages:  
 PHP  
