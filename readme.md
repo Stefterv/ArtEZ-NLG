@@ -12,3 +12,5 @@ JQuery
 Javascript
 HTML
 SCSS (Sass)
+
+DATABASE Layout:
