@@ -14,3 +14,9 @@ HTML
 SCSS (Sass)
 
 DATABASE Layout:
+
+##### SQL DUMP:
+in terminal:
+cd to this directory
+execute the following command:
+php sql/dumpsql.php
