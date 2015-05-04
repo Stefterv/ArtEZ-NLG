@@ -14,14 +14,14 @@ $documents = Document::findAll();
 	</head>
 
 	<body>
-		<header>
+		<header contenteditable>
 			search
 		</header>
 		
 		<main>
 			<? foreach($documents as $document): ?>
 				<div class="row" data-indent="0">
-					<p><?=$document->title?></p>
+					<p><?=$document->title?> - <?=$document->getIndent()?></p>
 					<a href="#" class="remove">Remove</a>
 				</div>
 			<? endforeach; ?>

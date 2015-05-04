@@ -2,6 +2,7 @@
 class Document extends databaseObject{
 	protected static $dbName = "documents";
 	public $title;
+	public $based_on;
 	function getTags(){
 		return Tag_Link::getTags(0,$this->id);
 	}
@@ -17,6 +18,13 @@ class Document extends databaseObject{
 			return $items;
 		}else{
 			return false;
+		}
+	}
+	function getIndent(){
+		if(empty($this->based_on)){
+			return 0;
+		}else{
+			return (Document::findByID($this->based_on)->getIndent()+1);
 		}
 	}
 }
