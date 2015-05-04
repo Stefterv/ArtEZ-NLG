@@ -6,7 +6,7 @@ class Document extends databaseObject{
 		return Tag_Link::getTags(0,$this->id);
 	}
 	function getNodes(){
-		$links = Document_Link::findByAttr(array("document_id="=>$this->id));
+		$links = Document_Link::find("SELECT * FROM document_links WHERE document_id={$this->id} ORDER BY rank");
 		if($links){
 			$items = array();
 			foreach($links as $link){
