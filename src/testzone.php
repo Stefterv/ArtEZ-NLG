@@ -5,6 +5,7 @@ $documents = Document::findAll();
 foreach($documents as $document){
 	var_dump($document);
 	var_dump($document->getTags());
+	var_dump($document->getNodes());
 }
 $modules = Module::findAll();
 foreach($modules as $module){
