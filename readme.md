@@ -13,6 +13,11 @@ Javascript
 HTML
 SCSS (Sass)
 
+##### SQL Access
+database name: steftnp108_nlg
+database pw: VAosbVx4
+database host: localhost
+
 DATABASE Layout:
 
 ##### SQL DUMP:
