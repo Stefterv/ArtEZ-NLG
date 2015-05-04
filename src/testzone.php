@@ -12,3 +12,4 @@ foreach($modules as $module){
 	var_dump($module);
 	var_dump($module->getTags());
 }
+?>
