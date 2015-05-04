@@ -15,10 +15,11 @@ SCSS (Sass)
 
 ##### SQL Access
 database name: steftnp108_nlg
+database username: steftnp108_nlg
 database pw: VAosbVx4
 database host: localhost
 
-DATABASE Layout:
+access on steftervelde.nl/phpmyadmin/
 
 ##### SQL DUMP:
 in terminal:
