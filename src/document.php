@@ -6,11 +6,11 @@ $document = Document::findByID(1);
 ?>
 <main class="document">
 	<div class="overview">
-		<div class="edit_box" data-parameter="Title">
-			<h1 contenteditable>Title</h1>
+		<div class="edit_box" data-objectid="1" data-class="Document">
+			<h1 contenteditable data-variable="title"><?=$document->title?></h1>
 		</div>
-		<div class="edit_box" data-parameter="Autor">
-			<h3 contenteditable>Willem Kempers</h3>
+		<div class="edit_box" data-objectid="1" data-class="Document">
+			<h3 contenteditable data-variable="author"><?=$document->author?></h3>
 		</div>
 		<?
 			$nodes = $document->getNodes();
