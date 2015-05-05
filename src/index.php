@@ -14,22 +14,24 @@ $documents = Document::findAll();
 	</head>
 
 	<body>
-		<header>
-			search
-		</header>
 		
-		<main>
+		<main class="homepage">
+			<header>
+				search
+			</header>
+
 			<? foreach($documents as $document): ?>
 				<div class="row" data-indent="0">
 					<p><?=$document->title?></p>
 					<a href="#" class="remove">Remove</a>
 				</div>
 			<? endforeach; ?>
+
+			<footer>
+				<a href="#">Add</a>
+			</footer>
 		</main>
 
-		<footer>
-			<a href="#">Add</a>
-		</footer>
 	</body>
 
 </html>
