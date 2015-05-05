@@ -48,8 +48,8 @@ footer {
 
 .document_preview {
   background: white;
-  width: 100%;
-  padding-bottom: 150%;
+  width: 210px;
+  height: 297px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25); }
 
 .edit_box {

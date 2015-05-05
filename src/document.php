@@ -18,6 +18,7 @@ $document = Document::findByID(1);
 				$node->display_edit();
 			}
 		?>
+		<a class="add_module" href="#">Add Module</a>
 		<script src="scripts/document_edit.js"></script>
 	</div>
 	<div class="preview">

@@ -13,3 +13,10 @@ $(".edit_box").on('input', function(event) {
 	submitButton.text("Save");
 	$(this).append(submitButton);
 });
+
+$(".add_module").on('click', function(event) {
+	event.preventDefault();
+	$.get( "editbox.php", function( data ) {
+		$('.add_module').before( data );
+	});
+});
