@@ -17,7 +17,7 @@ $documents = Document::findAll();
 	<? endforeach; ?>
 
 	<footer>
-		<a href="#">Add</a>
+		<a href="document.php">Add</a>
 	</footer>
 </main>
 
