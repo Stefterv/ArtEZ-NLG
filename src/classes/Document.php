@@ -3,6 +3,7 @@ class Document extends databaseObject{
 	protected static $dbName = "documents";
 	public $title;
 	public $based_on;
+	public $author;
 	function getTags(){
 		return Tag_Link::getTags(0,$this->id);
 	}

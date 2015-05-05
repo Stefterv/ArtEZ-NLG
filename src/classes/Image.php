@@ -4,8 +4,8 @@ class Image extends databaseObject{
 	public $src;	
 	function display_edit(){
 		?>
-		<div class="edit_box" data-parameter="src">
-			<p contenteditable><?=$this->src?></p>
+		<div class="edit_box" data-parameter="src" data-objectid="1" data-class="Image">
+			<p contenteditable data-variable="src"><?=$this->src?></p>
 		</div>
 		<?
 	}

@@ -137,26 +137,6 @@ class Object extends databaseObject{
 			</form>
 			<?
 		}
-		static function create($values){
-			$inst = new static();
-			$inst->parser($values);
-			$inst->submit();
-			return $inst;
-		}
-		static function update($id,$values){
-			$inst = static::findByID($id);
-			if($inst){
-				$inst->parser($_POST);
-				$inst->submit();
-			}
-			return $inst;
-		}
-		static function delete($id){
-			$inst = static::findByID($id);
-			if($inst){
-				$inst->remove();
-			}
-		}
 	}
 	function __autoload($name) {
 		include_once("classes/".$name.".php");
