@@ -18,12 +18,19 @@ $document = Document::findByID(1);
 				$node->display_edit();
 			}
 		?>
+		<script src="scripts/document_edit.js"></script>
 	</div>
 	<div class="preview">
 		<div class="document_preview">
 			<h1>
 				Document Title
 			</h1>
+			<?
+			$nodes = $document->getNodes();
+			foreach ($nodes as $node) {
+				$node->display_preview();
+			}
+			?>
 		</div>
 	</div>
 </main>

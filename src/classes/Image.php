@@ -9,5 +9,10 @@ class Image extends databaseObject{
 		</div>
 		<?
 	}
+	function display_preview(){
+		?>
+			<img src="<?=$this->src?>" alt="">
+		<?
+	}
 }
 ?>

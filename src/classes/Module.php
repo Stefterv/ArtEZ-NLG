@@ -14,5 +14,10 @@ class Module extends databaseObject{
 		</div>
 		<?
 	}
+	function display_preview(){
+		?>
+		<p><?=$this->content?></p>
+		<?
+	}
 }
 ?>
