@@ -12,6 +12,7 @@ $documents = Document::findAll();
 	<? foreach($documents as $document): ?>
 		<div class="row" data-indent="0">
 			<p><?=$document->title?> - <?=$document->getIndent()?></p>
+			<a href="document.php?id=<?=$document->id?>" class="edit">Edit</a>
 			<a href="#" class="remove">Remove</a>
 		</div>
 	<? endforeach; ?>

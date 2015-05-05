@@ -1,21 +1,25 @@
 <?
+if(empty($_GET['id'])){
+	header("Location: index.php");
+}
 include "dbObject.php";
 include "includes/header.php"; 
-
-$document = Document::findByID(1);
+$document = Document::findByID($_GET['id']);
 ?>
 <main class="document">
 	<div class="overview">
-		<div class="edit_box" data-objectid="1" data-class="Document">
+		<div class="edit_box" data-objectid="<?=$document->id?>" data-class="Document">
 			<h1 contenteditable data-variable="title"><?=$document->title?></h1>
 		</div>
-		<div class="edit_box" data-objectid="1" data-class="Document">
+		<div class="edit_box" data-objectid="<?=$document->id?>" data-class="Document">
 			<h3 contenteditable data-variable="author"><?=$document->author?></h3>
 		</div>
 		<?
 			$nodes = $document->getNodes();
-			foreach ($nodes as $node) {
-				$node->display_edit();
+			if($nodes){	
+				foreach ($nodes as $node) {
+					$node->display_edit();
+				}
 			}
 		?>
 		<a class="add_module" href="#">Add Module</a>
@@ -28,8 +32,10 @@ $document = Document::findByID(1);
 			</h1>
 			<?
 			$nodes = $document->getNodes();
-			foreach ($nodes as $node) {
-				$node->display_preview();
+			if($nodes){
+				foreach ($nodes as $node) {
+					$node->display_preview();
+				}
 			}
 			?>
 		</div>
