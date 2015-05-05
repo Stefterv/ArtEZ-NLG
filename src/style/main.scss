@@ -10,7 +10,6 @@ html, body {
 header {
 	height:200px;
 	margin:0 auto;
-	margin-top:100px;
 	border:2px solid green;
 }
 
@@ -46,3 +45,5 @@ footer {
 		top:15px;
 	}
 }
+
+@import "document";

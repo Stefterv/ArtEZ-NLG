@@ -2,36 +2,24 @@
 include "dbObject.php";
 $documents = Document::findAll();
 ?>
+<? include "includes/header.php"; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>NLG Documents Overview</title>
-		<link rel="stylesheet" href="style/main.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="js/scripts.js"></script>
-	</head>
+<main class="homepage">
+	<header contenteditable>
+		search
+	</header>
 
-	<body>
-		
-		<main class="homepage">
-			<header>
-				search
-			</header>
+	<? foreach($documents as $document): ?>
+		<div class="row" data-indent="0">
+			<p><?=$document->title?> - <?=$document->getIndent()?></p>
+			<a href="#" class="remove">Remove</a>
+		</div>
+	<? endforeach; ?>
 
-			<? foreach($documents as $document): ?>
-				<div class="row" data-indent="0">
-					<p><?=$document->title?></p>
-					<a href="#" class="remove">Remove</a>
-				</div>
-			<? endforeach; ?>
+	<footer>
+		<a href="#">Add</a>
+	</footer>
+</main>
 
-			<footer>
-				<a href="#">Add</a>
-			</footer>
-		</main>
+<? include "includes/footer.php"; ?>
 
-	</body>
-
-</html>
