@@ -145,27 +145,27 @@ class Object extends databaseObject{
 
 <?
 // Get form submission
-if(isset($_POST['submit'])):
-	// get the class
-	if(!isset($_POST['class'])){
-		echo "ERROR: No Class Specified";
-		die("No Class specified");
-	}
-	$class = substr($_POST['class'],3);
-	// check if class exists
-	if(!class_exists($class)){
-		echo "ERROR: Class \'{$class}\' does not exist";
-		die("Class \'{$class}\' does not exist");
-	}
-	$inst;
-	if($_POST['submit'] == "create"){
-		$class::create($_POST);
-	}
-	if($_POST['submit'] == "delete"){
-		$class::delete($_POST['id']);
-	}
-	if($_POST['submit'] == "update"){
-		$class::update($_POST['id'],$_POST);
-	}
-endif;
+// if(isset($_POST['submit'])):
+// 	// get the class
+// 	if(!isset($_POST['class'])){
+// 		echo "ERROR: No Class Specified";
+// 		die("No Class specified");
+// 	}
+// 	$class = substr($_POST['class'],3);
+// 	// check if class exists
+// 	if(!class_exists($class)){
+// 		echo "ERROR: Class \'{$class}\' does not exist";
+// 		die("Class \'{$class}\' does not exist");
+// 	}
+// 	$inst;
+// 	if($_POST['submit'] == "create"){
+// 		$class::create($_POST);
+// 	}
+// 	if($_POST['submit'] == "delete"){
+// 		$class::delete($_POST['id']);
+// 	}
+// 	if($_POST['submit'] == "update"){
+// 		$class::update($_POST['id'],$_POST);
+// 	}
+// endif;
 ?>
