@@ -1,16 +1,19 @@
 <?
 class Module extends databaseObject{
 	protected static $dbName = "modules";
-	public $type;
 	public $content;
 	public $title;
 	function getTags(){
 		return Tag_Link::getTags(1,$this->id);
 	}
-	function display_edit(){
+	function display_edit($key){
 		?>
-		<div class="edit_box" data-parameter="Text Module"  data-objectid="<?=$this->id?>" data-class="Module">
-			<p contenteditable data-variable="content"><?=$this->content?></p>
+		<div class="module">
+			<h4>Module</h4>
+			<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
+			<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
+			<input type="text" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
+			<input type="text" name="nodes[<?=$key?>][content]" value="<?=$this->content?>" placeholder="Content">
 		</div>
 		<?
 	}
