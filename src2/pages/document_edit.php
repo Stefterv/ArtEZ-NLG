@@ -14,6 +14,9 @@
 ?>
 <main>
 	<div class="interface">
+		<nav>
+			<a href="index.php">Back to Documents</a>
+		</nav>
 		<form action="api/document.php" method="POST">
 			<? if($duplicate): ?>
 			<input type="hidden" name="document_id" value="0">
