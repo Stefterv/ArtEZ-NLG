@@ -1,5 +1,5 @@
 <?
-$modules = Module::findAll();
+$modules = Module::findByAttr(array("master="=>"1"));
 $tags = Tag::findAll();
 
 
@@ -10,7 +10,7 @@ $tags = Tag::findAll();
 	    $( '#module_list' ).on( 'click', '.row', function () { // on click module
 	    	var id = this.getAttribute('data-id');	// get id of clicked module
 	    	$.ajax({
-		        url : 'scripts/get_modules.php', // url of php file
+		        url : 'api/get_modules.php', // url of php file
 		        type : 'POST', // post
 		        success : function (result) { // when succesful
 		        	var j = JSON.parse(result); //parse from json
@@ -31,11 +31,13 @@ $tags = Tag::findAll();
 	}
 	#interface{
 		position: absolute;
+		height: calc(100% - 100px);
+		overflow: scroll;
 		left: 0;
 		right: 50%;
-		
 		display: inline-block;
 		border:1px solid black;
+
 	}
 	#tagging{
 		
@@ -80,17 +82,24 @@ $tags = Tag::findAll();
 		background-color: white;
 		padding: 20px;
 	}
+	footer{
+		position: absolute;
+		background-color: white;
+		bottom: 0;
+		padding: 5px;
+	}
 </style>
 
 <main class="homepage">
-	<div id="interface">
-			<header>
+<header>
 				<nav>
 					<a href="/modules">Modules</a>
 					<a href="/">Library</a>
 				</nav>
 				<div id="searchbox" contenteditable></div>
 			</header>
+	<div id="interface">
+			
 	
 		<div id="tagging">
 			<? foreach($tags as $tag): ?>
@@ -101,10 +110,13 @@ $tags = Tag::findAll();
 		</div>
 		<div id="module_list">
 			<? foreach($modules as $module): ?>
+
 				<div class="row" data-indent="0" data-id="<?=$module->id?>">
 					<p class="module_title"><?=$module->title;?></p>
-					<a href="documents/edit.php?id=<?=$module->id?>" class="edit">Edit</a>
-					<a href="#" class="remove">Remove</a>
+
+					<p class="module_changed"><?=$module->changed;?></p>
+					
+					<a href="module_edit?id=<?=$module->id?>" class="edit">Edit</a>
 				</div>
 			<? endforeach; ?>
 		</div>
@@ -115,7 +127,7 @@ $tags = Tag::findAll();
 			<div id="preview_content"></div>
 		</div>
 	</div>
-	<!-- <footer>
-		<a href="document.php">Add</a>
-	</footer> -->
+	<footer>
+		<a href="/module_edit">Add</a>
+	</footer>
 </main>
