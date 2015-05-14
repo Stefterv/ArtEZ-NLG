@@ -33,7 +33,7 @@ function edit_box_event(el){
 		if($(this).find(".submitButton").length<1){
 			// create button element
 			var submitButton = $("<a></a>");
-			// addd href to make it clickable
+			// add href to make it clickable
 			submitButton.attr("href","#");
 			// add class to check if it exists
 			submitButton.addClass('submitButton');
