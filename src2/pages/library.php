@@ -16,7 +16,6 @@ $documents = Document::findAll();
 				<p><?=$document->title?> - <?=$document->getIndent()?></p>
 				<a href="document_edit?document=<?=$document->id?>" class="edit">Edit</a>
 				<a href="document_edit?duplicate=<?=$document->id?>" class="edit">Duplicate</a>
-				<a href="#" class="remove">Remove</a>
 			</div>
 		<? endforeach; ?>
 	</div>

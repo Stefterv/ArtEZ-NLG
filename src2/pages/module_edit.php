@@ -14,9 +14,9 @@ if(!$module){
 			<input type="hidden" name="module_id" value="<?=$module->id?>">
 			<input type="hidden" name="master" value="<?=$module->master?>">
 			<input type="text" name="title" value="<?=$module->title?>" placeholder="Title">
-			<input type="text" name="content" value="<?=$module->content?>" placeholder="Content">
-			<button type="submit" name="submit" value="edit">Submit</button>
-			<button type="submit" name="submit" value="delete">Delete Module</button>
+			<input type="text" name="content" value="<?=$module->content?>" placeholder="Content"><br>
+			<button type="submit" name="submit" value="edit">Submit</button><br>
+			<button type="submit" name="submit" style="color: red" value="delete">Delete Module</button>
 		</form>
 	</div>
 	<div class="preview">
