@@ -1,8 +1,8 @@
 <main>
 	<div class="interface">
-		&nbsp;
+		interface
 	</div>
 	<div class="preview">
-		&nbsp;
+		preview
 	</div>
 </main>
