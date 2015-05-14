@@ -86,7 +86,7 @@ $tags = Tag::findAll();
 	<div id="interface">
 			<header>
 				<nav>
-					<a href="modules.php">Modules</a>
+					<a href="/modules">Modules</a>
 					<a href="/">Library</a>
 				</nav>
 				<div id="searchbox" contenteditable></div>

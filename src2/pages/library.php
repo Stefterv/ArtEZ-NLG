@@ -5,7 +5,7 @@ $documents = Document::findAll();
 <main class="homepage">
 	<header>
 		<nav>
-			<a href="modules.php">Modules</a>
+			<a href="/modules">Modules</a>
 			<a href="/">Library</a>
 		</nav>
 		<div id="searchbox" contenteditable></div>
