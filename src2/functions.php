@@ -8,3 +8,8 @@ function get_header(){
 function get_footer(){
 	include "includes/footer.php";
 }
+
+function object(){
+  return new stdClass();
+}
+?>
