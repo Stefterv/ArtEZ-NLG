@@ -15,7 +15,7 @@
 <main>
 	<div class="interface">
 		<nav>
-			<a href="index.php">Back to Documents</a>
+			<a href="/">Back to Documents</a>
 		</nav>
 		<form action="api/document.php" method="POST">
 			<? if($duplicate): ?>
