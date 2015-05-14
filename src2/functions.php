@@ -12,4 +12,9 @@ function get_footer(){
 function object(){
   return new stdClass();
 }
+function dump($variable){
+	echo "<pre>";
+	var_dump($variable);
+	echo "</pre>";
+}
 ?>
