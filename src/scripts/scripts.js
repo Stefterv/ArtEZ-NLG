@@ -1,10 +1,11 @@
 $(document).ready(function() {
-	var size =  ($(document).width() / 2) / $('.document_preview').width();
+	var scale =  ($(document).width() / 2) / $('.document_preview').width();
+	var size = 
 	$('.document_preview').css({
-		'-webkit-transform' : 'scale(' + size + ',' + size + ')',
-	  '-moz-transform'    : 'scale(' + size + ',' + size + ')',
-	  '-ms-transform'     : 'scale(' + size + ',' + size + ')',
-	  '-o-transform'      : 'scale(' + size + ',' + size + ')',
-	  'transform'         : 'scale(' + size + ',' + size + ')'
+		'-webkit-transform' : 'scale(' + scale + ',' + scale + ') translate(' + scale/2 + 'px,0px)',
+	  '-moz-transform'    : 'scale(' + scale + ',' + scale + ') translate(' + scale/2 + 'px,0px)',
+	  '-ms-transform'     : 'scale(' + scale + ',' + scale + ') translate(' + scale/2 + 'px,0px)',
+	  '-o-transform'      : 'scale(' + scale + ',' + scale + ') translate(' + scale/2 + 'px,0px)',
+	  'transform'         : 'scale(' + scale + ',' + scale + ') translate(' + scale/2 + 'px,0px)'
 	});
 });
