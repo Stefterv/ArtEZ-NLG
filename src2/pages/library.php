@@ -4,9 +4,11 @@ $documents = Document::findAll();
 
 <main class="homepage">
 	<header>
-		<div id="searchbox" contenteditable>
-			&nbsp
-		</div>
+		<nav>
+			<a href="modules.php">Modules</a>
+			<a href="/">Library</a>
+		</nav>
+		<div id="searchbox" contenteditable></div>
 	</header>
 	<div class="documents">
 		<? foreach($documents as $document): ?>

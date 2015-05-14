@@ -84,9 +84,13 @@ $tags = Tag::findAll();
 
 <main class="homepage">
 	<div id="interface">
-		<header contenteditable>
-			search
-		</header>
+			<header>
+				<nav>
+					<a href="modules.php">Modules</a>
+					<a href="/">Library</a>
+				</nav>
+				<div id="searchbox" contenteditable></div>
+			</header>
 	
 		<div id="tagging">
 			<? foreach($tags as $tag): ?>
