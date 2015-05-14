@@ -9,7 +9,6 @@
 ?>
 <main>
 	<div class="interface">
-		<? dump($_POST); ?>
 		<form action="api/document.php" method="POST">
 			<input type="hidden" name="document_id" value="<?=$document->id?>">
 			<input type="text" name="title" value="<?=$document->title?>" placeholder="Document Title">

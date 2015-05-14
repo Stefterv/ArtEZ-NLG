@@ -1,5 +1,6 @@
 <?
 include "../functions.php";
+dump($_POST);
 if(isset($_POST['submit'])):
 	if($_POST['submit'] === "edit"){
 		$document = Document::findByID($_POST['document_id']);
@@ -10,7 +11,11 @@ if(isset($_POST['submit'])):
 		$document->submit(); 
 		if(isset($_POST['nodes'])){
 			$nodes = $_POST['nodes'];
-			foreach($nodes as $node){
+			$links = $document->getLinks();
+			foreach($links as $link){
+				$link->remove();
+			}
+			foreach($nodes as $key=> $node){
 				$class = $node['class'];
 				$object = $class::findByID($node['id']);
 				if($node['id'] == 0){
@@ -18,6 +23,13 @@ if(isset($_POST['submit'])):
 				}
 				$object->parser($node);
 				$object->submit();
+
+				$link = new Document_Link();
+				$link->document_id = $document->id;
+				$link->item_id = $object->id;
+				$link->type = $class;
+				$link->rank = $key;
+				$link->submit();
 			}
 		}
 		header("Location: /document_edit?document={$document->id}");

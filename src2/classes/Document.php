@@ -8,7 +8,7 @@ class Document extends databaseObject{
 		return Tag_Link::getTags(0,$this->id);
 	}
 	function getNodes(){
-		$links = Document_Link::find("SELECT * FROM document_links WHERE document_id={$this->id} ORDER BY rank");
+		$links = $this->getLinks();
 		if($links){
 			$items = array();
 			foreach($links as $link){
@@ -20,6 +20,9 @@ class Document extends databaseObject{
 		}else{
 			return false;
 		}
+	}
+	function getLinks(){
+		return Document_Link::find("SELECT * FROM document_links WHERE document_id={$this->id} ORDER BY rank");
 	}
 	function getIndent(){
 		if(empty($this->based_on)){

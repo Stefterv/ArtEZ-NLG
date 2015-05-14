@@ -4,6 +4,7 @@ class Module extends databaseObject{
 	public $content;
 	public $title;
 	public $deleted;
+	public $master;
 	function getTags(){
 		return Tag_Link::getTags(1,$this->id);
 	}
