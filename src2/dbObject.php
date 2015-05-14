@@ -141,9 +141,6 @@ class Object extends databaseObject{
 	function __autoload($name) {
 		include_once("classes/".$name.".php");
 	}
-?>
-
-<?
 // Get form submission
 // if(isset($_POST['submit'])):
 // 	// get the class

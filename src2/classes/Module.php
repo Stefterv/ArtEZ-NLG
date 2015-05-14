@@ -3,6 +3,7 @@ class Module extends databaseObject{
 	protected static $dbName = "modules";
 	public $content;
 	public $title;
+	public $deleted;
 	function getTags(){
 		return Tag_Link::getTags(1,$this->id);
 	}
@@ -19,6 +20,7 @@ class Module extends databaseObject{
 	}
 	function display_preview(){
 		?>
+		<h2><?=$this->title?></h2>
 		<p><?=$this->content?></p>
 		<?
 	}
