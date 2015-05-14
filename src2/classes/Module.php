@@ -16,6 +16,7 @@ class Module extends databaseObject{
 			<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
 			<input type="text" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
 			<input type="text" name="nodes[<?=$key?>][content]" value="<?=$this->content?>" placeholder="Content">
+			<div class="remove"><a href="#">remove</a></div>
 		</div>
 		<?
 	}

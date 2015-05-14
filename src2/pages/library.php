@@ -18,7 +18,6 @@ $documents = Document::findAll();
 			</div>
 		<? endforeach; ?>
 	</div>
-
 	<footer>
 		<a href="/document_edit">Add</a>
 	</footer>
