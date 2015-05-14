@@ -1,6 +1,5 @@
 <?
 include "../functions.php";
-dump($_POST);
 if(isset($_POST['submit'])):
 	if($_POST['submit'] === "edit"){
 		$document = Document::findByID($_POST['document_id']);

@@ -16,6 +16,7 @@ if(!$module){
 			<input type="text" name="title" value="<?=$module->title?>" placeholder="Title">
 			<input type="text" name="content" value="<?=$module->content?>" placeholder="Content">
 			<button type="submit" name="submit" value="edit">Submit</button>
+			<button type="submit" name="submit" value="delete">Delete Module</button>
 		</form>
 	</div>
 	<div class="preview">
