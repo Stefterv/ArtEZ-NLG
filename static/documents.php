@@ -16,7 +16,7 @@
 				</div>
 				<? for($i = 4; $i<50; $i++): ?>
 				<div class="document">
-					Document #<?=$i?>
+					<a href="singledocument.php">Document #<?=$i?></a>
 				</div>
 				<? endfor;?>
 			</div>

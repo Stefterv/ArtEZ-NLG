@@ -74,3 +74,38 @@ main {
 .document_container {
   height: 100%;
   overflow-y: scroll; }
+
+.search {
+  border: 2px solid black;
+  padding: 3px;
+  width: 300px;
+  box-shadow: 5px 5px 0px black;
+  margin-bottom: 15px; }
+
+.sort {
+  margin-bottom: 5px; }
+  .sort a {
+    color: black; }
+
+.module {
+  background: #A9D0EF;
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 20px; }
+  .module p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .module .button {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0px 4px; }
+  .module .edit {
+    right: 35px; }
+  .module .remove {
+    right: 10px; }
+
+.module_container {
+  height: 100%;
+  overflow-y: scroll; }
