@@ -1,8 +1,9 @@
 var row_order;
 $(document).ready(function() {
-	$("#searchbox").on('input', function() {
-		var search = $(this).text();
-		var list = $(".row").get();
+	$(".search").on('input', function() {
+    var search = $(this).text();
+    var list = $(".document").get();
+    console.log(list);
 		if(row_order == null){
 			row_order = list;
 		}
@@ -19,7 +20,7 @@ $(document).ready(function() {
 			list.sort(compare);
 		}
 		for(var i = 0; i<list.length; i++){
-			$(list[i]).appendTo('.documents');
+			$(list[i]).appendTo('.document_container');
 		}
 	});
 });

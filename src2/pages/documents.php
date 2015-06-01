@@ -4,7 +4,7 @@ $documents = Document::findAll();
 <main>
 	<div class="container">
 		<div class="navigation document_overview">
-			<div class="search" contenteditable>seachbar</div>
+			<div class="search" contenteditable>Search</div>
 			<div class="sort">sort by <a href="#">name</a>/<a href="#">date added</a>/<a href="#">date modified</a></div>
 			<div class="document_container">
 				<? foreach($documents as $document): ?>
