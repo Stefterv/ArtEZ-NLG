@@ -1,37 +1,256 @@
 html, body {
   margin: 0;
   width: 100%;
+  height: 100%;
+  font-family: "Raleway",sans-serif;
+  overflow: hidden; }
+
+header {
+  margin-top: 20px;
+  font-size: 0em; }
+  header a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid black;
+    border-bottom: 0;
+    font-size: 2rem;
+    margin: 0 20px;
+    color: black;
+    text-decoration: none; }
+    header a.current:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: white; }
+
+main {
+  border: 2px solid black;
+  padding: 20px;
+  width: calc(100% - 10px);
+  margin: 0px 10px;
+  height: calc(100% - 90px);
+  box-sizing: border-box; }
+
+.container {
+  position: relative;
+  width: 100%;
   height: 100%; }
 
-body {
-  overflow: hidden;
-  font-family: "Futura"; }
-
-.interface, .preview {
-  border: 1px solid black;
+.navigation, .preview {
   position: absolute;
   top: 0;
-  right: 50%;
   left: 0;
-  bottom: 0;
+  width: calc(50% - 10px);
+  height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll; }
 
 .preview {
-  left: 50%;
-  right: 0; }
+  left: calc(50% + 10px); }
 
-#footer {
-  display: block; }
+.document_overview {
+  position: relative; }
+
+.search {
+  border: 2px solid black;
+  padding: 3px;
+  width: 300px;
+  box-shadow: 5px 5px 0px black;
+  margin-bottom: 15px; }
+
+.sort {
+  margin-bottom: 5px; }
+  .sort a {
+    color: black; }
+
+.document {
+  background: #88d0cc;
+  margin-bottom: 10px;
+  padding: 5px; }
+  .document[data-indent="1"] {
+    margin-left: 35px; }
+
+.document_container {
+  height: calc(100% - 68px);
+  overflow-y: scroll;
+  position: relative; }
+
+.preview_buttons {
+  margin-bottom: 35px; }
+  .preview_buttons a {
+    color: black;
+    text-decoration: none; }
+
+.button {
+  border: 2px solid black;
+  padding: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 20px; }
+
+.document_preview {
+  border: 2px solid black;
+  padding: 20px;
+  height: calc(100% - 68px);
+  box-sizing: border-box; }
+
+.title {
+  border: 2px solid black;
+  padding: 3px;
+  height: 32px;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 1.6em; }
+
+.sort {
+  margin-bottom: 5px; }
+  .sort a {
+    color: black; }
 
 .module {
-  position: relative; }
-  .module .remove {
+  position: relative;
+  background: #A9D0EF;
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 20px; }
+  .module p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .module .modulebutton {
     position: absolute;
-    top: 0;
-    right: 0; }
+    top: 7px;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0px 3px;
+    font-size: 0.75em; }
+  .module .edit {
+    right: 35px; }
+  .module .remove {
+    right: 10px; }
 
-#searchbox {
-  border: 1px solid violet; }
+.document_module_container h2 {
+  font-weight: 600;
+  margin-bottom: 0; }
 
-.row {
-  border: 2px solid red; }
+.insertModule {
+  position: relative;
+  padding: 10px 5px; }
+  .insertModule .insertMod {
+    display: inline-block; }
+  .insertModule .insertText {
+    position: absolute;
+    right: 5px;
+    display: inline-block; }
+  .insertModule .addButton {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1em;
+    line-height: 18px; }
+  .insertModule p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+
+.module_bottom_buttons {
+  position: absolute;
+  bottom: 0px; }
+
+.deleteButton {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 0; }
+
+.title {
+  border: 2px solid black;
+  padding: 3px;
+  height: 32px;
+  margin-bottom: 15px;
+  outline: none;
+  font-size: 1.6em; }
+
+.sort {
+  margin-bottom: 5px; }
+  .sort a {
+    color: black; }
+
+.module {
+  position: relative;
+  background: #A9D0EF;
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 20px; }
+  .module p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .module .modulebutton {
+    position: absolute;
+    top: 7px;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0px 3px;
+    font-size: 0.75em; }
+  .module .edit {
+    right: 35px; }
+  .module .remove {
+    right: 10px; }
+
+.document_module_container h2 {
+  font-weight: 600;
+  margin-bottom: 0; }
+
+.insertModule {
+  position: relative;
+  padding: 10px 5px; }
+  .insertModule .insertMod {
+    display: inline-block; }
+  .insertModule .insertText {
+    position: absolute;
+    right: 5px;
+    display: inline-block; }
+  .insertModule .addButton {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1em;
+    line-height: 18px; }
+  .insertModule p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+
+.module_bottom_buttons {
+  position: absolute;
+  bottom: 0px; }
+
+.deleteButton {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 0; }
+
+.module_overview .document {
+  background: #f8dcc2; }
+
+.module_preview {
+  border: 2px solid black;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box; }

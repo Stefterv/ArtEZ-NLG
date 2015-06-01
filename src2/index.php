@@ -1,6 +1,6 @@
 <?
 include "functions.php";
-$page = "library";
+$page = "documents";
 if(isset($_GET['path'])){
 	if(file_exists("pages/".$_GET['path'].".php")){
 		$page = $_GET['path'];
