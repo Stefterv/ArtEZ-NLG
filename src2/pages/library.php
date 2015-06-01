@@ -1,8 +1,8 @@
 <?
 $documents = Document::findAll();
 ?>
-
 <main class="homepage">
+	<div class="interface">
 	<header>
 		<nav>
 			<a href="/modules">Modules</a>
@@ -22,4 +22,8 @@ $documents = Document::findAll();
 	<footer>
 		<a href="/document_edit">Add</a>
 	</footer>
+	</div>
+	<div class="preview">
+		
+	</div>
 </main>
