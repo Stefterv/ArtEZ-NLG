@@ -23,6 +23,30 @@ $(document).ready(function() {
 			$(list[i]).appendTo('.document_container');
 		}
 	});
+
+  $(".document").click(function() {
+    $(".document_selected").each(function() {
+      $(this).removeClass('document_selected');
+    });
+    $(this).addClass('document_selected');
+  });
+
+  $(".sortdocuments").click(function() {
+    // var list = $(".document").get();
+    var sorttype = $(this).data("sorttype");
+    var list = $('.document_container .document');
+    list.sort(function (a, b) {
+      var aTitle = $(a).data(sorttype)+"";
+      var bTitle = $(b).data(sorttype)+"";
+      return aTitle.localeCompare(bTitle);
+      // return + - +b.data("title");
+    });
+
+    $(".document_container").empty();
+    $(".document_container").append(list);
+
+    // .appendTo( $list );
+  });
 });
 
 

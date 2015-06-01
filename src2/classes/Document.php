@@ -4,6 +4,7 @@ class Document extends databaseObject{
 	public $title;
 	public $based_on;
 	public $author;
+	public $changed;
 	function getTags(){
 		return Tag_Link::getTags(0,$this->id);
 	}

@@ -60,7 +60,8 @@ main {
   padding: 3px;
   width: 300px;
   box-shadow: 5px 5px 0px black;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  outline: none; }
 
 .sort {
   margin-bottom: 5px; }
@@ -73,6 +74,9 @@ main {
   padding: 5px; }
   .document[data-indent="1"] {
     margin-left: 35px; }
+
+.document_selected {
+  opacity: 0.5; }
 
 .document_container {
   height: calc(100% - 68px);

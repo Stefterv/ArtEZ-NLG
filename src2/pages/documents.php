@@ -5,13 +5,13 @@ $documents = Document::findAll();
 	<div class="container">
 		<div class="navigation document_overview">
 			<div class="search" contenteditable>Search</div>
-			<div class="sort">sort by <a href="#">name</a>/<a href="#">date added</a>/<a href="#">date modified</a></div>
+			<div class="sort">sort by <a href="#" class="sortdocuments" data-sorttype="title">name</a>/<a href="#" class="sortdocuments" data-sorttype="added">date added</a>/<a href="#" class="sortdocuments" data-sorttype="modified">date modified</a></div>
 			<div class="document_container">
 				<? foreach($documents as $document): ?>
-				<div class="document" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>">
+				<div class="document" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
 					<?=$document->title?>
 				</div>
-			<? endforeach; ?>
+				<? endforeach; ?>
 			</div>
 		</div>
 		<div class="preview">
