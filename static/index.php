@@ -1,1 +1,1 @@
-<? header("Location: library.php"); ?>
+<? header("Location: documents.php"); ?>
