@@ -51,11 +51,9 @@
 }
 .document_overview{
 }
-.title{
+.document_attr{
 	border: 2px solid black;
 	padding: 3px;
-	// width: 100%;
-	height:32px;
 	margin-bottom: 15px;
 	outline:none;
 	font-size:1.6em;
@@ -71,7 +69,7 @@
 	background: #A9D0EF;
 	margin-bottom: 10px;
 	padding: 5px;
-	height:20px;
+	min-height:20px;
 	p {
 		display:inline-block;
 		margin:0;
@@ -90,7 +88,16 @@
 	}
 	.remove {
 		right:10px;
+		color: black;
+		text-decoration: none;
 	}
+	&.show .module_content{
+		display: block;
+	}
+}
+.module_content{
+	display: none;
+	background: white;
 }
 .document_module_container{
 	h2 {
@@ -98,20 +105,16 @@
 		margin-bottom:0;
 	}
 }
-
+.document_module_bottons{
+	margin-bottom: 10px;
+}
 .insertModule {
 	position:relative;
-	padding:10px 5px;
-	.insertMod {
-		display: inline-block;
-	}
-	.insertText {
-		position: absolute;
-		right:5px;
-		display: inline-block;
-
-	}
-	.addButton {
+	padding:10px 5px 10px 0;
+	color: black;
+	text-decoration: none;
+	&:before {
+		content: '+';
 		display: inline-block;
 		width:16px;
 		height:16px;
@@ -122,16 +125,15 @@
 		text-align: center;
 		font-size:1em;
 		line-height:18px;
-	}
-	p {
-		display: inline-block;
-		margin:0;
-		padding:0;
+		margin-right: 5px;
 	}
 }
 .module_bottom_buttons {
 	position:absolute;
 	bottom:0px;
+}
+.document_module_title{
+	margin-bottom: 5px;
 }
 
 .deleteButton {

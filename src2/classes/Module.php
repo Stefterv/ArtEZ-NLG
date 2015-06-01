@@ -12,12 +12,15 @@ class Module extends databaseObject{
 	function display_edit($key){
 		?>
 		<div class="module">
-			<h4>Module</h4>
+			<div class="node_title">Module</div>
 			<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
 			<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
-			<input type="text" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
-			<input type="text" name="nodes[<?=$key?>][content]" value="<?=$this->content?>" placeholder="Content">
-			<div class="remove"><a href="#">remove</a></div>
+			<input type="hidden" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
+			<input type="hidden" name="nodes[<?=$key?>][content]" data-input-name="content" value="<?=$this->content?>" placeholder="Content">
+			<a href="#" class="modulebutton remove">x</a>
+			<div class="module_content" contenteditable data-input-node="content">
+				<?=$this->content?>
+			</div>
 		</div>
 		<?
 	}
