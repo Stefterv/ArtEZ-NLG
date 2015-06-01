@@ -1,23 +1,23 @@
-<? $page = "documents" ?>
+<? $page = "modules" ?>
 <? include "header.php" ?>
 <main>
 	<div class="container">
-		<div class="navigation document_overview">
+		<div class="navigation module_overview">
 			<div class="search" contenteditable>seachbar</div>
 			<div class="sort">sort by <a href="#">name</a>/<a href="#">date added</a>/<a href="#">date modified</a></div>
 			<div class="document_container">
 				<div class="document">
-					Document #1
+					Module #1
 				</div>
 				<div class="document">
-					Document #2
+					Module #2
 				</div>
 				<div class="document indent-1">
-					Document #3 indent
+					Module #3 indent
 				</div>
 				<? for($i = 4; $i<50; $i++): ?>
 				<div class="document">
-					Document #<?=$i?>
+					Module #<?=$i?>
 				</div>
 				<? endfor;?>
 			</div>

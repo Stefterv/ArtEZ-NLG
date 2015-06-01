@@ -2,7 +2,8 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: sans-serif; }
+  font-family: "Raleway",sans-serif;
+  overflow: hidden; }
 
 header {
   margin-top: 20px;
@@ -30,7 +31,7 @@ main {
   border: 2px solid black;
   padding: 20px;
   width: calc(100% - 10px);
-  margin: 0px 5px;
+  margin: 0px 10px;
   height: calc(100% - 90px);
   box-sizing: border-box; }
 
@@ -43,13 +44,16 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: calc(50% - 10px);
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll; }
 
 .preview {
-  left: 50%; }
+  left: calc(50% + 10px); }
+
+.document_overview {
+  position: relative; }
 
 .search {
   border: 2px solid black;
@@ -64,13 +68,35 @@ main {
     color: black; }
 
 .document {
-  background: #f0606d;
+  background: #88d0cc;
   margin-bottom: 10px;
-  padding: 5px;
-  border: 2px solid black; }
+  padding: 5px; }
   .document.indent-1 {
     margin-left: 35px; }
 
 .document_container {
-  height: 100%;
-  overflow-y: scroll; }
+  height: calc(100% - 68px);
+  overflow-y: scroll;
+  position: relative; }
+
+.preview_buttons {
+  margin-bottom: 35px; }
+  .preview_buttons a {
+    color: black;
+    text-decoration: none; }
+
+.button {
+  border: 2px solid black;
+  padding: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 20px; }
+
+.document_preview {
+  border: 2px solid black;
+  padding: 20px;
+  height: calc(100% - 68px);
+  box-sizing: border-box; }
+
+.module_overview .document {
+  background: #f8dcc2; }
