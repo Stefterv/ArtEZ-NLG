@@ -16,10 +16,10 @@ class Module extends databaseObject{
 			<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
 			<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
 			<input type="hidden" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
-			<input type="hidden" name="nodes[<?=$key?>][content]" data-input-name="content" value="<?=$this->content?>" placeholder="Content">
 			<a href="#" class="modulebutton remove">x</a>
-			<div class="module_content" contenteditable data-input-node="content">
-				<?=$this->content?>
+			<div class="module_content">
+			<input type="text" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=$this->content?>" placeholder="Content">
+				
 			</div>
 		</div>
 		<?

@@ -39,7 +39,7 @@ if(isset($_POST['submit'])):
 			$document->deleted = 1;
 			$document->submit();
 		}
-		header("Location: /document_edit");
+		header("Location: /documents");
 	}
 endif;
 ?>

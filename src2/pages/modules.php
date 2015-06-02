@@ -6,6 +6,7 @@
 	$( document ).ready(function() {
 	    $( '.document_container' ).on( 'click', '.module_item', function () { // on click module
 	    	var id = this.getAttribute('data-id');	// get id of clicked module
+	    	// var id = $(this).data("id"); // easier
 	    	$.ajax({
 		        url : 'api/get_modules.php', // url of php file
 		        type : 'POST', // post
@@ -25,7 +26,7 @@
 <main>
 	<div class="container">
 		<div class="navigation module_overview">
-			<div class="search" contenteditable>seachbar</div>
+			<div class="search" contenteditable>Search</div>
 			<div class="sort">sort by <a href="#">name</a>/<a href="#">date added</a>/<a href="#">date modified</a></div>
 			<div class="document_container">
 				<? foreach($modules as $module): ?>
