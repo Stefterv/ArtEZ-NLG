@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.20)
 # Database: nlg
-# Generation Time: 2015-06-02 12:11:49 +0000
+# Generation Time: 2015-06-02 12:30:48 +0000
 # ************************************************************
 
 
@@ -68,14 +68,14 @@ LOCK TABLES `documents` WRITE;
 INSERT INTO `documents` (`id`, `__meta info__`, `author`, `title`, `based_on`, `changed`, `deleted`)
 VALUES
 	(1,NULL,'Stef Tervelde & Willem','Document Title #1',0,'2015-06-02 14:11:13',0),
-	(2,NULL,'Willem Kempers','Document #2',NULL,'2015-06-02 14:11:05',0),
-	(3,NULL,'Cas Spoelstra','Document #3',1,'2015-05-05 21:02:34',0),
-	(4,NULL,NULL,'Document #4',3,'2015-05-05 21:01:41',0),
-	(5,NULL,'Stef Tervelde','New Document',0,'2015-06-02 14:11:18',0),
-	(6,NULL,'','New Document!',0,'2015-05-14 14:42:50',0),
-	(7,NULL,'','New Document!',0,'2015-05-14 14:44:00',0),
-	(8,NULL,'','Dat is flauw',0,'2015-05-14 14:46:08',0),
-	(9,NULL,'','Test 3',0,'2015-05-14 14:57:08',1);
+	(2,NULL,'Willem Kempers','Document Title #2',NULL,'2015-06-02 14:29:50',0),
+	(3,NULL,'Cas Spoelstra','Document Title #3',1,'2015-06-02 14:29:53',0),
+	(4,NULL,'Cas Spoelstra','Document Title #4',3,'2015-06-02 14:30:27',0),
+	(5,NULL,'Stef Tervelde','Document Title #5',0,'2015-06-02 14:30:05',0),
+	(6,NULL,'Cas Spoelstra','Document Title #6',0,'2015-06-02 14:30:28',0),
+	(7,NULL,'Cas Spoelstra','Document Title #7',0,'2015-06-02 14:30:29',0),
+	(8,NULL,'Cas Spoelstra','Document Title #8',0,'2015-06-02 14:30:31',0),
+	(9,NULL,'Cas Spoelstra','Document Title #9',0,'2015-06-02 14:30:32',1);
 
 /*!40000 ALTER TABLE `documents` ENABLE KEYS */;
 UNLOCK TABLES;
