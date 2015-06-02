@@ -1,5 +1,5 @@
 <?
-include "functions.php";
+include"functions.php";
 $page = "documents";
 if(isset($_GET['path'])){
 	if(file_exists("pages/".$_GET['path'].".php")){

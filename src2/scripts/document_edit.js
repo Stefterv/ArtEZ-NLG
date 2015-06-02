@@ -25,26 +25,46 @@ $("#addmodule").on('click', function(event) {
 		type: 'GET'
 	})
 	.done(function(data) {
-		$("#nodes").append(data);
+		var el = $(data);
+		moduleEvent(el);
 		nodeForm();
+		$("#nodes").append(el);
 	})
 });	
-$(".module a.remove").on('click', function(event) {
-	event.preventDefault();
-	if($(this).closest('#nodes').find(".module").length > 1){
-  	$(this).closest('.module').remove();
-	}
+
+$(".module").each(function(index, el) {
+	moduleEvent($(this));
 });
+
+function moduleEvent(el){
+	el.find("a.remove").on('click', function(event) {
+		event.preventDefault();
+		if($(this).closest('#nodes').find(".module").length > 1){
+	  	$(this).closest('.module').remove();
+		}
+	});
+	nodeEvent(el.find(".node_title"));
+}
 $("[data-input]").each(function(index, el) {
-	var elName = $(this).data("input");
+	inputEvent($(this));
+	
+});
+
+function inputEvent(el){
+	var elName = el.data("input");
 	var value = $("[name="+elName+"]").val();
-	$(this).html(value);
-	$(this).on('input', function(event) {
+	el.html(value);
+	el.on('input', function(event) {
 		var elName = $(this).data("input");
 		$("[name="+elName+"]").val($(this).html());
 	});
-});
-$(".module .node_title").on('click', function(event) {
-	event.preventDefault();
-	$(this).closest('.module').toggleClass('show');
-});
+}
+
+function nodeEvent(el){
+	console.log(el);
+	el.on('click', function(event) {
+		event.preventDefault();
+		console.log("Trigger Click!");
+		$(this).closest('.module').toggleClass('show');
+	});
+}

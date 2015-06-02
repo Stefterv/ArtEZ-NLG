@@ -31,7 +31,7 @@
 				
 				<h1 class="document_module_title">Modules</h1>
 				<div class="document_module_bottons">
-					<a id="addmodulemaster" class="insertModule" href="#">insert module</a>
+					<!-- <a id="addmodulemaster" class="insertModule" href="#">insert module</a> -->
 					<a id="addmodule" class="insertModule" href="#">insert text</a>
 				</div>
 				<div id="nodes">
@@ -51,7 +51,9 @@
 			<script type="text/javascript" src="scripts/document_edit.js"></script>
 		</div>
 		<div class="preview">
-			<div class="document_preview">&nbsp;</div>
+				<? $document_id = $document->id;
+					include "api/get_document.php";
+				?>
 			<div class="button deleteButton">Delete</div>
 		</div>
 	</div>
