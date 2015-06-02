@@ -47,7 +47,7 @@ $(".preview_buttons .button").on('click', function(event) {
 $(".sortdocuments").click(function() {
   // var list = $(".document").get();
   var sorttype = $(this).data("sorttype");
-  var list = $('.document_container .document');
+  var list = $('.document_container .document').detach();
   list.sort(function (a, b) {
     var aTitle = $(a).data(sorttype)+"";
     var bTitle = $(b).data(sorttype)+"";
@@ -57,6 +57,5 @@ $(".sortdocuments").click(function() {
 
   $(".document_container").empty();
   $(".document_container").append(list);
-
   // .appendTo( $list );
 });
