@@ -32,5 +32,20 @@ class Document extends databaseObject{
 			return (Document::findByID($this->based_on)->getIndent()+1);
 		}
 	}
+	function preview(){
+		?>
+		<div class="document_preview" data-id="<?=$this->id?>">
+		<h1><?=$this->title?></h1>
+		<?
+		$nodes = $this->getNodes();
+		if($nodes){
+			foreach ($nodes as $node) {
+				$node->display_preview();
+			}
+		}
+		?>
+	</div>
+		<?
+	}
 }
 ?>

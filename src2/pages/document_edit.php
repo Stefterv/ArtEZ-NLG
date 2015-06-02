@@ -45,16 +45,15 @@
 					<? endforeach; ?>
 				<? endif; ?>
 				</div>
-				<button type="submit" name="submit" value="edit">Submit</button><br>
-				<button type="delete" name="submit" value="delete" style="color: red">Delete Document</button><br>
+				<button type="submit" id="submit" name="submit" value="edit" style="display: none">Submit</button>
+				<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
+				<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
 			</form>
 			<script type="text/javascript" src="scripts/document_edit.js"></script>
 		</div>
 		<div class="preview">
-				<? $document_id = $document->id;
-					include "api/get_document.php";
-				?>
-			<div class="button deleteButton">Delete</div>
+				<? $document->preview(); ?>
+			<!-- <div class="button deleteButton">Delete</div> -->
 		</div>
 	</div>
 </main>

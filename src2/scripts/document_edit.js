@@ -31,7 +31,11 @@ $("#addmodule").on('click', function(event) {
 		nodeForm();
 	})
 });	
-
+$("[data-trigger]").on('click', function(event) {
+	event.preventDefault();
+	var el = $(this).data("trigger");
+	$("#"+el).trigger('click');
+});
 $(".module").each(function(index, el) {
 	moduleEvent($(this));
 });

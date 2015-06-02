@@ -56,5 +56,15 @@ main{
 	@extend .navigation;
 	left: calc(50% + 10px);
 }
+.button{
+	border: 2px solid black;
+	padding: 5px;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 20px;
+	&.delete{
+		background: #f0606d;
+	}
+}
 @import "css/document";
 @import "css/module";
