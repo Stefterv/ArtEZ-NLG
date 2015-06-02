@@ -27,8 +27,8 @@ $("#addmodule").on('click', function(event) {
 	.done(function(data) {
 		var el = $(data);
 		moduleEvent(el);
-		nodeForm();
 		$("#nodes").append(el);
+		nodeForm();
 	})
 });	
 
