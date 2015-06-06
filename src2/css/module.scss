@@ -2,6 +2,9 @@
 	.document{
 		background: #f8dcc2;
 	}
+	.document_selected{
+		background: rgba(#f8dcc2,0.5);
+	}
 }
 .module_preview{
 	border: 2px solid black;

@@ -5,8 +5,8 @@
 .search{
 	border: 2px solid black;
 	padding: 3px;
-	width: 300px;
-	box-shadow: 5px 5px 0px black;
+	// max-width: 300px;
+	// box-shadow: 5px 5px 0px black;
 	margin-bottom: 15px;
 	outline:none;
 }
@@ -26,7 +26,7 @@
 	}
 }
 .document_selected {
-	opacity:0.5;
+	background: rgba(#88d0cc,0.5);
 }
 .document_container{
 	height: calc(100% - 68px);

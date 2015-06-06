@@ -1,3 +1,7 @@
+<?
+$documentspages = array("document_edit","documents");
+$modulespages = array("module_edit","modules");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,15 @@
 </head>
 <body>
 <header>
-	<a href="/">Documents</a>
-	<a href="/modules">Modules</a>
+	<a href="/" <?currentPage($documentspages)?>>Documents</a>
+	<a href="/modules" <?currentPage($modulespages)?>>Modules</a>
 </header>
+
+<?
+function currentPage($array){
+	global $page;
+	if(in_array($page, $array)){
+		echo "class=\"current\"";
+	}
+}
+?>

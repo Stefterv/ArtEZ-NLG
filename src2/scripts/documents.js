@@ -44,7 +44,8 @@ $(".preview_buttons .button").on('click', function(event) {
   window.location.href = url+$(".document_preview").data("id");
 });
 
-$(".sortdocuments").click(function() {
+$(".sortdocuments").click(function(event) {
+  event.preventDefault();
   // var list = $(".document").get();
   var sorttype = $(this).data("sorttype");
   var list = $('.document_container .document').detach();
