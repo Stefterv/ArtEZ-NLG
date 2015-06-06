@@ -28,7 +28,10 @@
 
 				<div class="document_attr" contenteditable data-input="title"></div>
 				<div class="document_attr" contenteditable data-input="author"></div>
-				
+
+				<h1>Tags</h1>
+				<input id="document_tags" name="tags" type="text">
+
 				<h1 class="document_module_title">Modules</h1>
 				<div class="document_module_bottons">
 					<!-- <a id="addmodulemaster" class="insertModule" href="#">insert module</a> -->
@@ -49,6 +52,7 @@
 				<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
 				<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
 			</form>
+			<script type="text/javascript" src="scripts/jquery.tagsinput.min.js"></script>
 			<script type="text/javascript" src="scripts/document_edit.js"></script>
 		</div>
 		<div class="preview">

@@ -5,7 +5,10 @@ $(function() {
 			nodeForm();
 		}
 	});
-  // $( "#nodes" ).disableSelection();
+  $("#document_tags").tagsInput({
+  	width: "auto",
+  	height: "auto"
+  })
 });
 function nodeForm(){
 	$("#nodes .module").each(function(i) {

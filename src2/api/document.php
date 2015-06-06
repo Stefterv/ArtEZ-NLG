@@ -31,6 +31,18 @@ if(isset($_POST['submit'])):
 				$link->submit();
 			}
 		}
+		$tags = explode($_POST['tags']);
+		foreach($tags as $tag){
+			// check if exists
+
+			// if not make link
+				// check if tag exist
+
+				// if not make tag
+
+			// check for old tags
+
+		}
 		header("Location: /document_edit?document={$document->id}");
 	}
 	if($_POST['submit'] == "delete"){
