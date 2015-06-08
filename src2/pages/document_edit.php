@@ -30,7 +30,14 @@
 				<div class="document_attr" contenteditable data-input="author"></div>
 
 				<h1>Tags</h1>
-				<input id="document_tags" name="tags" type="text">
+				<?
+					$tags = Tag_Link::getTags("Document",$document->id);
+					$tagString = "";
+					foreach($tags as $tag){
+						$tagString .= $tag->title.",";
+					}
+				?>
+				<input id="document_tags" name="tags" type="text" value="<?=$tagString?>">
 
 				<h1 class="document_module_title">Modules</h1>
 				<div class="document_module_bottons">

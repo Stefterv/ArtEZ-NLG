@@ -31,18 +31,30 @@ if(isset($_POST['submit'])):
 				$link->submit();
 			}
 		}
-		$tags = explode($_POST['tags']);
-		foreach($tags as $tag){
+		
+		$tags = explode(",",$_POST['tags']);
+		$currentTags = Tag_Link::getTags("Document",$document->id);
+		foreach($tags as $tagName){
 			// check if exists
-
+			$tag = Tag::findByName($tagName);
 			// if not make link
-				// check if tag exist
-
-				// if not make tag
-
-			// check for old tags
-
+			if(!$tag){
+				$tag = new Tag();
+				$tag->title = $tagName;
+				$tag->submit();
+			}
+			$properties = array("link_type="=>"Document","item_id="=>$document->id,"tag_id="=>$tag->id);
+			$tag_link = Tag_Link::findSingleByAttr($properties);
+			if(!$tag_link){
+				$tag_link = new Tag_Link();
+				$tag_link->link_type = "Document";
+				$tag_link->item_id = $document->id;
+				$tag_link->tag_id = $tag->id;
+				$tag_link->submit();
+			}
 		}
+				// check if tag link exist
+			// check for old tags
 		header("Location: /document_edit?document={$document->id}");
 	}
 	if($_POST['submit'] == "delete"){
@@ -54,4 +66,18 @@ if(isset($_POST['submit'])):
 		header("Location: /documents");
 	}
 endif;
+function removeFromArray(array $array, $value){
+    if(($key = array_search($value, $array, true)) !== FALSE) {
+        unset($array[$key]);
+    }
+    return $array;
+}
+function getTagByID($array,$id){
+	foreach($array as $object){
+		if($object->id == $id){
+			return $object;
+		}
+	}
+	return false;
+}
 ?>
