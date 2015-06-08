@@ -33,8 +33,10 @@
 				<?
 					$tags = Tag_Link::getTags("Document",$document->id);
 					$tagString = "";
-					foreach($tags as $tag){
-						$tagString .= $tag->title.",";
+					if($tags){
+						foreach($tags as $tag){
+							$tagString .= $tag->title.",";
+						}
 					}
 				?>
 				<input id="document_tags" name="tags" type="text" value="<?=$tagString?>">
@@ -46,6 +48,13 @@
 				</div>
 				<div id="nodes">
 				<? $nodes = $document->getNodes(); ?>
+				<?
+					if($_POST['fromModule']){
+						foreach(explode(",",$_POST['modules']) as $node){
+							$nodes[] = Module::findByID($node);
+						}
+					}
+				?>
 				<? if($nodes): ?>
 					<? foreach($nodes as $key => $node): ?>
 						<? if($duplicate): ?>

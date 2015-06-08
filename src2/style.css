@@ -245,5 +245,5 @@ main {
   display: inline-block;
   width: 100%; }
 
-.module_item:hover {
+.module_item.selected {
   background: #FFEED7; }

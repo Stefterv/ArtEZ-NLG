@@ -14,7 +14,7 @@
 				<div class="last_edit"><?=date_format($date, "H:i - d M");?></div>
 				</div>
 			<? endforeach; ?>
-				
+			<a href="#" id="modulescreate">Create new from selection</a>
 			</div>
 		</div>
 		<div class="preview">

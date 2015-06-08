@@ -11,6 +11,7 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 		  $('.document_container').html('Unable to load'); // if unable to load display this error message
 		}
 	})
+	$(this).toggleClass('selected');
 });
 $(".search").on('input', function() {
   var search = $(this).text();
@@ -35,3 +36,27 @@ $(".search").on('input', function() {
 		$(list[i]).appendTo('.document_container');
 	}
 });
+$("#modulescreate").on('click', function(event) {
+	event.preventDefault();
+	var data = {
+		"fromModule": true
+	};
+	data.modules = [];
+	$(".document_container .module_item.selected").each(function(index, el) {
+		data.modules[index] = $(this).data("id");
+	});
+	makePostRequest("document_edit",data);
+});
+
+function makePostRequest(url, data) {
+    var jForm = $('<form></form>');
+    jForm.attr('action', url);
+    jForm.attr('method', 'post');
+    for (name in data) {
+        var jInput = $("<input>");
+        jInput.attr('name', name);
+        jInput.attr('value', data[name]);
+        jForm.append(jInput);
+    }
+    jForm.submit();
+}
