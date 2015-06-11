@@ -12,6 +12,14 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 					<?=$document->title?>
 				</div>
 				<? endforeach; ?>
+				<?
+					$tags = Tag::findAll();
+				?>
+				<? foreach($tags as $tag): ?>
+				<div class="tag">
+					&nbsp;<?=$tag->title?>
+				</div>
+				<? endforeach; ?>
 			</div>
 		</div>
 		<div class="preview">
