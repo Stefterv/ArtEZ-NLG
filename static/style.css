@@ -185,7 +185,10 @@ main {
   text-transform: uppercase;
   font-size: 0.9em;
   color: white;
-  position: relative; }
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
   .document a {
     color: white;
     text-decoration: none; }
@@ -195,6 +198,13 @@ main {
 .document_container {
   overflow-y: scroll;
   position: relative; }
+
+.document_title {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .document_date {
   position: absolute;

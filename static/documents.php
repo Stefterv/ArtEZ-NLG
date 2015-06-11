@@ -23,21 +23,21 @@
 			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#" class="selected">editted</a></div>
 			<div class="document_container">
 				<div class="document">
-					Document #1
+					Document #1 
 				</div>
 				<div class="document">
 					Document #2
 				</div>
 				<div class="document indent-1">
-					Document #3 indent
+					<div class="document_title">Document #3 indent</div>
 				</div>
 				<? for($i = 4; $i<50; $i++): ?>
 				<div class="document">
-					<a href="singledocument.php">Document #<?=$i?></a>
-					<div class="document_date">
+					<div class="document_title"><a href="singledocument.php">Document #<?=$i?></a></div>
+					<!-- <div class="document_date">
 						<div class="created">01.01.2001</div>
 						<div class="edited">04.04.2001</div>
-					</div>
+					</div> -->
 				</div>
 				<? endfor;?>
 			</div>

@@ -82,6 +82,9 @@
 	font-size: 0.9em;
 	color: white;
 	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	a{
 		color: white;
 		text-decoration: none;
@@ -94,6 +97,15 @@
 	// height: calc(100% - 68px);
 	overflow-y: scroll;
 	position: relative;
+}
+
+.document_title{
+	padding: 0;
+	margin: 0;
+	// margin-right:200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .document_date{
 	position: absolute;
