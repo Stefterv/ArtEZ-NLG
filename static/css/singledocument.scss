@@ -10,7 +10,15 @@ html, body{
 	height:32px;
 	margin-bottom: 0;
 	outline:none;
-	font-size:1.6em;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+.title_edit{
+	margin-bottom: 15px;
+	margin-bottom: 75px;
+	font-size: 0.95em;
+	padding: 5px;
 }
 .sort{
 	margin-bottom: 5px;
@@ -26,7 +34,7 @@ html, body{
 }
 
 .add_module{
-	margin-top:20px; 
+	margin-top: 20px; 
 }
 .search_module{
 	border: 2px solid black;
@@ -34,9 +42,10 @@ html, body{
 	width: 300px;
 	display: inline-block;
 	box-shadow: 5px 5px 0px black;
-	margin-bottom: 15px;
-	
+	margin-bottom: 22px;
 	padding: 7px 15px;
+	margin-top: 20px;
+	font-size: 0.95em;
 	img{
 
 	}
@@ -45,16 +54,22 @@ html, body{
 .module{
 	position:relative;
 	background: $editdocument_color;
-
-	margin-bottom: 10px;
+	margin-bottom: 18px;
 	padding: 5px;
 	margin-right: 20px;
 	height:20px;
 	color:white;
+	padding: 8px;
+	padding-left: 15px;
+	text-transform: uppercase;
+	font-size: 0.9em;
 	.module_title {
 		display:inline-block;
 		margin:0;
 		padding:0;
+	}
+	p{
+		text-transform: none;
 	}
 	.modulebutton {
 		position: absolute;
@@ -62,7 +77,6 @@ html, body{
 		display: inline-block;
 		padding:0px 3px;
 		font-size: 0.75em;
-
 	}
 	.edit {
 		right:35px;
@@ -82,17 +96,17 @@ html, body{
 	color: black;
 	background-color: white;
 	border: 2px solid black;
-	padding:10px;
+	padding: 15px;
+	padding-right: 25px;
 	box-shadow: 5px 5px 0px black;
 	height:auto;
-	margin-bottom: 15px;
+	margin-bottom: 22px;
+	font-weight: 200;
+	font-size: 0.9em;
 	.module_title{
 		color: $editdocument_color;
-		margin-bottom: 10px;
 		text-transform: uppercase;
-	}
-	p{
-		
+		font-weight: 600;
 	}
 }
 .document_module_container{
@@ -106,6 +120,7 @@ html, body{
 	display: inline-block;
 	position:relative;
 	padding:10px 5px;
+	font-size:1em;
 	.insertMod {
 		display: inline-block;
 	}
@@ -150,7 +165,7 @@ html, body{
 
 .tag_item{
 	display:inline-block;
-	border: 2.3px solid $editdocument_color;
+	border: 2px solid $editdocument_color;
 	margin: 0 15px 15px 0;
 	padding:5px;
 }
@@ -169,21 +184,24 @@ html, body{
 
 .preview_header{
 	padding: 0;
+	padding-top: 32px;
 	margin: 0;
 	display: inline-block;
-}
-
-.preview_title{
-	text-transform: uppercase;
-	font-size: 1.2em;
-	display: inline-block;
-}
-
-.preview_icons{
+	font-weight: 200;
+	font-size: 0.9em;
+	.preview_title{
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.25em;
+		letter-spacing: 1px;
+		display: inline-block;
+	}
+	.preview_icons{
 	display: inline-block;
 	position: absolute;
 	right: 10px;
 	top:15px;	
+	}
 }
 
 .document_edit_navigation{
@@ -192,6 +210,18 @@ html, body{
 	left: 20px;
 	width: calc(66% - 10px);
 	height: 100%;
+	.tag_item{
+		display: inline-block;
+		background: white;
+		border-style: solid;
+		border-color: $editdocument_color;
+		margin: 7px 4px;
+		padding: 5px 13px;
+		font-size: 0.85em;
+		&.new_tag{
+			background: $editdocument_color;
+		}
+	}
 	
 }
 .document_edit_preview{

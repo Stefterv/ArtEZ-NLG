@@ -8,11 +8,12 @@
 			<div class="document_module_container">
 				
 				<div id="tag_list">
+					<div class="tag_item new_tag">New Tag</div>
 					<?for ($i=0; $i < 2 ; $i++):?><div class="tag_item">Test Tag</div><?endfor;?>
 				</div>
 
 				<div class="add_module">
-					<div class="search_module" contenteditable>Search for module <img src="img/search_icon.png" alt=""></div>
+					<div class="search_module" contenteditable>search for module <img src="img/search_icon.png" alt=""></div>
 					<div class="insertModule">
 						+ create new module
 					</div>

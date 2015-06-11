@@ -241,7 +241,15 @@ html, body {
   height: 32px;
   margin-bottom: 0;
   outline: none;
-  font-size: 1.6em; }
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 600; }
+
+.title_edit {
+  margin-bottom: 15px;
+  margin-bottom: 75px;
+  font-size: 0.95em;
+  padding: 5px; }
 
 .sort {
   margin-bottom: 5px; }
@@ -262,21 +270,29 @@ html, body {
   width: 300px;
   display: inline-block;
   box-shadow: 5px 5px 0px black;
-  margin-bottom: 15px;
-  padding: 7px 15px; }
+  margin-bottom: 22px;
+  padding: 7px 15px;
+  margin-top: 20px;
+  font-size: 0.95em; }
 
 .module {
   position: relative;
   background: #7db8df;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   padding: 5px;
   margin-right: 20px;
   height: 20px;
-  color: white; }
+  color: white;
+  padding: 8px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-size: 0.9em; }
   .module .module_title {
     display: inline-block;
     margin: 0;
     padding: 0; }
+  .module p {
+    text-transform: none; }
   .module .modulebutton {
     position: absolute;
     top: 7px;
@@ -296,14 +312,17 @@ html, body {
   color: black;
   background-color: white;
   border: 2px solid black;
-  padding: 10px;
+  padding: 15px;
+  padding-right: 25px;
   box-shadow: 5px 5px 0px black;
   height: auto;
-  margin-bottom: 15px; }
+  margin-bottom: 22px;
+  font-weight: 200;
+  font-size: 0.9em; }
   #edit_module .module_title {
     color: #7db8df;
-    margin-bottom: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 600; }
 
 .document_module_container h2 {
   font-weight: 600;
@@ -312,7 +331,8 @@ html, body {
 .insertModule {
   display: inline-block;
   position: relative;
-  padding: 10px 5px; }
+  padding: 10px 5px;
+  font-size: 1em; }
   .insertModule .insertMod {
     display: inline-block; }
   .insertModule .insertText {
@@ -348,7 +368,7 @@ html, body {
 
 .tag_item {
   display: inline-block;
-  border: 2.3px solid #7db8df;
+  border: 2px solid #7db8df;
   margin: 0 15px 15px 0;
   padding: 5px; }
 
@@ -364,19 +384,22 @@ html, body {
 
 .preview_header {
   padding: 0;
+  padding-top: 32px;
   margin: 0;
-  display: inline-block; }
-
-.preview_title {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  display: inline-block; }
-
-.preview_icons {
   display: inline-block;
-  position: absolute;
-  right: 10px;
-  top: 15px; }
+  font-weight: 200;
+  font-size: 0.9em; }
+  .preview_header .preview_title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    display: inline-block; }
+  .preview_header .preview_icons {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 15px; }
 
 .document_edit_navigation, .document_edit_preview {
   position: absolute;
@@ -384,6 +407,16 @@ html, body {
   left: 20px;
   width: calc(66% - 10px);
   height: 100%; }
+  .document_edit_navigation .tag_item, .document_edit_preview .tag_item {
+    display: inline-block;
+    background: white;
+    border-style: solid;
+    border-color: #7db8df;
+    margin: 7px 4px;
+    padding: 5px 13px;
+    font-size: 0.85em; }
+    .document_edit_navigation .tag_item.new_tag, .document_edit_preview .tag_item.new_tag {
+      background: #7db8df; }
 
 .document_edit_preview {
   height: auto;
