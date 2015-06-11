@@ -7,6 +7,8 @@
 </head>
 <body>
 <header>
-	<a <?if($page=="documents"):?>class="current"<?endif;?> href="documents.php">Documents</a>
-	<a <?if($page=="modules"):?>class="current"<?endif;?>href="modules.php">Modules</a>
+		<a id="modulesbutton"<?if($page=="modules"):?>class="current"<?endif;?>href="modules.php">MODULES</a>
+		<a id="documentbutton"<?if($page=="documents"):?>class="current"<?endif;?> href="documents.php">DOCUMENTS</a>
+
+		<a id="createnew"><sup>+ </sup>create new <?if($page=="modules"):?>module<?endif;?><?if($page=="documents"):?>document<?endif;?></a>
 </header>
