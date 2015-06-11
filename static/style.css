@@ -202,6 +202,7 @@ main {
 .document_title {
   padding: 0;
   margin: 0;
+  margin-right: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -437,6 +438,14 @@ html, body {
   background: #BFE3D5; }
 .module_overview .sort a.selected {
   color: #BFE3D5; }
+
+.module_title {
+  padding: 0;
+  margin: 0;
+  margin-right: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .module_preview {
   border: 2px solid black;

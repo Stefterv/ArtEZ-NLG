@@ -20,18 +20,13 @@
 		<div class="navigation module_overview">
 			<div class="sort"><a href="#">name a-z</a><a href="#" class="selected">created</a><a href="#">editted</a></div>
 			<div class="document_container">
+				<? for($i = 0; $i<50; $i++): ?>
 				<div class="document">
-					Module #1
-				</div>
-				<div class="document">
-					Module #2
-				</div>
-				<div class="document">
-					Module #3 
-				</div>
-				<? for($i = 4; $i<50; $i++): ?>
-				<div class="document">
-					Module #<?=$i?>
+					<div class="module_title">Module #<?=$i?></div>
+					<div class="document_date">
+						<div class="created">01.01.2001</div>
+						<div class="edited">04.04.2001</div>
+					</div>
 				</div>
 				<? endfor;?>
 			</div>

@@ -10,6 +10,15 @@
 		}
 	}
 }
+
+.module_title{
+	padding: 0;
+	margin: 0;
+	margin-right:200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .module_preview{
 	border: 2px solid black;
 	padding: 20px;
