@@ -3,9 +3,11 @@
 <main>
 	<div class="container">
 		<div class="properties">
-			<h2>FILTER BY TITLE</h2>
-			<div class="search" contenteditable>seachbar</div>
-			<h2>FILTER BY TAG</h2>
+			<div class="filter_header">
+				<h2>FILTER BY TITLE</h2>
+				<div class="search" contenteditable>seachbar</div>
+				<h2>FILTER BY TAG</h2>
+			</div>
 			<div class="document_tags">
 				<div class="tag selected">
 					New York
@@ -41,12 +43,9 @@
 			</div>
 		</div>
 		<div class="preview">
-			<div class="preview_buttons">
-				<a href="#" class="button">Download</a>
-				<a href="#" class="button">Duplicate</a>
-				<a href="#" class="button">Delete</a>
-			</div>
 			<div class="document_preview">
+				<h2>Document Title</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex itaque sunt neque, hic eaque quidem? Explicabo ratione maiores, quaerat, quibusdam veritatis adipisci cupiditate esse sed dolores inventore nihil rem. Magnam aspernatur dolores quidem itaque? Quod enim dolores, necessitatibus deserunt eius sunt porro culpa ea cupiditate odit, eveniet nisi, cumque. Sit at, suscipit atque, voluptatem sed ut dolor illo tenetur delectus necessitatibus quas, voluptatum eum consectetur aspernatur laudantium! Commodi aperiam, veritatis aspernatur ipsum cum minus perferendis pariatur, cupiditate illo molestiae consequuntur quo enim at! Eligendi ut distinctio id, ducimus aut eos quam quas praesentium vero, laudantium unde ullam voluptas voluptatem temporibus nihil optio provident, et rerum quia? Laboriosam omnis suscipit nesciunt tenetur iste dignissimos cum magnam quidem cumque illum magni asperiores itaque nemo, eius sit sint voluptatum ea tempora quis in perspiciatis distinctio, accusamus nulla! Voluptatum fuga cupiditate delectus fugit cumque beatae laborum at, quibusdam, magni numquam, eligendi aliquam, est error!
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex itaque sunt neque, hic eaque quidem? Explicabo ratione maiores, quaerat, quibusdam veritatis adipisci cupiditate esse sed dolores inventore nihil rem. Magnam aspernatur dolores quidem itaque? Quod enim dolores, necessitatibus deserunt eius sunt porro culpa ea cupiditate odit, eveniet nisi, cumque. Sit at, suscipit atque, voluptatem sed ut dolor illo tenetur delectus necessitatibus quas, voluptatum eum consectetur aspernatur laudantium! Commodi aperiam, veritatis aspernatur ipsum cum minus perferendis pariatur, cupiditate illo molestiae consequuntur quo enim at! Eligendi ut distinctio id, ducimus aut eos quam quas praesentium vero, laudantium unde ullam voluptas voluptatem temporibus nihil optio provident, et rerum quia? Laboriosam omnis suscipit nesciunt tenetur iste dignissimos cum magnam quidem cumque illum magni asperiores itaque nemo, eius sit sint voluptatum ea tempora quis in perspiciatis distinctio, accusamus nulla! Voluptatum fuga cupiditate delectus fugit cumque beatae laborum at, quibusdam, magni numquam, eligendi aliquam, est error!
 			</div>
 		</div>

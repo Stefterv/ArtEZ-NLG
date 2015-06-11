@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="navigation module_overview">
-			<div class="sort"><a href="#">name a-z</a><a href="#">date added</a><a href="#">date modified</a></div>
+			<div class="sort"><a href="#">name</a><a href="#" class="selected">date added</a><a href="#">date modified</a></div>
 			<div class="document_container">
 				<div class="document">
 					Module #1
