@@ -3,10 +3,13 @@
 <main>
 	<div class="container">
 		<div class="properties">
-			<h2>Filter By Title</h2>
+			<h2>FILTER BY TITLE</h2>
 			<div class="search" contenteditable>seachbar</div>
-			<h2>Filter By Tag</h2>
+			<h2>FILTER BY TAG</h2>
 			<div class="document_tags">
+				<div class="tag selected">
+					New York
+				</div>
 			<?for($i = 0; $i<200; $i++):?>
 				<div class="tag">
 					Tag <?=$i?>
@@ -15,7 +18,7 @@
 			</div>
 		</div>
 		<div class="navigation document_overview">
-			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#">editted</a></div>
+			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#" class="selected">editted</a></div>
 			<div class="document_container">
 				<div class="document">
 					Document #1
@@ -29,6 +32,10 @@
 				<? for($i = 4; $i<50; $i++): ?>
 				<div class="document">
 					<a href="singledocument.php">Document #<?=$i?></a>
+					<div class="document_date">
+						<div class="created">01.01.2001</div>
+						<div class="edited">04.04.2001</div>
+					</div>
 				</div>
 				<? endfor;?>
 			</div>

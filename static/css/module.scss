@@ -1,6 +1,6 @@
 .module_overview{
 	.document{
-		background: #f8dcc2;
+		background: #BFE3D5;
 	}
 }
 .module_preview{
@@ -8,4 +8,13 @@
 	padding: 20px;
 	height: 100%;
 	box-sizing: border-box;
+}
+.module_properties{
+	.tag{
+		background: #BFE3D5;
+		border-color: #BFE3D5;
+		&.selected{
+			background: white;
+		}
+	}
 }

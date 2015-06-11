@@ -2,6 +2,13 @@
 	// overflow: hidden;
 	position: relative;
 }
+.properties{
+	font-size: 13px;
+	h2{
+		font-size: 22px;
+		font-weight: 600;
+	}
+}
 .search{
 	border: 2px solid black;
 	padding: 3px;
@@ -9,12 +16,29 @@
 	// padding-right: 20px;
 	box-shadow: 5px 5px 0px black;
 	margin-bottom: 15px;
+	margin-bottom: 75px;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 8px;
+}
+.tag{
+	display: inline-block;
+	background: #F0606D;
+	border-style: solid;
+	border-color: #F0606D;
+	margin: 7px 4px;
+	padding: 5px 13px;
+	&.selected{
+		background: white;
+	}
 }
 .sort{
 	margin-bottom: 5px;
 	position: relative;
 	text-align: right;
-	font-size: 0.75em;
+	font-size: 0.85em;
+	font-weight: 600;
+	padding-bottom: 10px;
 	&:before{
 		content: 'sort by';
 		text-transform: uppercase;
@@ -22,22 +46,35 @@
 		top: 0;
 		left: 0;
 	}
+	.selected{
+		color: #F0606D;
+	}
 	a{
 		color: black;
 		border-right: 1px solid black;
-		padding-right: 5px;
+		padding-right: 15px;
 		margin-right: 5px;
 		text-transform: uppercase;
 		text-decoration: none;
 		&:last-child{
 			border-right: 0;
+			padding-right: 10px;
 		}
 	}
 }
 .document{
 	background: #88d0cc;
 	margin-bottom: 10px;
-	padding: 5px;
+	padding: 8px;
+	padding-left: 15px;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: white;
+	position: relative;
+	a{
+		color: white;
+		text-decoration: none;
+	}
 	&.indent-1{
 		margin-left: 35px;
 	}
@@ -46,6 +83,20 @@
 	height: calc(100% - 68px);
 	overflow-y: scroll;
 	position: relative;
+}
+.document_date{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.75em;
+	*{
+		display: inline-block;
+		padding: 0 20px;
+		margin-top: 10px;
+		border-left-style: solid;
+		border-left-color: white;
+		border-left-width: 1px;
+	}
 }
 .preview_buttons{
 	margin-bottom: 35px;
