@@ -18,7 +18,7 @@ class Module extends databaseObject{
 			<input type="hidden" name="nodes[<?=$key?>][title]" value="<?=$this->title?>" placeholder="Title">
 			<a href="#" class="modulebutton remove">x</a>
 			<div class="module_content">
-			<input type="text" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=$this->content?>" placeholder="Content">
+			<input type="text" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=htmlentities($this->content)?>" placeholder="Content">
 				
 			</div>
 		</div>

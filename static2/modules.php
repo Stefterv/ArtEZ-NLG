@@ -2,23 +2,9 @@
 <? include "header.php" ?>
 <main>
 	<div class="container">
-		<div class="module_properties properties">
-			<h2>FILTER BY TITLE</h2>
-			<div class="search" contenteditable>seachbar</div>
-			<h2>FILTER BY TAG</h2>
-			<div class="document_tags">
-				<div class="tag selected">
-					New York
-				</div>
-			<?for($i = 0; $i<200; $i++):?>
-				<div class="tag">
-					Tag <?=$i?>
-				</div>
-			<?endfor;?>
-			</div>
-		</div>
 		<div class="navigation module_overview">
-			<div class="sort"><a href="#">name a-z</a><a href="#" class="selected">created</a><a href="#">editted</a></div>
+			<div class="search" contenteditable>seachbar</div>
+			<div class="sort">sort by <a href="#">name</a>/<a href="#">date added</a>/<a href="#">date modified</a></div>
 			<div class="document_container">
 				<div class="document">
 					Module #1
@@ -26,8 +12,8 @@
 				<div class="document">
 					Module #2
 				</div>
-				<div class="document">
-					Module #3 
+				<div class="document indent-1">
+					Module #3 indent
 				</div>
 				<? for($i = 4; $i<50; $i++): ?>
 				<div class="document">

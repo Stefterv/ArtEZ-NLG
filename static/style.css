@@ -6,54 +6,66 @@ html, body {
   font-weight: 500;
   overflow: hidden; }
 
+h2 {
+  margin-top: 0; }
+
 header {
+  width: calc(100% / 3);
+  margin-left: calc(100% / 3);
+  padding-right: 50px;
+  box-sizing: border-box; }
+
+nav {
   margin-top: 20px;
   font-size: 0em;
-  padding: 50px;
-  margin: 0 auto;
+  padding: 70px 0 50px 0;
+  margin: 0;
   text-align: center; }
-  header .navlink {
+  nav .navlink {
     position: relative;
-    display: inline-block; }
-    header .navlink .navlink_button {
+    vertical-align: text-top;
+    display: inline-block;
+    text-align: left; }
+    nav .navlink .navlink_button {
       padding: 5px 15px;
       border-bottom: 0;
-      margin: 6px;
-      font-size: 2rem;
+      margin: 6px 20px 0px 0px;
       color: black;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 600;
       border-style: solid;
       border-width: 2px;
-      vertical-align: text-top; }
-    header .navlink.current .navlink_button {
+      vertical-align: text-top;
+      display: block; }
+    nav .navlink.current .navlink_button {
       border-style: none;
       font-size: 35px;
       font-weight: 700;
       padding: 0;
-      line-height: 20px;
+      margin: 0;
       letter-spacing: 2px; }
-    header .navlink.current .createnew {
+    nav .navlink.current#documentsbutton .navlink_button {
+      color: #F0606D; }
+    nav .navlink.current#modulesbutton .navlink_button {
+      color: #BFE3D5; }
+    nav .navlink.current .createnew {
       display: block; }
-    header .navlink .createnew {
-      position: absolute;
-      width: 100%;
-      margin-top: 6px;
+    nav .navlink .createnew {
       display: none;
-      top: 100%;
-      left: -6px;
       border-style: none;
-      text-align: right;
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 1px;
       text-decoration: none;
       color: black; }
+      nav .navlink .createnew:before {
+        content: '+ ';
+        position: relative;
+        top: -5px; }
 
 main {
-  width: calc(100%);
-  height: calc(100% - 90px);
+  height: calc(100% - 255px);
   box-sizing: border-box; }
 
 .container {
@@ -74,21 +86,30 @@ main {
   box-sizing: border-box; }
 
 .properties {
-  padding-right: 100px; }
+  padding-right: 75px;
+  padding-left: 75px; }
 
 .navigation {
   left: calc(33% + 100px);
   left: calc(100% / 3);
-  padding: 0;
-  padding-right: 50px; }
+  padding-left: 0; }
 
 .preview {
   left: calc(66% + 100px);
-  left: calc(200% / 3); }
+  left: calc(200% / 3);
+  padding-left: 25px;
+  padding-right: 75px; }
 
 .document_tags {
   overflow-y: scroll;
   text-align: justify; }
+
+.button {
+  border: 2px solid black;
+  padding: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 20px; }
 
 .document_overview {
   position: relative; }
@@ -96,36 +117,47 @@ main {
 .properties {
   font-size: 13px; }
   .properties h2 {
-    font-size: 22px;
+    font-size: 1.3em;
     font-weight: 600; }
 
 .search {
   border: 2px solid black;
-  padding: 3px;
   box-shadow: 5px 5px 0px black;
   margin-bottom: 15px;
   margin-bottom: 75px;
   text-transform: uppercase;
-  font-size: 13px;
-  padding: 8px; }
+  font-size: 0.95em;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-right: 5px; }
+
+.document_tags {
+  text-align: justify;
+  height: calc(100% - 167px);
+  overflow-y: scroll;
+  position: relative;
+  left: -4px;
+  width: calc(100% + 8px); }
 
 .tag {
   display: inline-block;
-  background: #F0606D;
+  background: white;
   border-style: solid;
   border-color: #F0606D;
   margin: 7px 4px;
-  padding: 5px 13px; }
+  padding: 5px 13px;
+  font-size: 0.95em; }
   .tag.selected {
-    background: white; }
+    background: #F0606D; }
 
 .sort {
   margin-bottom: 5px;
   position: relative;
   text-align: right;
-  font-size: 0.85em;
+  font-size: 0.75em;
   font-weight: 600;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-right: 10px; }
   .sort:before {
     content: 'sort by';
     text-transform: uppercase;
@@ -137,8 +169,8 @@ main {
   .sort a {
     color: black;
     border-right: 1px solid black;
-    padding-right: 15px;
-    margin-right: 5px;
+    padding-right: 10px;
+    margin-left: 10px;
     text-transform: uppercase;
     text-decoration: none; }
     .sort a:last-child {
@@ -146,22 +178,21 @@ main {
       padding-right: 10px; }
 
 .document {
-  background: #88d0cc;
-  margin-bottom: 10px;
+  background: #F0606D;
+  margin-bottom: 18px;
   padding: 8px;
   padding-left: 15px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 0.9em;
   color: white;
   position: relative; }
   .document a {
     color: white;
     text-decoration: none; }
   .document.indent-1 {
-    margin-left: 35px; }
+    margin-left: 50px; }
 
 .document_container {
-  height: calc(100% - 68px);
   overflow-y: scroll;
   position: relative; }
 
@@ -178,24 +209,28 @@ main {
     border-left-color: white;
     border-left-width: 1px; }
 
+.document_overview {
+  height: 100%;
+  overflow-y: scroll; }
+
 .preview_buttons {
   margin-bottom: 35px; }
   .preview_buttons a {
     color: black;
     text-decoration: none; }
 
-.button {
-  border: 2px solid black;
-  padding: 5px;
-  display: inline-block;
-  text-transform: uppercase;
-  margin-right: 20px; }
-
 .document_preview {
   border: 2px solid black;
-  padding: 20px;
-  height: calc(100% - 68px);
-  box-sizing: border-box; }
+  padding: 12px 40px 35px 40px;
+  box-sizing: border-box;
+  font-weight: 200;
+  font-size: 0.9em; }
+  .document_preview h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 20px; }
 
 .title {
   border: 2px solid black;
@@ -273,15 +308,21 @@ main {
 
 .module_overview .document {
   background: #BFE3D5; }
+.module_overview .sort a.selected {
+  color: #BFE3D5; }
 
 .module_preview {
   border: 2px solid black;
   padding: 20px;
-  height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 32px 40px 35px 40px;
+  box-sizing: border-box;
+  font-weight: 200;
+  font-size: 0.9em; }
 
 .module_properties .tag {
-  background: #BFE3D5;
+  background: white;
   border-color: #BFE3D5; }
   .module_properties .tag.selected {
-    background: white; }
+    background: #BFE3D5; }
