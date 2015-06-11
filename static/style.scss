@@ -7,6 +7,9 @@ html,body{
 	font-weight: 500;
 	overflow: hidden;
 }
+*:focus{
+	outline: 0;
+}
 h2{
 	margin-top: 0;
 }
@@ -52,7 +55,7 @@ nav{
 			letter-spacing: 2px;
 		}
 		&.current#documentsbutton .navlink_button{
-			color: #F0606D;
+			color: #B3BDE2;
 		}
 		&.current#modulesbutton .navlink_button{
 			color: #BFE3D5;
@@ -131,6 +134,30 @@ main{
 	display: inline-block;
 	text-transform: uppercase;
 	margin-right: 20px;
+}
+.search{
+	border: 2px solid black;
+	// width: 300px;
+	// padding-right: 20px;
+	box-shadow: 5px 5px 0px black;
+	margin-bottom: 15px;
+	margin-bottom: 75px;
+	text-transform: uppercase;
+	font-size: 0.95em;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	margin-right: 5px;
+	position: relative;
+	&:after{
+		position: absolute;
+		top: 2px;
+		right: 10px;
+		content: '';
+		width: 20px;
+		height: 20px;
+		background: url('img/search_icon.svg');
+		background-size: 100%;
+	}
 }
 @import "css/document";
 @import "css/singledocument";

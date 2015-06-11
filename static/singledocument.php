@@ -2,20 +2,22 @@
 <? include "header.php" ?>
 <main>
 	<div class="container">
-		<div class="document_edit_navigation document_overview">
-			<div class="title" contenteditable>Title</div>
+		<div class="properties document_overview">
+			<div class="title">Title</div>
 			<div class="title_edit"contenteditable>Edit the title</div>
 			<div class="document_module_container">
 				
-				<div id="tag_list">
-					<div class="tag_item new_tag">New Tag</div>
-					<?for ($i=0; $i < 2 ; $i++):?><div class="tag_item">Test Tag</div><?endfor;?>
+				<div class="document_edit_tags">
+					<div class="tag new_tag">New Tag</div>
+					<?for ($i=0; $i < 2 ; $i++):?>
+						<div class="tag">Test Tag <?=$i?></div>
+					<?endfor;?>
 				</div>
 
 				<div class="add_module">
-					<div class="search_module" contenteditable>search for module <img src="img/search_icon.png" alt=""></div>
+					<div class="search" contenteditable>search for module</div>
 					<div class="insertModule">
-						+ create new module
+						+ insert text
 					</div>
 				</div>
 
@@ -26,7 +28,7 @@
 					<div class="modulebutton remove"><img src="img/delete_icon.svg" width="30" alt=""></div>
 				</div>
 				<? endfor;?>
-				<div class="module" id="edit_module">
+				<div class="edit_module">
 					<div class="module_title">Module 2</div class="module_title">
 					
 					<div class="modulebutton save"><img src="img/duplicate_icon2.svg" alt="" width="30px"></div>
@@ -36,12 +38,12 @@
 				<div class="module">
 					<div class="module_title">Module #<?=$i?></div>
 					<div class="modulebutton edit"><img src="img/edit_edit.svg" width="30" alt=""></div>
-					<div class="modulebutton remove"><img src="img/delete_icon.svg" width="30" alt=""></div>
+					<div class="modulebutton remove"><img src="img/delete_icon.svg" width="20" alt=""></div>
 				</div>
 				<? endfor;?>
 			</div>
 		</div>
-		<div class="document_edit_preview">
+		<div class="preview">
 			<div class="document_preview">
 				<div class="preview_header">
 					<div class="preview_title">Document title</div>

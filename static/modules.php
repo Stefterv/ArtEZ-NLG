@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="module_properties properties">
 			<h2>FILTER BY TITLE</h2>
-			<div class="search" contenteditable>seachbar</div>
+			<div class="search" contenteditable>searchbar</div>
 			<h2>FILTER BY TAG</h2>
 			<div class="document_tags">
 				<div class="tag selected">
@@ -33,6 +33,7 @@
 		</div>
 		<div class="preview">
 			<div class="module_preview">
+				<h2>Module Title</h2>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae libero praesentium officia doloribus minus, doloremque excepturi possimus quia aspernatur ducimus quae adipisci similique quos corporis maxime labore alias ab dolore nemo amet eos! Corrupti et, quam voluptatibus id minima aliquid voluptates, alias molestias error, accusantium cupiditate! Aliquam ipsa perspiciatis, eos ullam, dicta pariatur voluptas libero nulla hic explicabo, fuga nemo ut maiores illum dolore suscipit voluptatem vitae fugit officiis ad itaque labore? Eius consequuntur officia fuga, cum dolor rerum quos architecto. Molestias obcaecati quaerat, ipsum quia at doloribus expedita dolore eum, dignissimos nesciunt quasi necessitatibus laudantium odit porro? Consequuntur, earum.
 			</div>
 		</div>

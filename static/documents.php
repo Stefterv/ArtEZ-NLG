@@ -5,7 +5,7 @@
 		<div class="properties">
 			<div class="filter_header">
 				<h2>FILTER BY TITLE</h2>
-				<div class="search" contenteditable>seachbar</div>
+				<div class="search" contenteditable>searchbar</div>
 				<h2>FILTER BY TAG</h2>
 			</div>
 			<div class="document_tags">
@@ -19,7 +19,7 @@
 			<?endfor;?>
 			</div>
 		</div>
-		<div class="navigation document_overview">
+		<div class="navigation">
 			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#" class="selected">editted</a></div>
 			<div class="document_container">
 				<? for($i = 0; $i<50; $i++): ?>
