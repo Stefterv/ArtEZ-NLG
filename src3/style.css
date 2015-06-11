@@ -226,6 +226,9 @@ main {
   height: 100%;
   overflow-y: scroll; }
 
+.document_selected {
+  border: 2px solid black; }
+
 .preview_buttons {
   margin-bottom: 35px; }
   .preview_buttons a {
