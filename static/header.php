@@ -19,5 +19,4 @@
 		</a>
 		<a href="" class="createnew"><sup>+</sup> create new document</a>
 	</div>
-
 </header>

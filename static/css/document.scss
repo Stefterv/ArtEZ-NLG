@@ -5,14 +5,33 @@
 .search{
 	border: 2px solid black;
 	padding: 3px;
-	width: 300px;
+	// width: 300px;
+	// padding-right: 20px;
 	box-shadow: 5px 5px 0px black;
 	margin-bottom: 15px;
 }
 .sort{
 	margin-bottom: 5px;
+	position: relative;
+	text-align: right;
+	font-size: 0.75em;
+	&:before{
+		content: 'sort by';
+		text-transform: uppercase;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	a{
 		color: black;
+		border-right: 1px solid black;
+		padding-right: 5px;
+		margin-right: 5px;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:last-child{
+			border-right: 0;
+		}
 	}
 }
 .document{
