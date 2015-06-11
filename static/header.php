@@ -7,6 +7,18 @@
 </head>
 <body>
 <header>
-	<a <?if($page=="documents"):?>class="current"<?endif;?> href="documents.php">Documents</a>
-	<a <?if($page=="modules"):?>class="current"<?endif;?>href="modules.php">Modules</a>
+	<nav>
+		<div id="modulesbutton" class="navlink<?if($page=="modules"):?> current<?endif;?>" class="">
+			<a href="modules.php" class="navlink_button">
+				MODULES
+			</a>
+			<a href="" class="createnew">create new module</a>
+		</div>
+		<div id="documentsbutton" class="navlink <?if($page=="documents"):?>current<?endif;?>">
+			<a href="documents.php" class="navlink_button">
+				DOCUMENTS
+			</a>
+			<a href="" class="createnew">create new document</a>
+		</div>
+	</nav>
 </header>

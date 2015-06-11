@@ -1,0 +1,157 @@
+html, body {
+  overflow: auto; }
+
+.title {
+  color: #7db8df;
+  padding: 3px;
+  height: 32px;
+  margin-bottom: 0;
+  outline: none;
+  font-size: 1.6em; }
+
+.sort {
+  margin-bottom: 5px; }
+  .sort a {
+    color: black; }
+
+#search_edit {
+  width: auto;
+  display: inline-block;
+  padding: 7px 10px; }
+
+.add_module {
+  margin-top: 20px; }
+
+.search_module {
+  border: 2px solid black;
+  padding: 3px;
+  width: 300px;
+  display: inline-block;
+  box-shadow: 5px 5px 0px black;
+  margin-bottom: 15px;
+  padding: 7px 15px; }
+
+.module {
+  position: relative;
+  background: #7db8df;
+  margin-bottom: 10px;
+  padding: 5px;
+  margin-right: 20px;
+  height: 20px;
+  color: white; }
+  .module .module_title {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .module .modulebutton {
+    position: absolute;
+    top: 7px;
+    display: inline-block;
+    padding: 0px 3px;
+    font-size: 0.75em; }
+  .module .edit {
+    right: 35px;
+    top: 8px; }
+  .module .remove {
+    top: 9px;
+    right: 1px; }
+  .module .save {
+    right: 10px; }
+
+#edit_module {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  box-shadow: 5px 5px 0px black;
+  height: auto;
+  margin-bottom: 15px; }
+  #edit_module .module_title {
+    color: #7db8df;
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+
+.document_module_container h2 {
+  font-weight: 600;
+  margin-bottom: 0; }
+
+.insertModule {
+  display: inline-block;
+  position: relative;
+  padding: 10px 5px; }
+  .insertModule .insertMod {
+    display: inline-block; }
+  .insertModule .insertText {
+    position: absolute;
+    right: 5px;
+    display: inline-block; }
+  .insertModule .addButton {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1em;
+    line-height: 18px; }
+  .insertModule p {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+
+.title_edit {
+  border: 2px solid black;
+  padding: 3px;
+  display: inline-block;
+  box-shadow: 5px 5px 0px black;
+  margin-bottom: 25px;
+  padding: 7px 15px; }
+
+#tag_list {
+  display: inline-block; }
+
+.tag_item {
+  display: inline-block;
+  border: 2.3px solid #7db8df;
+  margin: 0 15px 15px 0;
+  padding: 5px; }
+
+.module_bottom_buttons {
+  position: absolute;
+  bottom: 0px; }
+
+.deleteButton {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 0; }
+
+.preview_header {
+  padding: 0;
+  margin: 0;
+  display: inline-block; }
+
+.preview_title {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  display: inline-block; }
+
+.preview_icons {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 15px; }
+
+.document_edit_navigation, .document_edit_preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(66% - 10px);
+  height: 100%; }
+
+.document_edit_preview {
+  height: auto;
+  width: calc(33% - 10px);
+  left: calc(66% + 10px); }

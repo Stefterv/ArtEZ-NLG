@@ -1,0 +1,41 @@
+Started at [2015/06/02 15:26]
+Config file is /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src2/deployment.ini
+
+Deploying Portfolio
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src2
+Ignoring ./.DS_Store                    
+Ignoring ./classes/.DS_Store            
+Ignoring ./config.php                   
+Ignoring ./deployment.log               
+Ignoring ./includes/vendor/dompdf/dompdf/.gitattributes
+Ignoring ./includes/vendor/dompdf/dompdf/.gitignore
+Ignoring ./includes/vendor/dompdf/dompdf/.gitmodules
+Ignoring ./includes/vendor/phenx/php-font-lib/.gitattributes
+Ignoring ./includes/vendor/phenx/php-font-lib/.gitignore
+Creating remote file .htdeployment.running
+
+Uploading:
+(1 of 7) /css/document.scss
+(2 of 7) /pages/modules.php
+(3 of 7) /scripts/documents.js (filters applied)
+(4 of 7) /scripts/modules.js (filters applied)
+(5 of 7) /style.css (filters applied)
+(6 of 7) /style.scss
+(7 of 7) /.htdeployment
+
+Renaming:
+(1 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document.scss
+(2 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/modules.php
+(3 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/documents.js
+(4 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/modules.js
+(5 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.css
+(6 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.scss
+(7 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/.htdeployment
+
+Cleaning temp/cache
+
+Deleting remote file .htdeployment.running
+
+Finished at [2015/06/02 15:26] (in 1 seconds)

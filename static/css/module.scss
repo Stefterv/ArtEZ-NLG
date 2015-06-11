@@ -1,11 +1,40 @@
 .module_overview{
 	.document{
-		background: #f8dcc2;
+		background: #BFE3D5;
 	}
+	.sort{
+		a {
+			&.selected{
+			color: #BFE3D5;
+			}
+		}
+	}
+}
+
+.module_title{
+	padding: 0;
+	margin: 0;
+	margin-right:200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .module_preview{
 	border: 2px solid black;
 	padding: 20px;
-	height: 100%;
 	box-sizing: border-box;
+	border: 2px solid black;
+	padding: 32px 40px 35px 40px;
+	box-sizing: border-box;
+	font-weight: 200;
+	font-size: 0.9em;
+}
+.module_properties{
+	.tag{
+		background: white;
+		border-color: #BFE3D5;
+		&.selected{
+			background: #BFE3D5;
+		}
+	}
 }
