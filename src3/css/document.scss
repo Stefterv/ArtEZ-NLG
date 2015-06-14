@@ -29,6 +29,14 @@
 	&.selected{
 		background: #B3BDE2;
 	}
+	a{
+		color: black;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+		&:hover{
+			color: blue;
+		}
+	}
 }
 .sort{
 	margin-bottom: 5px;
@@ -106,16 +114,30 @@
 }
 .preview_buttons{
 	margin-bottom: 35px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
 	a{
-		color: black;
 		text-decoration: none;
+	}
+	svg{
+		width: 35px;
+		height: 35px;
+	}
+	svg *{
+		stroke: black;
+	}
+	&.show{
+		display: block;
 	}
 }
 
-.document_preview{
+.document_preview_container{
 	border: 2px solid black;
-	padding: 12px 40px 35px 40px;
+	
 	box-sizing: border-box;
+	position: relative;
 	h2{
 		text-transform: uppercase;
 		font-weight: 600;
@@ -125,4 +147,7 @@
 	}
 	font-weight: 200;
 	font-size: 0.9em;
+	.document_preview{
+		padding: 12px 40px 35px 40px;
+	}
 }

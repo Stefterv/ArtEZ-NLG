@@ -135,6 +135,10 @@ main {
     background: url("img/search_icon.svg");
     background-size: 100%; }
 
+[contentEditable]:empty:not(:focus):after {
+  content: attr(data-placeholder);
+  opacity: 0.5; }
+
 .document_overview {
   position: relative; }
 
@@ -152,7 +156,7 @@ main {
   left: -4px;
   width: calc(100% + 8px); }
 
-.tag {
+.tag, #document_tags_addTag {
   display: inline-block;
   background: white;
   border-style: solid;
@@ -160,8 +164,14 @@ main {
   margin: 7px 4px;
   padding: 5px 13px;
   font-size: 0.95em; }
-  .tag.selected {
+  .tag.selected, .selected#document_tags_addTag {
     background: #B3BDE2; }
+  .tag a, #document_tags_addTag a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; }
+    .tag a:hover, #document_tags_addTag a:hover {
+      color: blue; }
 
 .sort {
   margin-bottom: 5px;
@@ -230,23 +240,35 @@ main {
   border: 2px solid black; }
 
 .preview_buttons {
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none; }
   .preview_buttons a {
-    color: black;
     text-decoration: none; }
+  .preview_buttons svg {
+    width: 35px;
+    height: 35px; }
+  .preview_buttons svg * {
+    stroke: black; }
+  .preview_buttons.show {
+    display: block; }
 
-.document_preview {
+.document_preview_container {
   border: 2px solid black;
-  padding: 12px 40px 35px 40px;
   box-sizing: border-box;
+  position: relative;
   font-weight: 200;
   font-size: 0.9em; }
-  .document_preview h2 {
+  .document_preview_container h2 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.25em;
     letter-spacing: 1px;
     margin-top: 20px; }
+  .document_preview_container .document_preview {
+    padding: 12px 40px 35px 40px; }
 
 html, body {
   overflow: auto; }
@@ -318,6 +340,9 @@ html, body {
   .module .save, .edit_module .save {
     right: 10px; }
 
+.module_container.show .edit_module {
+  display: block; }
+
 .edit_module {
   color: black;
   background-color: white;
@@ -330,7 +355,8 @@ html, body {
   height: auto;
   margin-bottom: 22px;
   font-weight: 200;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  display: none; }
   .edit_module .module_title {
     color: #ffd385;
     text-transform: uppercase;
@@ -396,9 +422,9 @@ html, body {
     right: 10px;
     top: 15px; }
 
-.document_edit_tags .tag {
+.document_edit_tags .tag, .document_edit_tags #document_tags_addTag {
   position: relative; }
-  .document_edit_tags .tag:after {
+  .document_edit_tags .tag:after, .document_edit_tags #document_tags_addTag:after {
     content: '';
     display: inline-block;
     width: 15px;
@@ -420,6 +446,14 @@ html, body {
   width: calc(33% - 20px);
   left: calc(66% + 10px); }
 
+#document_tags_addTag {
+  padding-top: 1px;
+  padding-bottom: 2px; }
+  #document_tags_addTag input {
+    width: 70px;
+    border: 0;
+    font-size: 0.95em; }
+
 .module_overview .document {
   background: #BFE3D5; }
 .module_overview .sort a.selected {
@@ -435,8 +469,8 @@ html, body {
   font-weight: 200;
   font-size: 0.9em; }
 
-.module_properties .tag {
+.module_properties .tag, .module_properties #document_tags_addTag {
   background: white;
   border-color: #BFE3D5; }
-  .module_properties .tag.selected {
+  .module_properties .tag.selected, .module_properties .selected#document_tags_addTag {
     background: #BFE3D5; }

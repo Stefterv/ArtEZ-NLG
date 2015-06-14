@@ -23,13 +23,12 @@
 				<input type="hidden" name="document_id" value="<?=$document->id?>">
 				<? endif; ?>
 				<input type="hidden" name="title" value="<?=$document->title?>" placeholder="Document Title">
-				<input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author">
+				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
-				<div class="document_attr" contenteditable data-input="title"></div>
-				<div class="document_attr" contenteditable data-input="author"></div>
+				<div class="title_edit" contenteditable data-input="title"></div>
+				<!-- <div class="document_attr" contenteditable data-input="author"></div> -->
 
-				<h1>Tags</h1>
 				<?
 					$tags = Tag_Link::getTags("Document",$document->id);
 					$tagString = "";
@@ -49,7 +48,7 @@
 				<div id="nodes">
 				<? $nodes = $document->getNodes(); ?>
 				<?
-					if($_POST['fromModule']){
+					if(isset($_POST['fromModule'])){
 						foreach(explode(",",$_POST['modules']) as $node){
 							$nodes[] = Module::findByID($node);
 						}
@@ -72,7 +71,9 @@
 			<script type="text/javascript" src="scripts/document_edit.js"></script>
 		</div>
 		<div class="preview">
-				<? $document->preview(); ?>
+			<div class="document_preview_container">
+					<? $document->preview(); ?>
+			</div>
 			<!-- <div class="button deleteButton">Delete</div> -->
 		</div>
 	</div>
