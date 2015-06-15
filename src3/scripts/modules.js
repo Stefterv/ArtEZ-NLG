@@ -27,6 +27,44 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 	}
 });
 
+$('.module_preview').on('click', '.module_edit_button', function(){
+	
+	var id = $(this).data("id");
+	$.ajax({
+			url : 'api/get_form_module.php', // url of php file
+			type : 'POST', // post
+			data: {
+				id: id
+			},
+			success : function (result) { // when succesful
+				var result = $(result);
+				result.find("[data-input]").on('input', function(event) {
+					event.preventDefault();
+					var inputName = $(this).data("input");
+					console.log(inputName);
+					$(this).closest("form").find("[name="+inputName+"]").val($(this).html());
+				});
+				$(".module_preview").html(result);
+			},
+			error : function () {
+			  $('.module_preview').html('Unable to load'); // if unable to load display this error message
+			}
+		})
+});
+
+$("#modulesbutton").on('click', '.createnew', function(event) {
+	event.preventDefault();
+	$.ajax({
+		url : 'api/get_form_module.php', // url of php file
+		type : 'POST', // post
+		data: {
+			id: "new"
+		},
+		success : function (result) { // when succesful
+			$(".module_preview").html(result);
+		}
+	});
+});
 $(".search").on('input', function() {
   var search = $(this).text();
   var list = $(".module_item").get();

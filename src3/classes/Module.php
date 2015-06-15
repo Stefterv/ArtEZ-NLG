@@ -6,6 +6,7 @@ class Module extends databaseObject{
 	public $deleted;
 	public $master;
 	public $changed;
+	public $created;
 	function getTags(){
 		return Tag_Link::getTags(1,$this->id);
 	}
@@ -33,6 +34,28 @@ class Module extends databaseObject{
 		?>
 		<h2><?=$this->title?></h2>
 		<p><?=$this->content?></p>
+		<?
+	}
+
+	function edit_preview(){
+		?><form action="api/module.php" method="POST">
+			<input type="hidden" name="module_id" value="<?=$this->id?>">
+			<input type="hidden" name="title" value="<?=$this->title?>">
+			<input type="hidden" name="content" value="<?=$this->content?>">
+			<div class="title_edit" contenteditable data-input="title"><?=$this->title?></div>
+			<div class="content_edit" contenteditable data-input="content"><?=$this->content?></div>
+			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
+			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
+			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
+		
+		</form>
+		<script>
+			$("[data-trigger]").on('click', function(event) {
+				event.preventDefault();
+				var el = $(this).data("trigger");
+				$("#"+el).trigger('click');
+			});
+		</script>
 		<?
 	}
 }
