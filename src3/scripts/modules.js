@@ -27,8 +27,6 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 	}
 });
 
-
-});
 $(".search").on('input', function() {
   var search = $(this).text();
   var list = $(".module_item").get();
