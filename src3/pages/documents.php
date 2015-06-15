@@ -11,16 +11,23 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 				$tags = Tag::findAll();
 			?>
 			<? foreach($tags as $tag): ?>
-			<div class="tag">
-				&nbsp;<?=$tag->title?>
-			</div>
+			<div class="tag"><?=$tag->title?></div>
 			<? endforeach; ?>
 		</div>
 		<div class="navigation">
-			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#" class="selected">editted</a></div>
+			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">editted</a></div>
 			<div class="document_container">
 				<? foreach($documents as $document): ?>
-				<div class="document" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
+				<?
+					$tags = Tag_Link::getTags("Document",$document->id);
+					$tagString = "";
+					if($tags){
+						foreach($tags as $tag){
+							$tagString .= "tag_".$tag->title." ";
+						}
+					}
+				?>
+				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
 					<?=$document->title?>
 				</div>
 				<? endforeach; ?>

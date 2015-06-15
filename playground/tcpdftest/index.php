@@ -3,10 +3,6 @@ require_once('tcpdf_include.php');
 
 class MC_TCPDF extends TCPDF {
   public function PrintChapter($file) {
-    // $this->AddPage('L', 'A4');
-    // $this->resetColumns();
-    // $this->setEqualColumns(4, 60.25);
-    
     $this->ChapterBody($file);
   }
 

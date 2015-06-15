@@ -248,6 +248,12 @@ main {
     letter-spacing: 1px;
     margin-top: 20px; }
 
+.document_container.filtered .document {
+  display: none; }
+
+.document_container.filtered .document.documentVisible {
+  display: block; }
+
 html, body {
   overflow: auto; }
 

@@ -126,3 +126,10 @@
 	font-weight: 200;
 	font-size: 0.9em;
 }
+
+.document_container.filtered .document {
+	display:none;
+}
+.document_container.filtered .document.documentVisible {
+	display:block;
+}
