@@ -104,8 +104,34 @@ main {
   padding-right: 75px; }
 
 .document_tags {
+  text-align: justify;
+  height: calc(100% - 167px);
   overflow-y: scroll;
-  text-align: justify; }
+  position: relative;
+  left: -4px;
+  width: calc(100% + 8px); }
+
+.tag, #document_tags_addTag {
+  display: inline-block;
+  background: white;
+  border-style: solid;
+  margin: 7px 4px;
+  padding: 5px 13px;
+  font-size: 0.95em; }
+  .tag.selected[data-pagetype="documents"], .selected[data-pagetype="documents"]#document_tags_addTag {
+    background: #B3BDE2; }
+  .tag.selected[data-pagetype="modules"], .selected[data-pagetype="modules"]#document_tags_addTag {
+    background: #BFE3D5; }
+  .tag a, #document_tags_addTag a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; }
+    .tag a:hover, #document_tags_addTag a:hover {
+      color: blue; }
+  .tag[data-pagetype="documents"], [data-pagetype="documents"]#document_tags_addTag {
+    border-color: #B3BDE2; }
+  .tag[data-pagetype="modules"], [data-pagetype="modules"]#document_tags_addTag {
+    border-color: #BFE3D5; }
 
 .button {
   border: 2px solid black;
@@ -480,3 +506,60 @@ html, body {
   border-color: #BFE3D5; }
   .module_properties .tag.selected, .module_properties .selected#document_tags_addTag {
     background: #BFE3D5; }
+
+.module_item {
+  background: #BFE3D5;
+  margin-bottom: 18px;
+  padding: 8px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: white;
+  position: relative; }
+  .module_item a {
+    color: white;
+    text-decoration: none; }
+  .module_item.indent-1 {
+    margin-left: 50px; }
+
+.module_title {
+  padding: 0;
+  margin: 0;
+  margin-right: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.module_date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em; }
+  .module_date * {
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 10px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-left-width: 1px; }
+
+.module_selected {
+  background: #CDF5E5; }
+
+textarea {
+  resize: none;
+  width: 100%;
+  border: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 200;
+  font-size: 0.9em; }
+
+.document_container.filtered .module_item {
+  display: none; }
+
+.document_container.filtered .module_item.documentVisible {
+  display: block; }
+  .document_container.filtered .module_item.documentVisible .module_preview {
+    padding: 12px 40px 35px 40px; }
