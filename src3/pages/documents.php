@@ -8,11 +8,20 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 			<div class="search" contenteditable>Search</div>
 			<h2>FILTER BY TAG</h2>
 			<?
-				$tags = Tag::findAll();
+				// $tags = Tag::findAll();
+				$tags = Tag::find("SELECT * FROM tags
+													WHERE (
+													 SELECT COUNT(*) 
+													        FROM tag_links WHERE tag_links.link_type = 'Document' AND tag_links.tag_id = tags.id
+													) > 0 AND title != '' ");
 			?>
-			<? foreach($tags as $tag): ?>
-			<div class="tag" data-pagetype="documents"><?=$tag->title?></div>
-			<? endforeach; ?>
+			<div class="document_tags">
+				<? foreach($tags as $tag): ?>
+				<div class="tag" data-pagetype="documents">
+					<?=$tag->title?>
+				</div>
+				<? endforeach; ?>
+			</div>
 		</div>
 		<div class="navigation">
 			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">editted</a></div>
@@ -42,7 +51,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 					<a href="download?document=" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
 				</div>
 				<div class="document_preview">
-					<i>click a document to preview</i>
+					<i style="margin: 32px 0 5px 0; display: inline-block;" >click a document to preview</i>
 				</div>
 			</div>
 		</div>

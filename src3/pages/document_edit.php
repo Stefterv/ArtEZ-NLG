@@ -26,7 +26,7 @@
 				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
-				<div class="title_edit" contenteditable data-input="title"></div>
+				<div class="title_edit" contenteditable data-input="title" data-placeholder="Add document title"></div>
 				<!-- <div class="document_attr" contenteditable data-input="author"></div> -->
 
 				<?
@@ -39,12 +39,14 @@
 					}
 				?>
 				<input id="document_tags" name="tags" type="text" value="<?=$tagString?>">
-
-				<h1 class="document_module_title">Modules</h1>
 				<div class="document_module_bottons">
-					<!-- <a id="addmodulemaster" class="insertModule" href="#">insert module</a> -->
+					<div class="document_search_module search">
+						<div class="document_search_module_field" contenteditable data-placeholder="search for module"></div>
+						<div class="document_search_result"></div>
+					</div>
 					<a id="addmodule" class="insertModule" href="#">insert text</a>
 				</div>
+				<script src="scripts/document_module.js"></script>
 				<div id="nodes">
 				<? $nodes = $document->getNodes(); ?>
 				<?
