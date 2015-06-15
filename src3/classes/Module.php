@@ -12,31 +12,28 @@ class Module extends databaseObject{
 	}
 	function display_edit($key){
 		?>
-		<div class="module_container">
-			<div class="module"><?=$this->title?>
-				<a href="#" class="modulebutton remove">x</a>
-			</div>
-			<div class="edit_module">
+		<div class="module">
 				<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
 				<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
-				<div class="module_content">
 				<input type="hidden" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=htmlentities($this->content)?>" placeholder="Content">
 				<div class="module_title" contenteditable data-inputvalue="title" data-placeholder="Title"><?=$this->title?></div>
 				
-				<div contenteditable data-inputvalue="content" data-placeholder="Text"><?=$this->content?></div>
+				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=$this->content?></div>
+				<div class="module_buttons">
+					<a href="#" class="module_move">reorder</a>
+					<a href="#" class="module_edit">edit</a>
+					<a href="#" class="module_remove">x</a>
 				</div>
-			</div>
 		</div>
 		<?
 	}
 	function display_preview(){
 		?>
-		<h2><?=$this->title?></h2>
+		<div class="preview_subtitle"><?=$this->title?></div>
 		<p><?=$this->content?></p>
 		<?
 	}
-
 	function edit_preview(){
 		?><form action="api/module.php" method="POST">
 			<input type="hidden" name="module_id" value="<?=$this->id?>">
@@ -56,6 +53,11 @@ class Module extends databaseObject{
 				$("#"+el).trigger('click');
 			});
 		</script>
+	function search_result(){
+		?>
+		<div class="result" data-id="<?=$this->id?>">
+			<?=$this->title?>
+		</div>
 		<?
 	}
 }

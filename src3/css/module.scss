@@ -86,3 +86,13 @@ textarea{
 	font-weight: 200;
 	font-size: 0.9em;
 }
+
+.document_container.filtered .module_item {
+	display:none;
+}
+.document_container.filtered .module_item.documentVisible {
+	display:block;
+	.module_preview{
+		padding: 12px 40px 35px 40px;
+	}
+}

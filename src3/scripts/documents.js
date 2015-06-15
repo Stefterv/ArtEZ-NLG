@@ -39,8 +39,8 @@ $(".document").click(function() {
     $(".document_preview").remove();
     $(".document_preview_container").append(data);
   });
-  
 });
+
 $(".preview_buttons a").on('click', function(event) {
   event.preventDefault();
   var url = $(this).attr('href')+$(".document_preview").data("id");

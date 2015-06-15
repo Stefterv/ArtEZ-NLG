@@ -3,14 +3,32 @@
 <main>
 	<div class="container">
 		<div class="properties">
+			<h2>FILTER BY TITLE</h2>
 			<div class="search" contenteditable>Search</div>
-			<a href="api/get_form_module.php" id="modulescreate">Create new from selection</a>
+			<a href="#" id="modulescreate">Create new from selection</a>
+			<h2>FILTER BY TAG</h2>
+			<?
+				$tags = Tag::findAll();
+			?>
+			<? foreach($tags as $tag): ?>
+			<div class="tag" data-pagetype="modules"><?=$tag->title?></div>
+			<? endforeach; ?>
 		</div>
 		<div class="navigation module_overview">
-			<div class="sort"><a href="#">name a-z</a><a href="#">created</a><a href="#" class="selected">editted</a></div>
+			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">editted</a></div>
+
 			<div class="document_container">
 				<? foreach($modules as $module): ?>
-				<div class="module_item" data-id=<?=$module->id;?> data-title="<?=$module->title;?>">
+				<?
+					$tags = Tag_Link::getTags("Module",$module->id);
+					$tagString = "";
+					if($tags){
+						foreach($tags as $tag){
+							$tagString .= "tag_".$tag->title." ";
+						}
+					}
+				?>
+				<div class="module_item <?=$tagString?>" data-id=<?=$module->id;?> data-title="<?=$module->title;?>">
 					<div class="module_title"><?=$module->title;?></div>
 					<? $date = date_create_from_format("Y-m-d H:i:s",$module->created); ?>
 					<div class="module_date">

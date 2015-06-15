@@ -11,7 +11,7 @@
 }
 
 .document_tags{
-	text-align: justify;
+	// text-align: justify;
 	height: calc(100% - 167px);
 	overflow-y: scroll;
 	position: relative;
@@ -115,8 +115,8 @@
 .preview_buttons{
 	margin-bottom: 35px;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 3px;
+	right: 3px;
 	display: none;
 	a{
 		text-decoration: none;
@@ -135,7 +135,7 @@
 
 .document_preview_container{
 	border: 2px solid black;
-	
+	min-height: 100%;
 	box-sizing: border-box;
 	position: relative;
 	h2{
@@ -147,6 +147,9 @@
 	}
 	font-weight: 200;
 	font-size: 0.9em;
+	.document_preview{
+		padding: 12px 40px 35px 40px;
+	}
 }
 
 .document_container.filtered .document {
