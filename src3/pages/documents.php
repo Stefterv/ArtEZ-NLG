@@ -17,9 +17,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 			?>
 			<div class="document_tags">
 				<? foreach($tags as $tag): ?>
-				<div class="tag" data-pagetype="documents">
-					<?=$tag->title?>
-				</div>
+				<div class="tag" data-pagetype="documents"><?=$tag->title?></div>
 				<? endforeach; ?>
 			</div>
 		</div>
