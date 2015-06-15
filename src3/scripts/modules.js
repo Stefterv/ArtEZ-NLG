@@ -65,6 +65,31 @@ $("#modulesbutton").on('click', '.createnew', function(event) {
 		}
 	});
 });
+
+$(".module_preview").on('submit',"#save_master_module", function(event) {
+	event.preventDefault();
+	var form = $(this);
+	var data = $(this).serialize();
+	data += "&submit=edit";
+	console.log(data);
+	$.ajax({
+		url: 'api/module.php',
+		type: 'POST',
+		data: data
+	})
+	.done(function(result) {
+		var editbutton = '<div class="module_edit_button" data-id='+data.id+'>EDIT</div>';
+		editbutton += result;
+		$(".module_preview").html(editbutton);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+	
+});
 $(".search").on('input', function() {
   var search = $(this).text().toLowerCase();
   console.log(search);

@@ -8,14 +8,13 @@ if(isset($_POST['submit'])):
 		}
 		$module->parser($_POST);
 		$module->submit(); 
-		header("Location: /module_edit?module={$module->id}");
+		$module->display_preview();
 	}
 	if($_POST['submit'] === "delete"){
 		$module = Module::findByID($_POST['module_id']);
 		if($module){
 			$module->deleted = 1;
 			$module->submit(); 
-			header("Location: /module_edit");
 		}
 	}
 endif;

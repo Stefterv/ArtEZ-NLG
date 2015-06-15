@@ -30,12 +30,13 @@ class Module extends databaseObject{
 	}
 	function display_preview(){
 		?>
+		
 		<div class="preview_subtitle"><?=$this->title?></div>
 		<p><?=$this->content?></p>
 		<?
 	}
 	function edit_preview(){
-		?><form action="api/module.php" method="POST">
+		?><form method="POST" id="save_master_module">
 			<input type="hidden" name="module_id" value="<?=$this->id?>">
 			<input type="hidden" name="title" value="<?=$this->title?>">
 			<input type="hidden" name="content" value="<?=$this->content?>">
