@@ -28,6 +28,7 @@ $(".tag").click(function() {
 $(".document").click(function() {
   $(".document_selected").removeClass('document_selected');
   $(this).addClass('document_selected');
+  $(".preview_buttons").addClass('show');
   var id = $(this).data("id");
   $.ajax({
     url: 'api/get_document.php',
@@ -35,16 +36,15 @@ $(".document").click(function() {
     data: {"id": id},
   })
   .done(function(data) {
-    console.log("success");
     $(".document_preview").remove();
-    $(".preview").append(data);
+    $(".document_preview_container").append(data);
   });
   
 });
-$(".preview_buttons .button").on('click', function(event) {
+$(".preview_buttons a").on('click', function(event) {
   event.preventDefault();
-  var url = $(this).attr('href');
-  window.location.href = url+$(".document_preview").data("id");
+  var url = $(this).attr('href')+$(".document_preview").data("id");
+  window.location.href = url;
 });
 
 $(".sortdocuments").click(function(event) {

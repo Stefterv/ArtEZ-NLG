@@ -8,5 +8,6 @@ if(!$module){
 	$module = new Module();
 }
 $module->id = 0;
+$module->title = "Text";
 $module->display_edit(0);
 ?>

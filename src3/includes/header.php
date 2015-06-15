@@ -25,7 +25,7 @@ $modulespages = array("module_edit","modules");
 			<a href="/" class="navlink_button">
 				DOCUMENTS
 			</a>
-			<a href="" class="createnew">create new document</a>
+			<a href="document_edit" class="createnew">create new document</a>
 		</div>
 	</nav>
 </header>
