@@ -1,17 +1,33 @@
 $( '.document_container' ).on( 'click', '.module_item', function () { // on click module
-	var id = $(this).data("id"); 
-	$.ajax({
-		url : 'api/get_modules.php', // url of php file
-		type : 'POST', // post
-		success : function (result) { // when succesful
-			var j = JSON.parse(result); //parse from json
-			$('.module_preview').html((j[id])); // replace #preview_content with content from json
-		},
-		error : function () {
-		  $('.document_container').html('Unable to load'); // if unable to load display this error message
-		}
-	})
-	$(this).toggleClass('selected');
+	$(this).toggleClass('module_selected');
+	var id = $(this).data("id");
+	
+	if ($('.document_container .module_selected').length > 1) {
+		$('.module_preview').hide();
+	}
+	if ($('.document_container .module_selected').length == 1) {
+		$('.module_preview').show();
+		id = $('.document_container .module_selected').data("id");
+		$.ajax({
+			url : 'api/get_modules.php', // url of php file
+			type : 'POST', // post
+			data: {
+				id: id
+			},
+			success : function (result) { // when succesful
+				$(".module_preview").html(result);
+			},
+			error : function () {
+			  $('.module_preview').html('Unable to load'); // if unable to load display this error message
+			}
+		})
+	}
+	if ($('.document_container .selected').length < 1) {
+		$('.module_preview').html('<p>Click on a module on the left hand side to select it for editing.</p><p>Or select more modules to be able to create a new document containing the selected modules.</p>'); // if unable to load display this error message
+	}
+});
+
+
 });
 $(".search").on('input', function() {
   var search = $(this).text();
