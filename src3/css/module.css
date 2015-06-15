@@ -1,0 +1,20 @@
+.module_overview .document {
+  background: #BFE3D5; }
+.module_overview .sort a.selected {
+  color: #BFE3D5; }
+
+.module_preview {
+  border: 2px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 32px 40px 35px 40px;
+  box-sizing: border-box;
+  font-weight: 200;
+  font-size: 0.9em; }
+
+.module_properties .tag {
+  background: white;
+  border-color: #BFE3D5; }
+  .module_properties .tag.selected {
+    background: #BFE3D5; }
