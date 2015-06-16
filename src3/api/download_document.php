@@ -168,7 +168,7 @@ foreach($pages as  $pageNum => $page){
 // ---------------------------------------------------------
 
 //Close and output PDF document
-$pdf->Output($document->title, 'D');
+$pdf->Output($document->title . ".pdf", 'D');
 function grid($value){
 	return floor(($value - 1)/4)*2 + 1;
 }
