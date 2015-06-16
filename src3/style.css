@@ -468,6 +468,16 @@ html, body {
     border: 0;
     font-size: 0.95em; }
 
+.module_buttons a {
+  text-decoration: none; }
+
+svg {
+  margin-top: 4px;
+  width: 35px;
+  height: 35px;
+  stroke: black;
+  stroke-width: 2; }
+
 .title_edit {
   margin-bottom: 30px;
   font-size: 0.95em;
