@@ -72,7 +72,7 @@ nav {
         top: -5px; }
 
 main {
-  height: calc(100% - 255px);
+  height: 100%;
   box-sizing: border-box; }
 
 .container {
@@ -167,6 +167,27 @@ main {
 [contentEditable]:empty:not(:focus):before {
   content: attr(data-placeholder);
   opacity: 0.5; }
+
+.footergradient {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */ }
 
 .document_overview {
   position: relative; }
@@ -265,7 +286,7 @@ main {
   overflow-y: scroll; }
 
 .document_selected {
-  border: 2px solid black; }
+  opacity: 0.65; }
 
 .preview_buttons {
   margin-bottom: 35px;
