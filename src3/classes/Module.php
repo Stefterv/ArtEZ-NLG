@@ -38,8 +38,11 @@ class Module extends databaseObject{
 	}
 	function display_document(){
 		?>
-		<h1><?=$this->title?></h1>
+		<? if($this->title != ""): ?>
+			<h1><?=$this->title?></h1>
+		<? endif; ?>
 		<p><?=nl2br($this->content)?></p>
+		<br>
 	<?
 	}
 	function edit_preview(){
