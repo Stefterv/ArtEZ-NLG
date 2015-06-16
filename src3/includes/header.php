@@ -1,5 +1,6 @@
 <?
-$documentspages = array("document_edit","documents");
+$documentspages = array("documents");
+$document_editpages = array("document_edit");
 $modulespages = array("module_edit","modules");
 ?>
 <!DOCTYPE html>
@@ -15,6 +16,10 @@ $modulespages = array("module_edit","modules");
 <body>
 <header>
 	<nav>
+		<? global $page_title;?>
+		<? if(isset($page_title)):?>
+		<div class="header_title"><?=$page_title?></div>
+		<? endif; ?>
 		<div id="modulesbutton" class="navlink <?currentPage($modulespages)?>" >
 			<a href="modules" class="navlink_button">
 				MODULES

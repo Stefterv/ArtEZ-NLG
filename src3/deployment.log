@@ -1,41 +1,146 @@
-Started at [2015/06/02 15:26]
-Config file is /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src2/deployment.ini
+Creating temporary directory /var/folders/s7/02sk39hn3c703wpdjx61h97c0000gn/T/deployment
+Started at [2015/06/15 16:10]
+Config file is /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/deployment.ini
 
 Deploying Portfolio
 Connecting to server
 Loaded remote .htdeployment file
-Scanning files in /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src2
+Scanning files in /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3
 Ignoring ./.DS_Store                    
 Ignoring ./classes/.DS_Store            
 Ignoring ./config.php                   
+Ignoring ./css/.DS_Store                
 Ignoring ./deployment.log               
 Ignoring ./includes/vendor/dompdf/dompdf/.gitattributes
 Ignoring ./includes/vendor/dompdf/dompdf/.gitignore
 Ignoring ./includes/vendor/dompdf/dompdf/.gitmodules
 Ignoring ./includes/vendor/phenx/php-font-lib/.gitattributes
 Ignoring ./includes/vendor/phenx/php-font-lib/.gitignore
+Ignoring ./pages/.DS_Store              
+Ignoring ./scripts/.DS_Store            
+Compressing /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/scripts/jquery-2.1.4.min.js
+Error while executing 'java' -jar '/Applications/Deployment.app/vendor/Google-Closure-Compiler/compiler.jar' --warning_level QUIET
+Exception in thread "main" java.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner : Unsupported major.minor version 51.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+
+Compressing /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/scripts/jquery-ui.min.js
+Error while executing 'java' -jar '/Applications/Deployment.app/vendor/Google-Closure-Compiler/compiler.jar' --warning_level QUIET
+Exception in thread "main" java.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner : Unsupported major.minor version 51.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
+	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+
 Creating remote file .htdeployment.running
 
 Uploading:
-(1 of 7) /css/document.scss
-(2 of 7) /pages/modules.php
-(3 of 7) /scripts/documents.js (filters applied)
-(4 of 7) /scripts/modules.js (filters applied)
-(5 of 7) /style.css (filters applied)
-(6 of 7) /style.scss
-(7 of 7) /.htdeployment
+( 1 of 38) /api/document.php
+( 2 of 38) /api/new_module.php
+( 3 of 38) /classes/Document.php
+( 4 of 38) /classes/Module.php
+( 5 of 38) /classes/Tag.php
+( 6 of 38) /css/document.scss
+( 7 of 38) /css/document_edit.scss
+( 8 of 38) /css/module.scss
+( 9 of 38) /includes/header.php
+(10 of 38) /media/
+(11 of 38) /media/icons/
+(12 of 38) /media/icons/delete_icon.svg
+(13 of 38) /media/icons/download_icon.svg
+(14 of 38) /media/icons/download_icon_color.svg
+(15 of 38) /media/icons/duplicate_icon.svg
+(16 of 38) /media/icons/duplicate_icon2.svg
+(17 of 38) /media/icons/edit_edit.svg
+(18 of 38) /media/icons/edit_icon.png
+(19 of 38) /media/icons/edit_icon.svg
+(20 of 38) /media/icons/edit_icon_whitty.svg
+(21 of 38) /media/icons/print_icon.svg
+(22 of 38) /media/icons/saved.svg
+(23 of 38) /media/icons/saved_dik.svg
+(24 of 38) /media/icons/search_icon.png
+(25 of 38) /media/icons/search_icon.svg
+(26 of 38) /media/icons/unsaved.svg
+(27 of 38) /media/icons/view_icon_final.svg
+(28 of 38) /pages/document_edit.php
+(29 of 38) /pages/documents.php
+(30 of 38) /pages/modules.php
+(31 of 38) /scripts/document_edit.js (filters applied)
+(32 of 38) /scripts/documents.js (filters applied)
+(33 of 38) /scripts/jquery.tagsinput.min.js (filters applied)
+(34 of 38) /scripts/modules.js (filters applied)
+(35 of 38) /scripts/scripts.js (filters applied)
+(36 of 38) /style.css (filters applied)
+(37 of 38) /style.scss
+(38 of 38) /.htdeployment
 
 Renaming:
-(1 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document.scss
-(2 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/modules.php
-(3 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/documents.js
-(4 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/modules.js
-(5 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.css
-(6 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.scss
-(7 of 7) Renaming /domains/steftervelde.nl/public_html/artez-nlg/.htdeployment
+( 1 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/document.php
+( 2 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/new_module.php
+( 3 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Document.php
+( 4 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Module.php
+( 5 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Tag.php
+( 6 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document.scss
+( 7 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document_edit.scss
+( 8 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/module.scss
+( 9 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/includes/header.php
+(10 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/delete_icon.svg
+(11 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/download_icon.svg
+(12 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/download_icon_color.svg
+(13 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/duplicate_icon.svg
+(14 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/duplicate_icon2.svg
+(15 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/edit_edit.svg
+(16 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/edit_icon.png
+(17 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/edit_icon.svg
+(18 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/edit_icon_whitty.svg
+(19 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/print_icon.svg
+(20 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/saved.svg
+(21 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/saved_dik.svg
+(22 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/search_icon.png
+(23 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/search_icon.svg
+(24 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/unsaved.svg
+(25 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/media/icons/view_icon_final.svg
+(26 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/document_edit.php
+(27 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/documents.php
+(28 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/modules.php
+(29 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/document_edit.js
+(30 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/documents.js
+(31 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/jquery.tagsinput.min.js
+(32 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/modules.js
+(33 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/scripts.js
+(34 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.css
+(35 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.scss
+(36 of 36) Renaming /domains/steftervelde.nl/public_html/artez-nlg/.htdeployment
+
+Deleting:
+(1 of 7) Deleting /pages/newMoudleFromMaster.php
+(2 of 7) Deleting /css/module.css
+(3 of 7) Deleting /css/library.scss
+(4 of 7) Deleting /css/library.css
+(5 of 7) Deleting /css/interface.scss
+(6 of 7) Deleting /css/interface.css
+(7 of 7) Deleting /css/header.scss
 
 Cleaning temp/cache
 
 Deleting remote file .htdeployment.running
 
-Finished at [2015/06/02 15:26] (in 1 seconds)
+Finished at [2015/06/15 16:10] (in 5 seconds)

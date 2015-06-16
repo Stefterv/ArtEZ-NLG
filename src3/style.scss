@@ -25,6 +25,11 @@ nav{
 	padding: 70px 0 50px 0;
 	margin: 0;
 	text-align: center;
+	.header_title{
+		font-size: 1.75rem;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
 	.navlink {
 		position: relative;
 		vertical-align: text-top;
@@ -189,14 +194,15 @@ main{
 		content: '';
 		width: 20px;
 		height: 20px;
-		background: url('img/search_icon.svg');
+		background: url('media/icons/search_icon.svg');
 		background-size: 100%;
 	}
 }
-[contentEditable]:empty:not(:focus):after{
+[contentEditable]:empty:not(:focus):before{
   content:attr(data-placeholder);
   opacity: 0.5;
 }
 @import "css/document";
 @import "css/document_edit";
+@import "css/module_edit";
 @import "css/module";

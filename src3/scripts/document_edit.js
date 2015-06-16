@@ -1,9 +1,6 @@
 $(function() {
   $( "#nodes" ).sortable({
-  	handle: ".module",
-		stop: function(event, ui) {
-			nodeForm();
-		}
+  	handle: ".module_move",
 	});
   $("#document_tags").tagsInput({
   	width: "auto",
@@ -21,7 +18,6 @@ $("#addmodule").on('click', function(event) {
 		var el = $(data);
 		$("#nodes").append(el);
 		moduleEvent(el);
-		nodeForm();
 	})
 });	
 $("[data-trigger]").on('click', function(event) {
@@ -29,7 +25,7 @@ $("[data-trigger]").on('click', function(event) {
 	var el = $(this).data("trigger");
 	$("#"+el).trigger('click');
 });
-$(".module_container").each(function(index, el) {
+$(".module").each(function(index, el) {
 	moduleEvent($(this));
 });
 
@@ -39,18 +35,20 @@ $(".module_container").each(function(index, el) {
 
 
 
-
+$("#submit").on('click', function(event) {
+	nodeForm();
+});
 
 
 function moduleEvent(el){
-	el.find("a.remove").on('click', function(event) {
+	el.find(".module_remove").on('click', function(event) {
 		event.preventDefault();
-		if($(this).closest('#nodes').find(".module_container").length > 1){
-	  	$(this).closest('.module_container').remove();
+		if($(this).closest('#nodes').find(".module").length > 1){
+	  	$(this).closest('.module').remove();
 		}
 	});
-	el.find(".module").on('click', function(event) {
-		$(this).closest('.module_container').toggleClass('show');
+	el.find(".module_edit").on('click', function(event) {
+		$(this).closest('.module').toggleClass('open');
 	});
 	el.find("[data-inputvalue]").on('input', function(event) {
 		var elName = $(this).data("inputvalue");
@@ -58,7 +56,7 @@ function moduleEvent(el){
 	});
 }
 function nodeForm(){
-	$("#nodes .module_container").each(function(i) {
+	$("#nodes .module").each(function(i) {
 		var index = $(this).index();
 		$(this).find("[name]").each(function(i, el) {
 			var text = $(this).attr("name");

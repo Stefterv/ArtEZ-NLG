@@ -28,11 +28,14 @@
 						}
 					}
 				?>
-				<div class="module_item <?=$tagString?>" data-id=<?=$module->id;?> data-title="<?=$module->title;?>" data-added="<?=$module->id?>" data-modified="<?=$module->changed?>">
-					<?=$module->title;?>
-				<? $date = date_create_from_format("Y-m-d H:i:s",$module->changed); ?>
-				
-				<div class="last_edit"><?=date_format($date, "H:i - d M");?></div>
+				<div class="module_item <?=$tagString?>" data-id=<?=$module->id;?> data-title="<?=$module->title;?>">
+					<div class="module_title"><?=$module->title;?></div>
+					<? $date = date_create_from_format("Y-m-d H:i:s",$module->created); ?>
+					<div class="module_date">
+						<div class="changed"><?=date_format($date, "m-d-Y");?></div>
+						<? $date = date_create_from_format("Y-m-d H:i:s",$module->changed); ?>
+						<div class="changed"><?=date_format($date, "m-d-Y");?></div>
+					</div>
 				</div>
 			<? endforeach; ?>
 			

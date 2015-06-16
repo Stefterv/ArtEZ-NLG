@@ -10,7 +10,7 @@ if(!$module){
 ?>
 <main>
 	<div class="interface">
-		<form action="api/module.php" method="POST">
+		<form  method="POST" id="save_master_module">
 			<input type="hidden" name="module_id" value="<?=$module->id?>">
 			<input type="hidden" name="master" value="<?=$module->master?>">
 			<input type="text" name="title" value="<?=$module->title?>" placeholder="Title">

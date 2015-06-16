@@ -4,6 +4,10 @@ include "../functions.php";
 // foreach ($modules as $module) {
 // 	$arrid[$module->id] = $module->content;
 // }
-$module = Module::findByID($_POST[id]);
+$id = $_POST[id];
+$module = Module::findByID($id);
+
+
+echo '<div class="module_edit_button" data-id="'.$id.'">EDIT</div>';
 $module->display_preview();
 ?>
