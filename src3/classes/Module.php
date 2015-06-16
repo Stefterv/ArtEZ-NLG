@@ -15,7 +15,7 @@ class Module extends databaseObject{
 		<div class="module">
 				<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
 				<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
-				<input type="hidden" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
+				<input type="text" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=htmlentities($this->content)?>" placeholder="Content">
 				<div class="module_title" contenteditable data-inputvalue="title" data-placeholder="Title"><?=$this->title?></div>
 				
