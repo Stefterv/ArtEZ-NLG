@@ -8,7 +8,11 @@
 			<a href="#" id="modulescreate">Create new from selection</a>
 			<h2>FILTER BY TAG</h2>
 			<?
-				$tags = Tag::findAll();
+				$tags = Tag::find("SELECT * FROM tags
+													WHERE (
+													 SELECT COUNT(*) 
+													        FROM tag_links WHERE tag_links.link_type = 'Module' AND tag_links.tag_id = tags.id
+													) > 0 AND title != '' ");
 			?>
 			<? foreach($tags as $tag): ?>
 			<div class="tag" data-pagetype="modules"><?=$tag->title?></div>

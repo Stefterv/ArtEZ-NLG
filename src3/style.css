@@ -108,7 +108,6 @@ main {
   padding-right: 75px; }
 
 .document_tags {
-  text-align: justify;
   height: calc(100% - 167px);
   overflow-y: scroll;
   position: relative;
