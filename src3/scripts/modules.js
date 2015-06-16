@@ -3,7 +3,7 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 	var id = $(this).data("id");
 	
 	if ($('.document_container .module_selected').length > 1) {
-		$('.module_preview').hide();
+		$('.module_preview').html('<a href="#" id="modulescreate">Create new from selection</a>');
 	}
 	if ($('.document_container .module_selected').length == 1) {
 		$('.module_preview').show();
@@ -22,7 +22,7 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 			}
 		})
 	}
-	if ($('.document_container .selected').length < 1) {
+	if ($('.document_container .module_selected').length < 1) {
 		$('.module_preview').html('<p>Click on a module on the left hand side to select it for editing.</p><p>Or select more modules to be able to create a new document containing the selected modules.</p>'); // if unable to load display this error message
 	}
 });
@@ -155,7 +155,7 @@ $(".sortdocuments").click(function(event) {
   // .appendTo( $list );
 });
 
-$("#modulescreate").on('click', function(event) {
+$(".module_preview").on('click',"#modulescreate", function(event) {
 	event.preventDefault();
 	var data = {
 		"fromModule": true

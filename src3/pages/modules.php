@@ -5,7 +5,7 @@
 		<div class="properties">
 			<h2>FILTER BY TITLE</h2>
 			<div class="search" contenteditable>Search</div>
-			<a href="#" id="modulescreate">Create new from selection</a>
+			
 			<h2>FILTER BY TAG</h2>
 			<?
 				$tags = Tag::find("SELECT * FROM tags
