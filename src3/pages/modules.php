@@ -4,8 +4,9 @@
 	<div class="container">
 		<div class="properties">
 			<h2>FILTER BY TITLE</h2>
-			<div class="search" contenteditable>Search</div>
-			
+
+			<div data-placeholder="Search" class="search" contenteditable></div>
+
 			<h2>FILTER BY TAG</h2>
 			<?
 				$tags = Tag::find("SELECT * FROM tags
