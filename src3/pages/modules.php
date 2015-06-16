@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="properties">
 			<h2>FILTER BY TITLE</h2>
-			<div class="search" contenteditable>Search</div>
+			<div data-placeholder="Search" class="search" contenteditable></div>
 			<a href="#" id="modulescreate">Create new from selection</a>
 			<h2>FILTER BY TAG</h2>
 			<?
