@@ -143,6 +143,7 @@ main{
 	margin: 7px 4px;
 	padding: 5px 13px;
 	font-size: 0.95em;
+	cursor:pointer;
 	&.selected{
 		&[data-pagetype="documents"] {
 			background: #B3BDE2;

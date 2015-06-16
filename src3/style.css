@@ -120,7 +120,8 @@ main {
   border-style: solid;
   margin: 7px 4px;
   padding: 5px 13px;
-  font-size: 0.95em; }
+  font-size: 0.95em;
+  cursor: pointer; }
   .tag.selected[data-pagetype="documents"], .selected[data-pagetype="documents"]#document_tags_addTag {
     background: #B3BDE2; }
   .tag.selected[data-pagetype="modules"], .selected[data-pagetype="modules"]#document_tags_addTag {

@@ -77,7 +77,7 @@
 				<div class="preview_buttons show">
 					<a href="document_edit?document=" alt="Edit Document"><?=file_get_contents("media/icons/edit_icon.svg")?></a>
 					<a href="document_edit?duplicate=" alt="Duplicate Document"><?=file_get_contents("media/icons/duplicate_icon.svg")?></a>
-					<a href="/api/download_document.php?document=" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
+					<a href="/api/download_document.php?document=<?=$document->id?>" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
 				</div>
 					<? $document->preview(); ?>
 			</div>
