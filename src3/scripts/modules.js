@@ -72,13 +72,14 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 	var data = $(this).serialize();
 	data += "&submit=edit";
 	console.log(data);
+	id = $('.document_container .module_selected').data("id");
 	$.ajax({
 		url: 'api/module.php',
 		type: 'POST',
 		data: data
 	})
 	.done(function(result) {
-		var editbutton = '<div class="module_edit_button" data-id='+data.id+'>EDIT</div>';
+		var editbutton = '<div class="module_edit_button" data-id='+id+'>EDIT</div>';
 		editbutton += result;
 		$(".module_preview").html(editbutton);
 	})

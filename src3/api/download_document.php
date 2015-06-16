@@ -120,6 +120,7 @@ foreach($modules as $module){
 	$module->display_document();
 	$html = ob_get_clean();
 	$pageNum = floor(($pdf->getPage() - 1)/2)*2 + 1;
+	// $pageNum = grid($pdf->getPage());
 	error_log($pageNum);
 	if(!isset($pages[$pageNum])){
 		$pages[$pageNum] = array();
@@ -127,8 +128,9 @@ foreach($modules as $module){
 	$pages[$pageNum][] = $module;
 	$pdf->PrintChapter($html);
 }
-
+$i = 1;
 foreach($pages as  $pageNum => $page){
+	error_log("pages:".count($pages));
 	$pdf->setPage($pageNum,false);
 	$pagewidth = 297 - 7 * 2;
 	$pagewidth -= 3*14; // remove margins
@@ -142,7 +144,7 @@ foreach($pages as  $pageNum => $page){
 		<table cellpadding="0" cellspacing="0">
 		 <tr>
 		  <td width="30" height="60"></td>
-		  <td width="145" height="60" align="center" style="font-size:3em"><p style="font-weight:bold;"><?=$pdf->getPage()?> / <?=$pdf->getNumPages()?></p></td>
+		  <td width="145" height="60" align="center" style="font-size:3em"><p style="font-weight:bold;"><?=$i?> / <?=count($pages)?></p></td>
 		  <td width="30" height="60"></td>
 		 </tr>
 		 <? foreach($page as $module): ?>
@@ -158,6 +160,7 @@ foreach($pages as  $pageNum => $page){
 	<? 
 	$html = ob_get_clean();
 	$pdf->writeHTMLCell($w, $h,$x,$y,$html,0,0,false,true,'',true);
+	$i++;
 }
 // write module html to pdf
 //
@@ -165,6 +168,8 @@ foreach($pages as  $pageNum => $page){
 // ---------------------------------------------------------
 
 //Close and output PDF document
-$pdf->Output('example_010.pdf', 'D');
-
+$pdf->Output($document->title, 'D');
+function grid($value){
+	return floor(($value - 1)/4)*2 + 1;
+}
 ?>

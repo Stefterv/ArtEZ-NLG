@@ -21,24 +21,28 @@ class Module extends databaseObject{
 				
 				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=$this->content?></div>
 				<div class="module_buttons">
-					<a href="#" class="module_move">reorder</a>
-					<a href="#" class="module_edit">edit</a>
-					<a href="#" class="module_remove">x</a>
+					<!-- <a href="#" class="module_move">reorder</a> -->
+					<a href="#" alt="Re-order module" class="module_move"><?=file_get_contents("media/icons/rearrange3.svg")?></a>
+					<a href="#" alt="Edit module" class="module_edit"><?=file_get_contents("media/icons/edit_icon.svg")?></a>
+					<a href="#" alt="Delete module" class="module_remove"><?=file_get_contents("media/icons/binoption2.svg")?></a>
 				</div>
 		</div>
 		<?
 	}
 	function display_preview(){
 		?>
-		
+
 		<div class="preview_subtitle"><?=$this->title?></div>
 		<p><?=$this->content?></p>
 		<?
 	}
 	function display_document(){
 		?>
-		<h1><?=$this->title?></h1>
+		<? if($this->title != ""): ?>
+			<h1><?=$this->title?></h1>
+		<? endif; ?>
 		<p><?=nl2br($this->content)?></p>
+		<br>
 	<?
 	}
 	function edit_preview(){
