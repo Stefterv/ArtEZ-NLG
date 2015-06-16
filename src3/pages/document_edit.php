@@ -66,7 +66,9 @@
 				<? endif; ?>
 				</div>
 				<button type="submit" id="submit" name="submit" value="edit" style="display: none">Submit</button>
-				<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
+				<div class="document_buttons">
+					<div data-trigger="submit"><?=file_get_contents("media/icons/unsaved.svg")?>Save</div><div data-trigger="delete"><?=file_get_contents("media/icons/binoption2.svg")?>Delete</div>
+				</div>
 				<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
 			</form>
 			<script type="text/javascript" src="scripts/jquery.tagsinput.min.js"></script>

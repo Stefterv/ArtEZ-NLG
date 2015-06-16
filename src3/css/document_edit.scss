@@ -110,7 +110,6 @@ html, body{
 	}
 	svg{
 		stroke: white;
-		stroke-width: 4;
 	}
 	.module_title{
 		color: white;
@@ -225,6 +224,19 @@ html, body{
 		width: 70px;
 		border: 0;
 		font-size: 0.95em;
+	}
+}
+.document_buttons>*{
+	display: inline-block;
+	position: relative;
+	padding: 0px 10px;
+	padding-left: 30px;
+	svg{
+		position: absolute;
+		top: -12px;
+		left: 0;
+		width: 30px;
+		height: 30px;
 	}
 }
 .document_module_bottons{

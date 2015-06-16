@@ -405,8 +405,7 @@ html, body {
     border: 2px solid black;
     background: #4fb2b8; }
   .module svg {
-    stroke: white;
-    stroke-width: 4; }
+    stroke: white; }
   .module .module_title {
     color: white; }
 
@@ -503,6 +502,18 @@ html, body {
     width: 70px;
     border: 0;
     font-size: 0.95em; }
+
+.document_buttons > * {
+  display: inline-block;
+  position: relative;
+  padding: 0px 10px;
+  padding-left: 30px; }
+  .document_buttons > * svg {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 30px;
+    height: 30px; }
 
 .document_module_bottons {
   position: relative;
