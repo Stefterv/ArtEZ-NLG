@@ -7,6 +7,7 @@ if(isset($_POST['submit'])):
 			$module = new Module();
 		}
 		$module->parser($_POST);
+		Tag::saveTags($module,$_POST['tags']);
 		$module->submit(); 
 		$module->display_preview();
 	}

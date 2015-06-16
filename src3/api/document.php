@@ -31,43 +31,8 @@ if(isset($_POST['submit'])):
 				$link->submit();
 			}
 		}
-
-		$tags = explode(",",$_POST['tags']);
-		$currentTags = Tag_Link::getTags("Document",$document->id);
-		foreach($tags as $tagName){
-			// check if exists
-			$tag = Tag::findByName($tagName);
-			// if not make link
-			if(!$tag){
-				$tag = new Tag();
-				$tag->title = $tagName;
-				$tag->submit();
-			}
-			$properties = array("link_type="=>"Document","item_id="=>$document->id,"tag_id="=>$tag->id);
-			$tag_link = Tag_Link::findSingleByAttr($properties);
-			if(!$tag_link){
-				$tag_link = new Tag_Link();
-				$tag_link->link_type = "Document";
-				$tag_link->item_id = $document->id;
-				$tag_link->tag_id = $tag->id;
-				$tag_link->submit();
-			}
-			if($currentTags){
-				foreach($currentTags as $key => $currentTag){
-					if($currentTag->id == $tag->id){
-						unset($currentTags[$key]);
-						break;
-					}
-				}
-			}
-		}
-		if($currentTags){	
-			foreach($currentTags as $key => $currentTag){
-				// $currentTag->remove();
-				$tagLink = Tag_Link::findSingleByAttr(array("link_type="=>"Document","tag_id="=>$currentTag->id,"item_id="=>$document->id));
-				$tagLink->remove();
-			}
-		}
+		Tag::saveTags($document,$_POST['tags']);
+		
 		header("Location: /document_edit?document={$document->id}");
 	}
 	if($_POST['submit'] == "delete"){

@@ -160,10 +160,11 @@ $("#modulescreate").on('click', function(event) {
 		"fromModule": true
 	};
 	data.modules = [];
-	$(".document_container .module_item.selected").each(function(index, el) {
+	$(".document_container .module_item.module_selected").each(function(index, el) {
 		data.modules[index] = $(this).data("id");
 	});
 	makePostRequest("document_edit",data);
+	// console.log(data);
 });
 
 function makePostRequest(url, data) {

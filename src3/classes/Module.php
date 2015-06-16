@@ -36,24 +36,42 @@ class Module extends databaseObject{
 		<?
 	}
 	function edit_preview(){
-		?><form method="POST" id="save_master_module">
+	?><form method="POST" id="save_master_module">
 			<input type="hidden" name="module_id" value="<?=$this->id?>">
 			<input type="hidden" name="title" value="<?=$this->title?>">
 			<input type="hidden" name="content" value="<?=$this->content?>">
+			<?
+					$tags = Tag_Link::getTags("Module",$this->id);
+					$tagString = "";
+					if($tags){
+						foreach($tags as $tag){
+							$tagString .= $tag->title.",";
+						}
+					}
+				?>
 			<div class="title_edit" contenteditable data-input="title"><?=$this->title?></div>
+			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
 			<div class="content_edit" contenteditable data-input="content"><?=$this->content?></div>
 			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
 			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
 			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
 		
 		</form>
+		<script type="text/javascript" src="scripts/jquery.tagsinput.min.js"></script>
 		<script>
+		$("#module_tags").tagsInput({
+		  	width: "auto",
+		  	height: "auto",
+		  	'defaultText':'Create Tag'
+		  });
 			$("[data-trigger]").on('click', function(event) {
 				event.preventDefault();
 				var el = $(this).data("trigger");
 				$("#"+el).trigger('click');
 			});
 		</script>
+	<?
+	}
 	function search_result(){
 		?>
 		<div class="result" data-id="<?=$this->id?>">

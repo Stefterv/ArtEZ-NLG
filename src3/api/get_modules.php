@@ -4,7 +4,7 @@ include "../functions.php";
 // foreach ($modules as $module) {
 // 	$arrid[$module->id] = $module->content;
 // }
-$id = $_POST[id];
+$id = $_POST['id'];
 $module = Module::findByID($id);
 
 
