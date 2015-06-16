@@ -1,13 +1,15 @@
-$editdocument_color : #FFD385;
 html, body{
 	overflow: auto;
 }
 .document_overview{
 	width: calc(100%/3*2);
 	padding-right: $margin/2;
+	.tag{
+		border-color: $editdocumentcolor;
+	}
 }
 .title{
-	color:$editdocument_color;
+	color:$editdocumentcolor;
 	padding: 3px;
 	margin-bottom: 12px;
 	text-transform: uppercase;
@@ -44,6 +46,7 @@ html, body{
 	width: 25%;
 	display: inline-block;
 }
+
 // .edit_module{
 // 	@extend .module;
 // 	color: black;
@@ -59,16 +62,16 @@ html, body{
 // 	font-weight: 200;
 // 	font-size: 0.9em;
 // 	.module_title{
-// 		color: $editdocument_color;
+// 		color: $editdocumentcolor;
 // 		text-transform: uppercase;
 // 		font-weight: 600;
 // 	}
 // }
 .module{
-	background: $editdocument_color;
+	background: $editdocumentcolor;
 	color: black;
 	box-sizing: border-box;
-	padding: 15px;
+	padding: 10px 15px;
 	padding-right: 25px;
 	margin-right: 5px;
 	margin-bottom: 22px;
@@ -80,6 +83,9 @@ html, body{
 		position: absolute;
 		top: 0;
 		right: 0;
+		svg{
+			height: 28px;
+		}
 	}
 
 	&.open{
@@ -87,17 +93,27 @@ html, body{
 		box-shadow: 5px 5px 0px black;
 		background: white;
 		.module_title{
-			color: $editdocument_color;
-			text-transform: uppercase;
+			color: $editdocumentcolor;
 			font-weight: 600;
 		}
 		.module_text{
 			display: block;
 		}
+		svg{
+			stroke: black;
+		}
 	}
 	&.ui-sortable-helper{
 		box-shadow: 5px 5px 0px black;
 		border: 2px solid black;
+		background: $editdocumentcolorhover;
+	}
+	svg{
+		stroke: white;
+		stroke-width: 4;
+	}
+	.module_title{
+		color: white;
 	}
 }
 
@@ -152,7 +168,7 @@ html, body{
 	.result{
 		padding: 5px;
 		&:hover{
-			background: $editdocument_color;
+			background: $editdocumentcolor;
 			cursor: pointer;
 		}
 	}
