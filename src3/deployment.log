@@ -1,4 +1,4 @@
-Started at [2015/06/15 22:45]
+Started at [2015/06/16 13:43]
 Config file is /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/deployment.ini
 
 Deploying Portfolio
@@ -20,55 +20,43 @@ Ignoring ./scripts/.DS_Store
 Creating remote file .htdeployment.running
 
 Uploading:
-( 1 of 22) /api/document.php
-( 2 of 22) /api/get_modules.php
-( 3 of 22) /api/new_module.php
-( 4 of 22) /api/search_module.php
-( 5 of 22) /classes/Module.php
-( 6 of 22) /css/document.css (filters applied)
-( 7 of 22) /css/document.scss
-( 8 of 22) /css/document_edit.scss
-( 9 of 22) /css/module.css (filters applied)
-(10 of 22) /css/module.scss
-(11 of 22) /includes/header.php
-(12 of 22) /index.php
-(13 of 22) /pages/document_edit.php
-(14 of 22) /pages/documents.php
-(15 of 22) /pages/modules.php
-(16 of 22) /scripts/document_edit.js (filters applied)
-(17 of 22) /scripts/document_module.js (filters applied)
-(18 of 22) /scripts/documents.js (filters applied)
-(19 of 22) /scripts/modules.js (filters applied)
-(20 of 22) /style.css (filters applied)
-(21 of 22) /style.scss
-(22 of 22) /.htdeployment
+( 1 of 14) /api/document.php
+( 2 of 14) /api/get_form_module.php
+( 3 of 14) /api/get_modules.php
+( 4 of 14) /api/module.php
+( 5 of 14) /classes/Module.php
+( 6 of 14) /classes/Tag.php
+( 7 of 14) /css/module_edit.css (filters applied)
+( 8 of 14) /css/module_edit.scss
+( 9 of 14) /pages/module_edit.php
+(10 of 14) /pages/modules.php
+(11 of 14) /scripts/modules.js (filters applied)
+(12 of 14) /style.css (filters applied)
+(13 of 14) /style.scss
+(14 of 14) /.htdeployment
 
 Renaming:
-( 1 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/document.php
-( 2 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/get_modules.php
-( 3 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/new_module.php
-( 4 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/search_module.php
-( 5 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Module.php
-( 6 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document.css
-( 7 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document.scss
-( 8 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/document_edit.scss
-( 9 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/module.css
-(10 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/module.scss
-(11 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/includes/header.php
-(12 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/index.php
-(13 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/document_edit.php
-(14 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/documents.php
-(15 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/modules.php
-(16 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/document_edit.js
-(17 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/document_module.js
-(18 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/documents.js
-(19 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/modules.js
-(20 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.css
-(21 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.scss
-(22 of 22) Renaming /domains/steftervelde.nl/public_html/artez-nlg/.htdeployment
+( 1 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/document.php
+( 2 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/get_form_module.php
+( 3 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/get_modules.php
+( 4 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/api/module.php
+( 5 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Module.php
+( 6 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/classes/Tag.php
+( 7 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/module_edit.css
+( 8 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/css/module_edit.scss
+( 9 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/module_edit.php
+(10 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/pages/modules.php
+(11 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/scripts/modules.js
+(12 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.css
+(13 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/style.scss
+(14 of 14) Renaming /domains/steftervelde.nl/public_html/artez-nlg/.htdeployment
+
+Deleting:
+(1 of 2) Deleting /css/module.css
+(2 of 2) Deleting /css/document.css
 
 Cleaning temp/cache
 
 Deleting remote file .htdeployment.running
 
-Finished at [2015/06/15 22:45] (in 26 seconds)
+Finished at [2015/06/16 13:43] (in 3 seconds)

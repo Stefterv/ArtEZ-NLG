@@ -8,6 +8,9 @@ if(isset($_POST['submit'])):
 		}
 		$module->parser($_POST);
 		Tag::saveTags($module,$_POST['tags']);
+		if($module->created = ""){
+			$module->created = date("m-d-Y");
+		}
 		$module->submit(); 
 		$module->display_preview();
 	}

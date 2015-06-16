@@ -95,6 +95,10 @@ html, body{
 			display: block;
 		}
 	}
+	&.ui-sortable-helper{
+		box-shadow: 5px 5px 0px black;
+		border: 2px solid black;
+	}
 }
 
 .insertModule {
@@ -205,5 +209,21 @@ html, body{
 		width: 70px;
 		border: 0;
 		font-size: 0.95em;
+	}
+}
+.document_module_bottons{
+	position: relative;
+	margin-top: 25px;
+}
+.insertModule{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: black;
+	text-decoration: none;
+	&:before{
+		content: '+ ';
+		position: relative;
+		top: -5px;
 	}
 }

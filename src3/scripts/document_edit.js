@@ -1,6 +1,8 @@
 $(function() {
   $( "#nodes" ).sortable({
   	handle: ".module_move",
+		axis: "y",
+		containment: "parent"
 	});
   $("#document_tags").tagsInput({
   	width: "auto",
@@ -52,7 +54,7 @@ function moduleEvent(el){
 	});
 	el.find("[data-inputvalue]").on('input', function(event) {
 		var elName = $(this).data("inputvalue");
-		$(this).closest(".module_container").find("[data-inputname="+elName+"]").val($(this).html());
+		$(this).closest(".module").find("[data-inputname="+elName+"]").val($(this).html());
 	});
 }
 function nodeForm(){

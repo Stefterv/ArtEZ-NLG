@@ -201,7 +201,14 @@ main{
   content:attr(data-placeholder);
   opacity: 0.5;
 }
+.save-icon{
+
+}
+.delete-icon{
+
+}
 @import "css/document";
 @import "css/document_edit";
 @import "css/module_edit";
 @import "css/module";
+@import "css/print";
