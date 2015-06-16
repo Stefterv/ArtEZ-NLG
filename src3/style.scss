@@ -1,4 +1,11 @@
 $margin: 100px;
+$documentscolor: #8DDDD1;
+$editdocumentcolor : #1D9099;
+$modulescolor: #EE382D;
+
+$modulescolorhover: rgb(243,116,108);
+$documentcolorhover: rgb(185,239,230);
+$editdocumentcolorhover: rgb(79,178,184);
 html,body{
 	margin: 0;
 	width: 100%;
@@ -60,10 +67,10 @@ nav{
 			letter-spacing: 2px;
 		}
 		&.current#documentsbutton .navlink_button{
-			color: #B3BDE2;
+			color: $documentscolor;
 		}
 		&.current#modulesbutton .navlink_button{
-			color: #BFE3D5;
+			color: $modulescolor;
 		}
 		&.current .createnew{
 			display: block;
@@ -146,10 +153,10 @@ main{
 	cursor:pointer;
 	&.selected{
 		&[data-pagetype="documents"] {
-			background: #B3BDE2;
+			background: $documentscolor;
 		}
 		&[data-pagetype="modules"] {
-			background: #BFE3D5;
+			background: $modulescolor;
 		}
 	}
 	a{
@@ -161,10 +168,10 @@ main{
 		}
 	}
 	&[data-pagetype="documents"] {
-		border-color: #B3BDE2;
+		border-color: $documentscolor;
 	}
 	&[data-pagetype="modules"] {
-		border-color: #BFE3D5;
+		border-color: $modulescolor;
 	}
 }
 .button{
