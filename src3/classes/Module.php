@@ -35,5 +35,11 @@ class Module extends databaseObject{
 		<p><?=$this->content?></p>
 		<?
 	}
+	function display_document(){
+		?>
+		<h1><?=$this->title?></h1>
+		<p><?=nl2br($this->content)?></p>
+		<?
+	}
 }
 ?>

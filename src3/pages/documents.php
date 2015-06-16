@@ -39,7 +39,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 				<div class="preview_buttons">
 					<a href="document_edit?document=" alt="Edit Document"><?=file_get_contents("media/icons/edit_icon.svg")?></a>
 					<a href="document_edit?duplicate=" alt="Duplicate Document"><?=file_get_contents("media/icons/duplicate_icon.svg")?></a>
-					<a href="download?document=" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
+					<a href="/api/download_document.php?document=" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
 				</div>
 				<div class="document_preview">
 					<i>click a document to preview</i>
