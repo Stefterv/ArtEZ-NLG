@@ -5,7 +5,7 @@
 	 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <g>
 	<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="45.6" cy="41.4" r="16.8"/>
-	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M75,75c0.4,0.5,0.2,1.4-0.6,2l0,0c-0.7,0.6-1.7,0.6-2.1,0.1
-		L55.7,56.4c-0.4-0.5-0.2-1.4,0.6-2l0,0c0.7-0.6,1.7-0.6,2.1-0.1L75,75z"/>
+	<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M75,75c0.4,0.5,0.2,1.4-0.6,2l0,0
+		c-0.7,0.6-1.7,0.6-2.1,0.1L55.7,56.4c-0.4-0.5-0.2-1.4,0.6-2l0,0c0.7-0.6,1.7-0.6,2.1-0.1L75,75z"/>
 </g>
 </svg>
