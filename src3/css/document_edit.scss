@@ -76,6 +76,7 @@ html, body{
 	margin-right: 5px;
 	margin-bottom: 22px;
 	position: relative;
+	cursor:pointer;
 	.module_text{
 		display: none;
 	}
@@ -264,4 +265,7 @@ svg{
 	height: 35px; 
 	stroke: black;
 	stroke-width:2;
+}
+#printDocument {
+	cursor:pointer;
 }

@@ -258,7 +258,8 @@ main {
   text-transform: uppercase;
   font-size: 0.9em;
   color: white;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .document a {
     color: white;
     text-decoration: none; }
@@ -380,7 +381,8 @@ html, body {
   padding-right: 25px;
   margin-right: 5px;
   margin-bottom: 22px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .module .module_text {
     display: none; }
   .module .module_buttons {
@@ -539,6 +541,9 @@ svg {
   height: 35px;
   stroke: black;
   stroke-width: 2; }
+
+#printDocument {
+  cursor: pointer; }
 
 .title_edit {
   margin-bottom: 30px;
