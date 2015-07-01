@@ -166,7 +166,7 @@ $(".module_preview").on('click',"#modulescreate", function(event) {
 		"fromModule": true
 	};
 	data.modules = [];
-	$(".document_container .module_item.module_selected").each(function(index, el) {
+	$(".document_container .module_item.selected").each(function(index, el) {
 		data.modules[index] = $(this).data("id");
 	});
 	makePostRequest("document_edit",data);

@@ -41,6 +41,7 @@
 	color: white;
 	position: relative;
 	cursor:pointer;
+	white-space: nowrap;
 	a{
 		color: white;
 		text-decoration: none;
@@ -59,7 +60,7 @@
 	display: inline-block;
 	position: relative;
 	left: -5px;
-	
+	white-space: nowrap;
 }
 .module_title{
 	padding: 0;

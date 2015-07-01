@@ -22,7 +22,7 @@
 				<? else: ?>
 				<input type="hidden" name="document_id" value="<?=$document->id?>">
 				<? endif; ?>
-				<input type="hidden" name="title" value="<?=$document->title?>" placeholder="Document Title">
+				<input type="hidden" name="title" value="<?=htmlentities($document->title)?>" placeholder="Document Title">
 				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
@@ -34,7 +34,7 @@
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= $tag->title.",";
+							$tagString .= htmlentities($tag->title).",";
 						}
 					}
 				?>
@@ -67,7 +67,7 @@
 				</div>
 				<button type="submit" id="submit" name="submit" value="edit" style="display: none">Submit</button>
 				<div class="document_buttons">
-					<div data-trigger="submit"><?=file_get_contents("media/icons/unsaved_black.svg")?>Save</div><div data-trigger="delete"><?=file_get_contents("media/icons/bin_black.svg")?>Delete</div>
+					<div data-trigger="submit"><img class="icon" src="media/icons/unsaved_black.svg" />Save</div><div data-trigger="delete"><img class="icon" src="media/icons/bin_black.svg" />Delete</div>
 				</div>
 				<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
 			</form>
@@ -77,8 +77,8 @@
 		<div class="preview">
 			<div class="document_preview_container">
 				<div class="preview_buttons show">
-					<a onclick="window.print();" id="printDocument"><?=file_get_contents("media/icons/print_icon.svg")?>	</a>
-					<a href="/api/download_document.php?document=<?=$document->id?>" alt="Download Document"><?=file_get_contents("media/icons/download_icon.svg")?></a>
+					<a onclick="window.print();" id="printDocument"><img class="icon" src="media/icons/print_icon_black.svg" />	</a>
+					<a href="/api/download_document.php?document=<?=$document->id?>" alt="Download Document"><img class="icon" src="media/icons/download_icon_black.svg" /></a>
 				</div>
 					<? $document->preview(); ?>
 			</div>

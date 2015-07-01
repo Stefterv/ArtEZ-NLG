@@ -39,7 +39,6 @@ class Tag extends databaseObject{
 		}
 		if($currentTags){	
 			foreach($currentTags as $key => $currentTag){
-				
 				$tagLink = Tag_Link::findSingleByAttr(array("link_type="=>$object_type,"tag_id="=>$currentTag->id,"item_id="=>$document->id));
 				if($tagLink){
 					$tagLink->remove();

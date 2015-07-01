@@ -82,7 +82,7 @@ html, body{
 	}
 	.module_buttons{
 		position: absolute;
-		top: 0;
+		top: 3px;
 		right: 0;
 		svg{
 			height: 28px;
@@ -235,9 +235,9 @@ html, body{
 	position: relative;
 	padding: 0px 10px;
 	padding-left: 30px;
-	svg{
+	.icon{
 		position: absolute;
-		top: -12px;
+		top: -8px;
 		left: 0;
 		width: 30px;
 		height: 30px;
