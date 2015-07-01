@@ -6,9 +6,11 @@
   padding: 3px;
   display: inline-block;
   box-shadow: 5px 5px 0px black;
+  min-width: 100px;
   padding: 7px 15px; }
 
 .content_edit {
+  min-width:100px;
   margin-bottom: 30px;
   font-size: 0.95em;
   padding: 5px;
@@ -17,3 +19,5 @@
   display: inline-block;
   box-shadow: 5px 5px 0px black;
   padding: 7px 15px; }
+
+

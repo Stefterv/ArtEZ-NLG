@@ -59,9 +59,9 @@ class Module extends databaseObject{
 						}
 					}
 				?>
-			<div class="title_edit" contenteditable data-input="title"><?=$this->title?></div>
+			<div class="title_edit" contenteditable data-input="title" data-placeholder="This is a placeholder title"><?=$this->title?></div>
 			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
-			<div class="content_edit" contenteditable data-input="content"><?=$this->content?></div>
+			<div class="content_edit" contenteditable data-input="content" data-placeholder="This is placeholder content"><?=$this->content?></div>
 			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
 			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
 			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>

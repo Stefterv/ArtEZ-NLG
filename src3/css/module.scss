@@ -39,6 +39,7 @@
 	font-size: 0.9em;
 	color: white;
 	position: relative;
+	cursor:pointer;
 	a{
 		color: white;
 		text-decoration: none;
@@ -107,4 +108,24 @@ textarea{
 	.module_preview{
 		padding: 12px 40px 35px 40px;
 	}
+}
+#modulescreate {
+	text-decoration: none;
+	font-size:13px;
+	font-weight:600;
+	color:black;
+	padding:5px 15px;
+}
+.module_edit_button {
+	font-weight:600;
+	font-size:13px;
+	cursor:pointer;
+}
+
+svg{
+	margin-top:4px;
+	width: 35px;
+	height: 35px; 
+	stroke: black;
+	stroke-width:2;
 }

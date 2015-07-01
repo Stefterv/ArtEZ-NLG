@@ -5,7 +5,6 @@ $( '.module_item' ).on( 'click', function () { // on click module
 
 
 	var selection = $('.document_container .module_item.selected');
-	
 	if (selection.length > 1) {
 		$('.module_preview').html('<a href="#" id="modulescreate">Create new from selection</a>');
 	}
@@ -80,7 +79,7 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 		data: data
 	})
 	.done(function(result) {
-		var editbutton = '<div class="module_edit_button" data-id='+id+'>EDIT</div>';
+		var editbutton = '<div class="module_edit_button" class="button" data-id='+id+'>EDIT</div>';
 		editbutton += result;
 		$(".module_preview").html(editbutton);
 	})
