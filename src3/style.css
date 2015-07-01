@@ -86,9 +86,7 @@ main {
   left: 0;
   width: calc(33% - 100px);
   width: calc(100% / 3);
-  height: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
   padding: 0 50px;
   box-sizing: border-box; }
 
@@ -188,7 +186,8 @@ main {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */ }
+  /* IE6-9 */
+  pointer-events: none; }
 
 .document_overview {
   position: relative; }
@@ -200,8 +199,7 @@ main {
     font-weight: 600; }
 
 .document_tags {
-  height: calc(100% - 167px);
-  overflow-y: scroll;
+  padding-bottom: 25px;
   position: relative;
   left: -4px;
   width: calc(100% + 8px); }
@@ -307,7 +305,7 @@ main {
 
 .document_preview_container {
   border: 2px solid black;
-  min-height: 100%;
+  min-height: 70vh;
   box-sizing: border-box;
   position: relative;
   font-weight: 200;
@@ -388,6 +386,8 @@ html, body {
     top: 0;
     right: 0; }
     .module .module_buttons svg {
+      height: 28px; }
+    .module .module_buttons img {
       height: 28px; }
   .module.open {
     border: 2px solid black;
@@ -595,6 +595,16 @@ svg {
     text-decoration: none; }
   .module_item.indent-1 {
     margin-left: 50px; }
+  .module_item.selected .module_selection {
+    background: black; }
+
+.module_selection {
+  width: 14px;
+  height: 14px;
+  background: white;
+  display: inline-block;
+  position: relative;
+  left: -5px; }
 
 .module_title {
   padding: 0;
@@ -602,7 +612,8 @@ svg {
   margin-right: 200px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  display: inline-block; }
 
 .module_date {
   position: absolute;

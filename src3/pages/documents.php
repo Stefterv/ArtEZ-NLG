@@ -22,7 +22,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 			</div>
 		</div>
 		<div class="navigation">
-			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">editted</a></div>
+			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">edited</a></div>
 			<div class="document_container">
 				<? foreach($documents as $document): ?>
 				<?

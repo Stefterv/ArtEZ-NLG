@@ -1,11 +1,15 @@
-$( '.document_container' ).on( 'click', '.module_item', function () { // on click module
-	$(this).toggleClass('module_selected');
+$( '.module_item' ).on( 'click', function () { // on click module
+	$(".module_selected").removeClass('module_selected');
+	$(this).addClass('module_selected');
 	var id = $(this).data("id");
+
+
+	var selection = $('.document_container .module_item.selected');
 	
-	if ($('.document_container .module_selected').length > 1) {
+	if (selection.length > 1) {
 		$('.module_preview').html('<a href="#" id="modulescreate">Create new from selection</a>');
 	}
-	if ($('.document_container .module_selected').length == 1) {
+	if (selection.length <= 1) {
 		$('.module_preview').show();
 		id = $('.document_container .module_selected').data("id");
 		$.ajax({
@@ -21,9 +25,6 @@ $( '.document_container' ).on( 'click', '.module_item', function () { // on clic
 			  $('.module_preview').html('Unable to load'); // if unable to load display this error message
 			}
 		})
-	}
-	if ($('.document_container .module_selected').length < 1) {
-		$('.module_preview').html('<p>Click on a module on the left hand side to select it for editing.</p><p>Or select more modules to be able to create a new document containing the selected modules.</p>'); // if unable to load display this error message
 	}
 });
 
@@ -166,6 +167,11 @@ $(".module_preview").on('click',"#modulescreate", function(event) {
 	});
 	makePostRequest("document_edit",data);
 	// console.log(data);
+});
+
+$(".module_selection").on('click', function(event) {
+	event.preventDefault();
+	$(this).closest('.module_item').toggleClass('selected');
 });
 
 function makePostRequest(url, data) {

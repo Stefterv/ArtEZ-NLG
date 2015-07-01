@@ -46,8 +46,19 @@
 	&.indent-1{
 		margin-left: 50px;
 	}
+	&.selected .module_selection{
+		background: black;
+	}
 }
-
+.module_selection{
+	width: 14px;
+	height: 14px;
+	background: white;
+	display: inline-block;
+	position: relative;
+	left: -5px;
+	
+}
 .module_title{
 	padding: 0;
 	margin: 0;
@@ -55,6 +66,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	display: inline-block;
 }
 .module_date{
 	position: absolute;

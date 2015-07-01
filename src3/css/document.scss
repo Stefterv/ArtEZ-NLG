@@ -12,8 +12,7 @@
 
 .document_tags{
 	// text-align: justify;
-	height: calc(100% - 167px);
-	overflow-y: scroll;
+	padding-bottom: 25px;
 	position: relative;
 	left: -4px;
 	width: calc(100% + 8px);
@@ -135,7 +134,7 @@
 
 .document_preview_container{
 	border: 2px solid black;
-	min-height: 100%;
+	min-height: 70vh;
 	box-sizing: border-box;
 	position: relative;
 	h2{
