@@ -17,9 +17,9 @@ class Module extends databaseObject{
 				<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
 				<input type="hidden" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=htmlentities($this->content)?>" placeholder="Content">
-				<div class="module_title" contenteditable data-inputvalue="title" data-placeholder="Title"><?=$this->title?></div>
+				<div class="module_title" contenteditable data-inputvalue="title" data-placeholder="Title"><?=htmlentities($this->title)?></div>
 				
-				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=$this->content?></div>
+				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=htmlentities($this->content)?></div>
 				<div class="module_buttons">
 					<!-- <a href="#" class="module_move">reorder</a> -->
 					<a href="#" alt="Re-order module" class="module_move"><img src="media/icons/rearrange.svg" alt=""></a>
@@ -31,8 +31,8 @@ class Module extends databaseObject{
 	}
 	function display_preview(){
 		?>
-		<div class="preview_subtitle"><?=$this->title?></div>
-		<p><?=$this->content?></p>
+		<div class="preview_subtitle"><?=htmlentities($this->title)?></div>
+		<p><?=htmlentities($this->content)?></p>
 		<?
 	}
 	function modules_preview(){
@@ -43,9 +43,9 @@ class Module extends databaseObject{
 	function display_document(){
 		?>
 		<? if($this->title != ""): ?>
-			<h1><?=$this->title?></h1>
+			<h1><?=htmlentities($this->title)?></h1>
 		<? endif; ?>
-		<p><?=nl2br($this->content)?></p>
+		<p><?=htmlentities(nl2br($this->content))?></p>
 		<br>
 	<?
 	}
@@ -63,9 +63,9 @@ class Module extends databaseObject{
 						}
 					}
 				?>
-			<div class="title_edit" contenteditable data-input="title" data-placeholder="This is a placeholder title"><?=$this->title?></div>
+			<div class="title_edit" contenteditable data-input="title" data-placeholder="This is a placeholder title"><?=htmlentities($this->title)?></div>
 			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
-			<div class="content_edit" contenteditable data-input="content" data-placeholder="This is placeholder content"><?=$this->content?></div>
+			<div class="content_edit" contenteditable data-input="content" data-placeholder="This is placeholder content"><?=htmlentities($this->content)?></div>
 			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
 			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
 			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
@@ -89,7 +89,7 @@ class Module extends databaseObject{
 	function search_result(){
 		?>
 		<div class="result" data-id="<?=$this->id?>">
-			<?=$this->title?>
+			<?=htmlentities($this->title)?>
 		</div>
 		<?
 	}

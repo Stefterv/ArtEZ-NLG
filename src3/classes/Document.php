@@ -35,7 +35,7 @@ class Document extends databaseObject{
 	function preview(){
 		?>
 		<div class="document_preview" data-id="<?=$this->id?>">
-		<div class="preview_title"><?=$this->title?></div>
+		<div class="preview_title"><?=htmlentities($this->title0htmlentities)?></div>
 		<?
 		$nodes = $this->getNodes();
 		if($nodes){

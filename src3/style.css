@@ -160,7 +160,7 @@ main {
     content: '';
     width: 20px;
     height: 20px;
-    background: url("media/icons/search_icon.svg");
+    background: url("media/icons/search_icon_black.svg");
     background-size: 100%; }
 
 [contentEditable]:empty:not(:focus):before {
