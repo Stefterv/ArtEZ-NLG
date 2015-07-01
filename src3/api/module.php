@@ -7,12 +7,12 @@ if(isset($_POST['submit'])):
 			$module = new Module();
 		}
 		$module->parser($_POST);
-		Tag::saveTags($module,$_POST['tags']);
 		if($module->created = ""){
 			$module->created = date("m-d-Y");
 		}
 		$module->submit(); 
-		$module->display_preview();
+		Tag::saveTags($module,$_POST['tags']);
+		$module->modules_preview();
 	}
 	if($_POST['submit'] === "delete"){
 		$module = Module::findByID($_POST['module_id']);

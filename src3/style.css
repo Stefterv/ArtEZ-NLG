@@ -167,6 +167,9 @@ main {
   content: attr(data-placeholder);
   opacity: 0.5; }
 
+.icon {
+  width: 35px; }
+
 .footergradient {
   position: fixed;
   left: 0;
@@ -580,7 +583,8 @@ svg {
   padding: 32px 40px 35px 40px;
   box-sizing: border-box;
   font-weight: 200;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  position: relative; }
 
 .module_properties .tag, .module_properties #document_tags_addTag {
   background: white;

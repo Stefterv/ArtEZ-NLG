@@ -79,9 +79,7 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 		data: data
 	})
 	.done(function(result) {
-		var editbutton = '<div class="module_edit_button" class="button" data-id='+id+'>EDIT</div>';
-		editbutton += result;
-		$(".module_preview").html(editbutton);
+		$(".module_preview").html(result);
 	})
 	.fail(function() {
 		console.log("error");
