@@ -176,6 +176,7 @@ main {
   right: 0;
   bottom: 0;
   height: 50px;
+  pointer-events: none;
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white));
