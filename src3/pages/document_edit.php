@@ -22,7 +22,7 @@
 				<? else: ?>
 				<input type="hidden" name="document_id" value="<?=$document->id?>">
 				<? endif; ?>
-				<input type="hidden" name="title" value="<?=$document->title?>" placeholder="Document Title">
+				<input type="hidden" name="title" value="<?=htmlentities($document->title)?>" placeholder="Document Title">
 				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
@@ -34,7 +34,7 @@
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= $tag->title.",";
+							$tagString .= htmlentities($tag->title).",";
 						}
 					}
 				?>

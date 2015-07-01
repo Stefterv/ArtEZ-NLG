@@ -1,9 +1,9 @@
-Started at [2015/07/01 13:26]
+Started at [2015/07/01 15:36]
 Config file is /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/deployment.ini
 
 Deploying Portfolio
 Connecting to server
-Remote .htdeployment file not found
+Loaded remote .htdeployment file
 Scanning files in /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3
 Ignoring ./.DS_Store                    
 Ignoring ./classes/.DS_Store            
@@ -12,941 +12,106 @@ Ignoring ./css/.DS_Store
 Ignoring ./deployment.log               
 Ignoring ./pages/.DS_Store              
 Ignoring ./scripts/.DS_Store            
-Compressing /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/scripts/jquery-2.1.4.min.js
-Error while executing 'java' -jar '/Applications/Deployment.app/vendor/Google-Closure-Compiler/compiler.jar' --warning_level QUIET
-Exception in thread "main" java.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner : Unsupported major.minor version 51.0
-	at java.lang.ClassLoader.defineClass1(Native Method)
-	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
-	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
-	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
-	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
-	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
-
-Compressing /Users/stefterv/Documents/ArtEZ/Webdesign/ArtEZ-NLG/src3/scripts/jquery-ui.min.js
-Error while executing 'java' -jar '/Applications/Deployment.app/vendor/Google-Closure-Compiler/compiler.jar' --warning_level QUIET
-Exception in thread "main" java.lang.UnsupportedClassVersionError: com/google/javascript/jscomp/CommandLineRunner : Unsupported major.minor version 51.0
-	at java.lang.ClassLoader.defineClass1(Native Method)
-	at java.lang.ClassLoader.defineClassCond(ClassLoader.java:637)
-	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
-	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141)
-	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283)
-	at java.net.URLClassLoader.access$000(URLClassLoader.java:58)
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:197)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
-
 Creating remote file .htdeployment.running
 
 Uploading:
-(  1 of 462) /.htaccess
-(  2 of 462) /api/
-(  3 of 462) /api/document.php
-(  4 of 462) /api/download_document.php
-(  5 of 462) /api/get_document.php
-(  6 of 462) /api/get_form_module.php
-(  7 of 462) /api/get_module_list.php
-(  8 of 462) /api/get_modules.php
-(  9 of 462) /api/module.php
-( 10 of 462) /api/new_module.php
-( 11 of 462) /api/search_module.php
-( 12 of 462) /classes/
-( 13 of 462) /classes/Document.php
-( 14 of 462) /classes/Document_Link.php
-( 15 of 462) /classes/Image.php
-( 16 of 462) /classes/Module.php
-( 17 of 462) /classes/Tag.php
-( 18 of 462) /classes/Tag_Link.php
-( 19 of 462) /css/
-( 20 of 462) /css/document.scss
-( 21 of 462) /css/document_edit.scss
-( 22 of 462) /css/module.scss
-( 23 of 462) /css/module_edit.css (filters applied)
-( 24 of 462) /css/module_edit.scss
-( 25 of 462) /css/print.css (filters applied)
-( 26 of 462) /css/print.scss
-( 27 of 462) /dbObject.php
-( 28 of 462) /deployment.ini
-( 29 of 462) /functions.php
-( 30 of 462) /includes/
-( 31 of 462) /includes/footer.php
-( 32 of 462) /includes/header.php
-( 33 of 462) /includes/tcpdf/
-( 34 of 462) /includes/tcpdf/CHANGELOG.TXT
-( 35 of 462) /includes/tcpdf/composer.json
-( 36 of 462) /includes/tcpdf/config/
-( 37 of 462) /includes/tcpdf/config/tcpdf_config.php
-( 38 of 462) /includes/tcpdf/examples/
-( 39 of 462) /includes/tcpdf/examples/barcodes/
-( 40 of 462) /includes/tcpdf/examples/barcodes/example_1d_html.php
-( 41 of 462) /includes/tcpdf/examples/barcodes/example_1d_png.php
-( 42 of 462) /includes/tcpdf/examples/barcodes/example_1d_svg.php
-( 43 of 462) /includes/tcpdf/examples/barcodes/example_1d_svgi.php
-( 44 of 462) /includes/tcpdf/examples/barcodes/example_2d_datamatrix_html.php
-( 45 of 462) /includes/tcpdf/examples/barcodes/example_2d_datamatrix_png.php
-( 46 of 462) /includes/tcpdf/examples/barcodes/example_2d_datamatrix_svg.php
-( 47 of 462) /includes/tcpdf/examples/barcodes/example_2d_datamatrix_svgi.php
-( 48 of 462) /includes/tcpdf/examples/barcodes/example_2d_pdf417_html.php
-( 49 of 462) /includes/tcpdf/examples/barcodes/example_2d_pdf417_png.php
-( 50 of 462) /includes/tcpdf/examples/barcodes/example_2d_pdf417_svg.php
-( 51 of 462) /includes/tcpdf/examples/barcodes/example_2d_pdf417_svgi.php
-( 52 of 462) /includes/tcpdf/examples/barcodes/example_2d_qrcode_html.php
-( 53 of 462) /includes/tcpdf/examples/barcodes/example_2d_qrcode_png.php
-( 54 of 462) /includes/tcpdf/examples/barcodes/example_2d_qrcode_svg.php
-( 55 of 462) /includes/tcpdf/examples/barcodes/example_2d_qrcode_svgi.php
-( 56 of 462) /includes/tcpdf/examples/barcodes/tcpdf_barcodes_1d_include.php
-( 57 of 462) /includes/tcpdf/examples/barcodes/tcpdf_barcodes_2d_include.php
-( 58 of 462) /includes/tcpdf/examples/config/
-( 59 of 462) /includes/tcpdf/examples/config/tcpdf_config_alt.php
-( 60 of 462) /includes/tcpdf/examples/data/
-( 61 of 462) /includes/tcpdf/examples/data/cert/
-( 62 of 462) /includes/tcpdf/examples/data/cert/tcpdf.crt
-( 63 of 462) /includes/tcpdf/examples/data/cert/tcpdf.fdf
-( 64 of 462) /includes/tcpdf/examples/data/cert/tcpdf.p12
-( 65 of 462) /includes/tcpdf/examples/data/chapter_demo_1.txt
-( 66 of 462) /includes/tcpdf/examples/data/chapter_demo_2.txt
-( 67 of 462) /includes/tcpdf/examples/data/table_data_demo.txt
-( 68 of 462) /includes/tcpdf/examples/data/utf8test.txt
-( 69 of 462) /includes/tcpdf/examples/example_001.php
-( 70 of 462) /includes/tcpdf/examples/example_002.php
-( 71 of 462) /includes/tcpdf/examples/example_003.php
-( 72 of 462) /includes/tcpdf/examples/example_004.php
-( 73 of 462) /includes/tcpdf/examples/example_005.php
-( 74 of 462) /includes/tcpdf/examples/example_006.php
-( 75 of 462) /includes/tcpdf/examples/example_007.php
-( 76 of 462) /includes/tcpdf/examples/example_008.php
-( 77 of 462) /includes/tcpdf/examples/example_009.php
-( 78 of 462) /includes/tcpdf/examples/example_010.php
-( 79 of 462) /includes/tcpdf/examples/example_011.php
-( 80 of 462) /includes/tcpdf/examples/example_012.pdf
-( 81 of 462) /includes/tcpdf/examples/example_012.php
-( 82 of 462) /includes/tcpdf/examples/example_013.php
-( 83 of 462) /includes/tcpdf/examples/example_014.php
-( 84 of 462) /includes/tcpdf/examples/example_015.php
-( 85 of 462) /includes/tcpdf/examples/example_016.php
-( 86 of 462) /includes/tcpdf/examples/example_017.php
-( 87 of 462) /includes/tcpdf/examples/example_018.php
-( 88 of 462) /includes/tcpdf/examples/example_019.php
-( 89 of 462) /includes/tcpdf/examples/example_020.php
-( 90 of 462) /includes/tcpdf/examples/example_021.php
-( 91 of 462) /includes/tcpdf/examples/example_022.php
-( 92 of 462) /includes/tcpdf/examples/example_023.php
-( 93 of 462) /includes/tcpdf/examples/example_024.php
-( 94 of 462) /includes/tcpdf/examples/example_025.php
-( 95 of 462) /includes/tcpdf/examples/example_026.php
-( 96 of 462) /includes/tcpdf/examples/example_027.php
-( 97 of 462) /includes/tcpdf/examples/example_028.php
-( 98 of 462) /includes/tcpdf/examples/example_029.php
-( 99 of 462) /includes/tcpdf/examples/example_030.php
-(100 of 462) /includes/tcpdf/examples/example_031.php
-(101 of 462) /includes/tcpdf/examples/example_032.php
-(102 of 462) /includes/tcpdf/examples/example_033.php
-(103 of 462) /includes/tcpdf/examples/example_034.php
-(104 of 462) /includes/tcpdf/examples/example_035.php
-(105 of 462) /includes/tcpdf/examples/example_036.php
-(106 of 462) /includes/tcpdf/examples/example_037.php
-(107 of 462) /includes/tcpdf/examples/example_038.php
-(108 of 462) /includes/tcpdf/examples/example_039.php
-(109 of 462) /includes/tcpdf/examples/example_040.php
-(110 of 462) /includes/tcpdf/examples/example_041.php
-(111 of 462) /includes/tcpdf/examples/example_042.php
-(112 of 462) /includes/tcpdf/examples/example_043.php
-(113 of 462) /includes/tcpdf/examples/example_044.php
-(114 of 462) /includes/tcpdf/examples/example_045.php
-(115 of 462) /includes/tcpdf/examples/example_046.php
-(116 of 462) /includes/tcpdf/examples/example_047.php
-(117 of 462) /includes/tcpdf/examples/example_048.php
-(118 of 462) /includes/tcpdf/examples/example_049.php
-(119 of 462) /includes/tcpdf/examples/example_050.php
-(120 of 462) /includes/tcpdf/examples/example_051.php
-(121 of 462) /includes/tcpdf/examples/example_052.php
-(122 of 462) /includes/tcpdf/examples/example_053.php
-(123 of 462) /includes/tcpdf/examples/example_054.php
-(124 of 462) /includes/tcpdf/examples/example_055.php
-(125 of 462) /includes/tcpdf/examples/example_056.php
-(126 of 462) /includes/tcpdf/examples/example_057.php
-(127 of 462) /includes/tcpdf/examples/example_058.php
-(128 of 462) /includes/tcpdf/examples/example_059.php
-(129 of 462) /includes/tcpdf/examples/example_060.php
-(130 of 462) /includes/tcpdf/examples/example_061.php
-(131 of 462) /includes/tcpdf/examples/example_062.php
-(132 of 462) /includes/tcpdf/examples/example_063.php
-(133 of 462) /includes/tcpdf/examples/example_064.php
-(134 of 462) /includes/tcpdf/examples/example_065.php
-(135 of 462) /includes/tcpdf/examples/images/
-(136 of 462) /includes/tcpdf/examples/images/_blank.png
-(137 of 462) /includes/tcpdf/examples/images/alpha.png
-(138 of 462) /includes/tcpdf/examples/images/image_demo.jpg
-(139 of 462) /includes/tcpdf/examples/images/image_with_alpha.png
-(140 of 462) /includes/tcpdf/examples/images/img.png
-(141 of 462) /includes/tcpdf/examples/images/logo_example.gif
-(142 of 462) /includes/tcpdf/examples/images/logo_example.jpg
-(143 of 462) /includes/tcpdf/examples/images/logo_example.png
-(144 of 462) /includes/tcpdf/examples/images/tcpdf_box.ai
-(145 of 462) /includes/tcpdf/examples/images/tcpdf_box.svg
-(146 of 462) /includes/tcpdf/examples/images/tcpdf_cell.png
-(147 of 462) /includes/tcpdf/examples/images/tcpdf_logo.jpg
-(148 of 462) /includes/tcpdf/examples/images/tcpdf_signature.png
-(149 of 462) /includes/tcpdf/examples/images/testsvg.svg
-(150 of 462) /includes/tcpdf/examples/images/tux.svg
-(151 of 462) /includes/tcpdf/examples/index.php
-(152 of 462) /includes/tcpdf/examples/lang/
-(153 of 462) /includes/tcpdf/examples/lang/afr.php
-(154 of 462) /includes/tcpdf/examples/lang/ara.php
-(155 of 462) /includes/tcpdf/examples/lang/aze.php
-(156 of 462) /includes/tcpdf/examples/lang/bel.php
-(157 of 462) /includes/tcpdf/examples/lang/bra.php
-(158 of 462) /includes/tcpdf/examples/lang/bul.php
-(159 of 462) /includes/tcpdf/examples/lang/cat.php
-(160 of 462) /includes/tcpdf/examples/lang/ces.php
-(161 of 462) /includes/tcpdf/examples/lang/chi.php
-(162 of 462) /includes/tcpdf/examples/lang/cym.php
-(163 of 462) /includes/tcpdf/examples/lang/dan.php
-(164 of 462) /includes/tcpdf/examples/lang/eng.php
-(165 of 462) /includes/tcpdf/examples/lang/est.php
-(166 of 462) /includes/tcpdf/examples/lang/eus.php
-(167 of 462) /includes/tcpdf/examples/lang/far.php
-(168 of 462) /includes/tcpdf/examples/lang/fra.php
-(169 of 462) /includes/tcpdf/examples/lang/ger.php
-(170 of 462) /includes/tcpdf/examples/lang/gle.php
-(171 of 462) /includes/tcpdf/examples/lang/glg.php
-(172 of 462) /includes/tcpdf/examples/lang/hat.php
-(173 of 462) /includes/tcpdf/examples/lang/heb.php
-(174 of 462) /includes/tcpdf/examples/lang/hrv.php
-(175 of 462) /includes/tcpdf/examples/lang/hun.php
-(176 of 462) /includes/tcpdf/examples/lang/hye.php
-(177 of 462) /includes/tcpdf/examples/lang/ind.php
-(178 of 462) /includes/tcpdf/examples/lang/ita.php
-(179 of 462) /includes/tcpdf/examples/lang/jpn.php
-(180 of 462) /includes/tcpdf/examples/lang/kat.php
-(181 of 462) /includes/tcpdf/examples/lang/kor.php
-(182 of 462) /includes/tcpdf/examples/lang/mkd.php
-(183 of 462) /includes/tcpdf/examples/lang/mlt.php
-(184 of 462) /includes/tcpdf/examples/lang/msa.php
-(185 of 462) /includes/tcpdf/examples/lang/nld.php
-(186 of 462) /includes/tcpdf/examples/lang/nob.php
-(187 of 462) /includes/tcpdf/examples/lang/pol.php
-(188 of 462) /includes/tcpdf/examples/lang/por.php
-(189 of 462) /includes/tcpdf/examples/lang/ron.php
-(190 of 462) /includes/tcpdf/examples/lang/rus.php
-(191 of 462) /includes/tcpdf/examples/lang/slv.php
-(192 of 462) /includes/tcpdf/examples/lang/spa.php
-(193 of 462) /includes/tcpdf/examples/lang/sqi.php
-(194 of 462) /includes/tcpdf/examples/lang/srp.php
-(195 of 462) /includes/tcpdf/examples/lang/swa.php
-(196 of 462) /includes/tcpdf/examples/lang/swe.php
-(197 of 462) /includes/tcpdf/examples/lang/ukr.php
-(198 of 462) /includes/tcpdf/examples/lang/urd.php
-(199 of 462) /includes/tcpdf/examples/lang/yid.php
-(200 of 462) /includes/tcpdf/examples/lang/zho.php
-(201 of 462) /includes/tcpdf/examples/tcpdf_include.php
-(202 of 462) /includes/tcpdf/fonts/
-(203 of 462) /includes/tcpdf/fonts/ae_fonts_2.0/
-(204 of 462) /includes/tcpdf/fonts/ae_fonts_2.0/ChangeLog
-(205 of 462) /includes/tcpdf/fonts/ae_fonts_2.0/COPYING
-(206 of 462) /includes/tcpdf/fonts/ae_fonts_2.0/README
-(207 of 462) /includes/tcpdf/fonts/aealarabiya.ctg.z
-(208 of 462) /includes/tcpdf/fonts/aealarabiya.php
-(209 of 462) /includes/tcpdf/fonts/aealarabiya.z
-(210 of 462) /includes/tcpdf/fonts/aefurat.ctg.z
-(211 of 462) /includes/tcpdf/fonts/aefurat.php
-(212 of 462) /includes/tcpdf/fonts/aefurat.z
-(213 of 462) /includes/tcpdf/fonts/cid0cs.php
-(214 of 462) /includes/tcpdf/fonts/cid0ct.php
-(215 of 462) /includes/tcpdf/fonts/cid0jp.php
-(216 of 462) /includes/tcpdf/fonts/cid0kr.php
-(217 of 462) /includes/tcpdf/fonts/courier.php
-(218 of 462) /includes/tcpdf/fonts/courierb.php
-(219 of 462) /includes/tcpdf/fonts/courierbi.php
-(220 of 462) /includes/tcpdf/fonts/courieri.php
-(221 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/
-(222 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/AUTHORS
-(223 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/BUGS
-(224 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/langcover.txt
-(225 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/LICENSE
-(226 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/NEWS
-(227 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/README
-(228 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/status.txt
-(229 of 462) /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/unicover.txt
-(230 of 462) /includes/tcpdf/fonts/dejavusans.ctg.z
-(231 of 462) /includes/tcpdf/fonts/dejavusans.php
-(232 of 462) /includes/tcpdf/fonts/dejavusans.z
-(233 of 462) /includes/tcpdf/fonts/dejavusansb.ctg.z
-(234 of 462) /includes/tcpdf/fonts/dejavusansb.php
-(235 of 462) /includes/tcpdf/fonts/dejavusansb.z
-(236 of 462) /includes/tcpdf/fonts/dejavusansbi.ctg.z
-(237 of 462) /includes/tcpdf/fonts/dejavusansbi.php
-(238 of 462) /includes/tcpdf/fonts/dejavusansbi.z
-(239 of 462) /includes/tcpdf/fonts/dejavusanscondensed.ctg.z
-(240 of 462) /includes/tcpdf/fonts/dejavusanscondensed.php
-(241 of 462) /includes/tcpdf/fonts/dejavusanscondensed.z
-(242 of 462) /includes/tcpdf/fonts/dejavusanscondensedb.ctg.z
-(243 of 462) /includes/tcpdf/fonts/dejavusanscondensedb.php
-(244 of 462) /includes/tcpdf/fonts/dejavusanscondensedb.z
-(245 of 462) /includes/tcpdf/fonts/dejavusanscondensedbi.ctg.z
-(246 of 462) /includes/tcpdf/fonts/dejavusanscondensedbi.php
-(247 of 462) /includes/tcpdf/fonts/dejavusanscondensedbi.z
-(248 of 462) /includes/tcpdf/fonts/dejavusanscondensedi.ctg.z
-(249 of 462) /includes/tcpdf/fonts/dejavusanscondensedi.php
-(250 of 462) /includes/tcpdf/fonts/dejavusanscondensedi.z
-(251 of 462) /includes/tcpdf/fonts/dejavusansextralight.ctg.z
-(252 of 462) /includes/tcpdf/fonts/dejavusansextralight.php
-(253 of 462) /includes/tcpdf/fonts/dejavusansextralight.z
-(254 of 462) /includes/tcpdf/fonts/dejavusansi.ctg.z
-(255 of 462) /includes/tcpdf/fonts/dejavusansi.php
-(256 of 462) /includes/tcpdf/fonts/dejavusansi.z
-(257 of 462) /includes/tcpdf/fonts/dejavusansmono.ctg.z
-(258 of 462) /includes/tcpdf/fonts/dejavusansmono.php
-(259 of 462) /includes/tcpdf/fonts/dejavusansmono.z
-(260 of 462) /includes/tcpdf/fonts/dejavusansmonob.ctg.z
-(261 of 462) /includes/tcpdf/fonts/dejavusansmonob.php
-(262 of 462) /includes/tcpdf/fonts/dejavusansmonob.z
-(263 of 462) /includes/tcpdf/fonts/dejavusansmonobi.ctg.z
-(264 of 462) /includes/tcpdf/fonts/dejavusansmonobi.php
-(265 of 462) /includes/tcpdf/fonts/dejavusansmonobi.z
-(266 of 462) /includes/tcpdf/fonts/dejavusansmonoi.ctg.z
-(267 of 462) /includes/tcpdf/fonts/dejavusansmonoi.php
-(268 of 462) /includes/tcpdf/fonts/dejavusansmonoi.z
-(269 of 462) /includes/tcpdf/fonts/dejavuserif.ctg.z
-(270 of 462) /includes/tcpdf/fonts/dejavuserif.php
-(271 of 462) /includes/tcpdf/fonts/dejavuserif.z
-(272 of 462) /includes/tcpdf/fonts/dejavuserifb.ctg.z
-(273 of 462) /includes/tcpdf/fonts/dejavuserifb.php
-(274 of 462) /includes/tcpdf/fonts/dejavuserifb.z
-(275 of 462) /includes/tcpdf/fonts/dejavuserifbi.ctg.z
-(276 of 462) /includes/tcpdf/fonts/dejavuserifbi.php
-(277 of 462) /includes/tcpdf/fonts/dejavuserifbi.z
-(278 of 462) /includes/tcpdf/fonts/dejavuserifcondensed.ctg.z
-(279 of 462) /includes/tcpdf/fonts/dejavuserifcondensed.php
-(280 of 462) /includes/tcpdf/fonts/dejavuserifcondensed.z
-(281 of 462) /includes/tcpdf/fonts/dejavuserifcondensedb.ctg.z
-(282 of 462) /includes/tcpdf/fonts/dejavuserifcondensedb.php
-(283 of 462) /includes/tcpdf/fonts/dejavuserifcondensedb.z
-(284 of 462) /includes/tcpdf/fonts/dejavuserifcondensedbi.ctg.z
-(285 of 462) /includes/tcpdf/fonts/dejavuserifcondensedbi.php
-(286 of 462) /includes/tcpdf/fonts/dejavuserifcondensedbi.z
-(287 of 462) /includes/tcpdf/fonts/dejavuserifcondensedi.ctg.z
-(288 of 462) /includes/tcpdf/fonts/dejavuserifcondensedi.php
-(289 of 462) /includes/tcpdf/fonts/dejavuserifcondensedi.z
-(290 of 462) /includes/tcpdf/fonts/dejavuserifi.ctg.z
-(291 of 462) /includes/tcpdf/fonts/dejavuserifi.php
-(292 of 462) /includes/tcpdf/fonts/dejavuserifi.z
-(293 of 462) /includes/tcpdf/fonts/freefont-20120503/
-(294 of 462) /includes/tcpdf/fonts/freefont-20120503/AUTHORS
-(295 of 462) /includes/tcpdf/fonts/freefont-20120503/ChangeLog
-(296 of 462) /includes/tcpdf/fonts/freefont-20120503/COPYING
-(297 of 462) /includes/tcpdf/fonts/freefont-20120503/CREDITS
-(298 of 462) /includes/tcpdf/fonts/freefont-20120503/INSTALL
-(299 of 462) /includes/tcpdf/fonts/freefont-20120503/README
-(300 of 462) /includes/tcpdf/fonts/freefont-20120503/TROUBLESHOOTING
-(301 of 462) /includes/tcpdf/fonts/freefont-20120503/USAGE
-(302 of 462) /includes/tcpdf/fonts/freemono.ctg.z
-(303 of 462) /includes/tcpdf/fonts/freemono.php
-(304 of 462) /includes/tcpdf/fonts/freemono.z
-(305 of 462) /includes/tcpdf/fonts/freemonob.ctg.z
-(306 of 462) /includes/tcpdf/fonts/freemonob.php
-(307 of 462) /includes/tcpdf/fonts/freemonob.z
-(308 of 462) /includes/tcpdf/fonts/freemonobi.ctg.z
-(309 of 462) /includes/tcpdf/fonts/freemonobi.php
-(310 of 462) /includes/tcpdf/fonts/freemonobi.z
-(311 of 462) /includes/tcpdf/fonts/freemonoi.ctg.z
-(312 of 462) /includes/tcpdf/fonts/freemonoi.php
-(313 of 462) /includes/tcpdf/fonts/freemonoi.z
-(314 of 462) /includes/tcpdf/fonts/freesans.ctg.z
-(315 of 462) /includes/tcpdf/fonts/freesans.php
-(316 of 462) /includes/tcpdf/fonts/freesans.z
-(317 of 462) /includes/tcpdf/fonts/freesansb.ctg.z
-(318 of 462) /includes/tcpdf/fonts/freesansb.php
-(319 of 462) /includes/tcpdf/fonts/freesansb.z
-(320 of 462) /includes/tcpdf/fonts/freesansbi.ctg.z
-(321 of 462) /includes/tcpdf/fonts/freesansbi.php
-(322 of 462) /includes/tcpdf/fonts/freesansbi.z
-(323 of 462) /includes/tcpdf/fonts/freesansi.ctg.z
-(324 of 462) /includes/tcpdf/fonts/freesansi.php
-(325 of 462) /includes/tcpdf/fonts/freesansi.z
-(326 of 462) /includes/tcpdf/fonts/freeserif.ctg.z
-(327 of 462) /includes/tcpdf/fonts/freeserif.php
-(328 of 462) /includes/tcpdf/fonts/freeserif.z
-(329 of 462) /includes/tcpdf/fonts/freeserifb.ctg.z
-(330 of 462) /includes/tcpdf/fonts/freeserifb.php
-(331 of 462) /includes/tcpdf/fonts/freeserifb.z
-(332 of 462) /includes/tcpdf/fonts/freeserifbi.ctg.z
-(333 of 462) /includes/tcpdf/fonts/freeserifbi.php
-(334 of 462) /includes/tcpdf/fonts/freeserifbi.z
-(335 of 462) /includes/tcpdf/fonts/freeserifi.ctg.z
-(336 of 462) /includes/tcpdf/fonts/freeserifi.php
-(337 of 462) /includes/tcpdf/fonts/freeserifi.z
-(338 of 462) /includes/tcpdf/fonts/helvetica.php
-(339 of 462) /includes/tcpdf/fonts/helveticab.php
-(340 of 462) /includes/tcpdf/fonts/helveticabi.php
-(341 of 462) /includes/tcpdf/fonts/helveticai.php
-(342 of 462) /includes/tcpdf/fonts/hysmyeongjostdmedium.php
-(343 of 462) /includes/tcpdf/fonts/kozgopromedium.php
-(344 of 462) /includes/tcpdf/fonts/kozminproregular.php
-(345 of 462) /includes/tcpdf/fonts/msungstdlight.php
-(346 of 462) /includes/tcpdf/fonts/pdfacourier.php
-(347 of 462) /includes/tcpdf/fonts/pdfacourier.z
-(348 of 462) /includes/tcpdf/fonts/pdfacourierb.php
-(349 of 462) /includes/tcpdf/fonts/pdfacourierb.z
-(350 of 462) /includes/tcpdf/fonts/pdfacourierbi.php
-(351 of 462) /includes/tcpdf/fonts/pdfacourierbi.z
-(352 of 462) /includes/tcpdf/fonts/pdfacourieri.php
-(353 of 462) /includes/tcpdf/fonts/pdfacourieri.z
-(354 of 462) /includes/tcpdf/fonts/pdfahelvetica.php
-(355 of 462) /includes/tcpdf/fonts/pdfahelvetica.z
-(356 of 462) /includes/tcpdf/fonts/pdfahelveticab.php
-(357 of 462) /includes/tcpdf/fonts/pdfahelveticab.z
-(358 of 462) /includes/tcpdf/fonts/pdfahelveticabi.php
-(359 of 462) /includes/tcpdf/fonts/pdfahelveticabi.z
-(360 of 462) /includes/tcpdf/fonts/pdfahelveticai.php
-(361 of 462) /includes/tcpdf/fonts/pdfahelveticai.z
-(362 of 462) /includes/tcpdf/fonts/pdfasymbol.php
-(363 of 462) /includes/tcpdf/fonts/pdfasymbol.z
-(364 of 462) /includes/tcpdf/fonts/pdfatimes.php
-(365 of 462) /includes/tcpdf/fonts/pdfatimes.z
-(366 of 462) /includes/tcpdf/fonts/pdfatimesb.php
-(367 of 462) /includes/tcpdf/fonts/pdfatimesb.z
-(368 of 462) /includes/tcpdf/fonts/pdfatimesbi.php
-(369 of 462) /includes/tcpdf/fonts/pdfatimesbi.z
-(370 of 462) /includes/tcpdf/fonts/pdfatimesi.php
-(371 of 462) /includes/tcpdf/fonts/pdfatimesi.z
-(372 of 462) /includes/tcpdf/fonts/pdfazapfdingbats.php
-(373 of 462) /includes/tcpdf/fonts/pdfazapfdingbats.z
-(374 of 462) /includes/tcpdf/fonts/stsongstdlight.php
-(375 of 462) /includes/tcpdf/fonts/symbol.php
-(376 of 462) /includes/tcpdf/fonts/times.php
-(377 of 462) /includes/tcpdf/fonts/timesb.php
-(378 of 462) /includes/tcpdf/fonts/timesbi.php
-(379 of 462) /includes/tcpdf/fonts/timesi.php
-(380 of 462) /includes/tcpdf/fonts/uni2cid_ac15.php
-(381 of 462) /includes/tcpdf/fonts/uni2cid_ag15.php
-(382 of 462) /includes/tcpdf/fonts/uni2cid_aj16.php
-(383 of 462) /includes/tcpdf/fonts/uni2cid_ak12.php
-(384 of 462) /includes/tcpdf/fonts/zapfdingbats.php
-(385 of 462) /includes/tcpdf/include/
-(386 of 462) /includes/tcpdf/include/barcodes/
-(387 of 462) /includes/tcpdf/include/barcodes/datamatrix.php
-(388 of 462) /includes/tcpdf/include/barcodes/pdf417.php
-(389 of 462) /includes/tcpdf/include/barcodes/qrcode.php
-(390 of 462) /includes/tcpdf/include/sRGB.icc
-(391 of 462) /includes/tcpdf/include/tcpdf_colors.php
-(392 of 462) /includes/tcpdf/include/tcpdf_filters.php
-(393 of 462) /includes/tcpdf/include/tcpdf_font_data.php
-(394 of 462) /includes/tcpdf/include/tcpdf_fonts.php
-(395 of 462) /includes/tcpdf/include/tcpdf_images.php
-(396 of 462) /includes/tcpdf/include/tcpdf_static.php
-(397 of 462) /includes/tcpdf/LICENSE.TXT
-(398 of 462) /includes/tcpdf/README.TXT
-(399 of 462) /includes/tcpdf/tcpdf.php
-(400 of 462) /includes/tcpdf/tcpdf_autoconfig.php
-(401 of 462) /includes/tcpdf/tcpdf_barcodes_1d.php
-(402 of 462) /includes/tcpdf/tcpdf_barcodes_2d.php
-(403 of 462) /includes/tcpdf/tcpdf_import.php
-(404 of 462) /includes/tcpdf/tcpdf_parser.php
-(405 of 462) /includes/tcpdf/tools/
-(406 of 462) /includes/tcpdf/tools/.htaccess
-(407 of 462) /includes/tcpdf/tools/convert_fonts_examples.txt
-(408 of 462) /includes/tcpdf/tools/tcpdf_addfont.php
-(409 of 462) /includes/vendor/
-(410 of 462) /includes/vendor/dompdf/
-(411 of 462) /includes/vendor/dompdf/dompdf/
-(412 of 462) /includes/vendor/dompdf/dompdf/lib/
-(413 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/
-(414 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/Helvetica-Bold.afm.php
-(415 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/Helvetica.afm.php
-(416 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/log.htm
-(417 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm.php
-(418 of 462) /includes/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm.php
-(419 of 462) /index.php
-(420 of 462) /media/
-(421 of 462) /media/icons/
-(422 of 462) /media/icons/binoption2.svg
-(423 of 462) /media/icons/delete_icon.svg
-(424 of 462) /media/icons/download_icon.svg
-(425 of 462) /media/icons/download_icon_color.svg
-(426 of 462) /media/icons/duplicate_icon.svg
-(427 of 462) /media/icons/duplicate_icon2.svg
-(428 of 462) /media/icons/edit_edit.svg
-(429 of 462) /media/icons/edit_icon.png
-(430 of 462) /media/icons/edit_icon.svg
-(431 of 462) /media/icons/edit_icon_whitty.svg
-(432 of 462) /media/icons/print_icon.svg
-(433 of 462) /media/icons/rearrange2.svg
-(434 of 462) /media/icons/rearrange3.svg
-(435 of 462) /media/icons/saved.svg
-(436 of 462) /media/icons/saved_dik.svg
-(437 of 462) /media/icons/search_icon.png
-(438 of 462) /media/icons/search_icon.svg
-(439 of 462) /media/icons/unsaved.svg
-(440 of 462) /media/icons/view_icon_final.svg
-(441 of 462) /media/nlg_logo.jpg
-(442 of 462) /pages/
-(443 of 462) /pages/404.php
-(444 of 462) /pages/create_pdf.php
-(445 of 462) /pages/document_edit.php
-(446 of 462) /pages/document_preview.php
-(447 of 462) /pages/documents.php
-(448 of 462) /pages/module_edit.php
-(449 of 462) /pages/module_preview.php
-(450 of 462) /pages/modules.php
-(451 of 462) /scripts/
-(452 of 462) /scripts/document_edit.js (filters applied)
-(453 of 462) /scripts/document_module.js (filters applied)
-(454 of 462) /scripts/documents.js (filters applied)
-(455 of 462) /scripts/jquery-2.1.4.min.js (filters applied)
-(456 of 462) /scripts/jquery-ui.min.js (filters applied)
-(457 of 462) /scripts/jquery.tagsinput.min.js (filters applied)
-(458 of 462) /scripts/modules.js (filters applied)
-(459 of 462) /scripts/scripts.js (filters applied)
-(460 of 462) /style.css (filters applied)
-(461 of 462) /style.scss
-(462 of 462) /.htdeployment
+( 1 of 39) /api/get_modules.php
+( 2 of 39) /api/module.php
+( 3 of 39) /classes/Module.php
+( 4 of 39) /css/document.scss
+( 5 of 39) /css/document_edit.scss
+( 6 of 39) /css/module.scss
+( 7 of 39) /css/module_edit.css (filters applied)
+( 8 of 39) /css/module_edit.scss
+( 9 of 39) /media/icons/bin.svg
+(10 of 39) /media/icons/bin_black.svg
+(11 of 39) /media/icons/checkbox_ticked.svg
+(12 of 39) /media/icons/checkbox_ticked_black.svg
+(13 of 39) /media/icons/checkbox_unticked.svg
+(14 of 39) /media/icons/checkbox_unticked_black.svg
+(15 of 39) /media/icons/delete_icon.svg
+(16 of 39) /media/icons/delete_icon_black.svg
+(17 of 39) /media/icons/download_icon.svg
+(18 of 39) /media/icons/download_icon_black.svg
+(19 of 39) /media/icons/duplicate_icon.svg
+(20 of 39) /media/icons/duplicate_icon_black.svg
+(21 of 39) /media/icons/edit_icon.svg
+(22 of 39) /media/icons/edit_icon_black.svg
+(23 of 39) /media/icons/preview.svg
+(24 of 39) /media/icons/preview_black.svg
+(25 of 39) /media/icons/print_icon.svg
+(26 of 39) /media/icons/print_icon_black.svg
+(27 of 39) /media/icons/rearrange.svg
+(28 of 39) /media/icons/rearrange_black.svg
+(29 of 39) /media/icons/search_icon.svg
+(30 of 39) /media/icons/search_icon_black.svg
+(31 of 39) /media/icons/unsaved.svg
+(32 of 39) /media/icons/unsaved_black.svg
+(33 of 39) /pages/document_edit.php
+(34 of 39) /pages/documents.php
+(35 of 39) /pages/modules.php
+(36 of 39) /scripts/modules.js (filters applied)
+(37 of 39) /style.css (filters applied)
+(38 of 39) /style.scss
+(39 of 39) /.htdeployment
 
 Renaming:
-(  1 of 433) Renaming /.htaccess
-(  2 of 433) Renaming /api/document.php
-(  3 of 433) Renaming /api/download_document.php
-(  4 of 433) Renaming /api/get_document.php
-(  5 of 433) Renaming /api/get_form_module.php
-(  6 of 433) Renaming /api/get_module_list.php
-(  7 of 433) Renaming /api/get_modules.php
-(  8 of 433) Renaming /api/module.php
-(  9 of 433) Renaming /api/new_module.php
-( 10 of 433) Renaming /api/search_module.php
-( 11 of 433) Renaming /classes/Document.php
-( 12 of 433) Renaming /classes/Document_Link.php
-( 13 of 433) Renaming /classes/Image.php
-( 14 of 433) Renaming /classes/Module.php
-( 15 of 433) Renaming /classes/Tag.php
-( 16 of 433) Renaming /classes/Tag_Link.php
-( 17 of 433) Renaming /css/document.scss
-( 18 of 433) Renaming /css/document_edit.scss
-( 19 of 433) Renaming /css/module.scss
-( 20 of 433) Renaming /css/module_edit.css
-( 21 of 433) Renaming /css/module_edit.scss
-( 22 of 433) Renaming /css/print.css
-( 23 of 433) Renaming /css/print.scss
-( 24 of 433) Renaming /dbObject.php
-( 25 of 433) Renaming /deployment.ini
-( 26 of 433) Renaming /functions.php
-( 27 of 433) Renaming /includes/footer.php
-( 28 of 433) Renaming /includes/header.php
-( 29 of 433) Renaming /includes/tcpdf/CHANGELOG.TXT
-( 30 of 433) Renaming /includes/tcpdf/composer.json
-( 31 of 433) Renaming /includes/tcpdf/config/tcpdf_config.php
-( 32 of 433) Renaming /includes/tcpdf/examples/barcodes/example_1d_html.php
-( 33 of 433) Renaming /includes/tcpdf/examples/barcodes/example_1d_png.php
-( 34 of 433) Renaming /includes/tcpdf/examples/barcodes/example_1d_svg.php
-( 35 of 433) Renaming /includes/tcpdf/examples/barcodes/example_1d_svgi.php
-( 36 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_datamatrix_html.php
-( 37 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_datamatrix_png.php
-( 38 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_datamatrix_svg.php
-( 39 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_datamatrix_svgi.php
-( 40 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_pdf417_html.php
-( 41 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_pdf417_png.php
-( 42 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_pdf417_svg.php
-( 43 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_pdf417_svgi.php
-( 44 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_qrcode_html.php
-( 45 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_qrcode_png.php
-( 46 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_qrcode_svg.php
-( 47 of 433) Renaming /includes/tcpdf/examples/barcodes/example_2d_qrcode_svgi.php
-( 48 of 433) Renaming /includes/tcpdf/examples/barcodes/tcpdf_barcodes_1d_include.php
-( 49 of 433) Renaming /includes/tcpdf/examples/barcodes/tcpdf_barcodes_2d_include.php
-( 50 of 433) Renaming /includes/tcpdf/examples/config/tcpdf_config_alt.php
-( 51 of 433) Renaming /includes/tcpdf/examples/data/cert/tcpdf.crt
-( 52 of 433) Renaming /includes/tcpdf/examples/data/cert/tcpdf.fdf
-( 53 of 433) Renaming /includes/tcpdf/examples/data/cert/tcpdf.p12
-( 54 of 433) Renaming /includes/tcpdf/examples/data/chapter_demo_1.txt
-( 55 of 433) Renaming /includes/tcpdf/examples/data/chapter_demo_2.txt
-( 56 of 433) Renaming /includes/tcpdf/examples/data/table_data_demo.txt
-( 57 of 433) Renaming /includes/tcpdf/examples/data/utf8test.txt
-( 58 of 433) Renaming /includes/tcpdf/examples/example_001.php
-( 59 of 433) Renaming /includes/tcpdf/examples/example_002.php
-( 60 of 433) Renaming /includes/tcpdf/examples/example_003.php
-( 61 of 433) Renaming /includes/tcpdf/examples/example_004.php
-( 62 of 433) Renaming /includes/tcpdf/examples/example_005.php
-( 63 of 433) Renaming /includes/tcpdf/examples/example_006.php
-( 64 of 433) Renaming /includes/tcpdf/examples/example_007.php
-( 65 of 433) Renaming /includes/tcpdf/examples/example_008.php
-( 66 of 433) Renaming /includes/tcpdf/examples/example_009.php
-( 67 of 433) Renaming /includes/tcpdf/examples/example_010.php
-( 68 of 433) Renaming /includes/tcpdf/examples/example_011.php
-( 69 of 433) Renaming /includes/tcpdf/examples/example_012.pdf
-( 70 of 433) Renaming /includes/tcpdf/examples/example_012.php
-( 71 of 433) Renaming /includes/tcpdf/examples/example_013.php
-( 72 of 433) Renaming /includes/tcpdf/examples/example_014.php
-( 73 of 433) Renaming /includes/tcpdf/examples/example_015.php
-( 74 of 433) Renaming /includes/tcpdf/examples/example_016.php
-( 75 of 433) Renaming /includes/tcpdf/examples/example_017.php
-( 76 of 433) Renaming /includes/tcpdf/examples/example_018.php
-( 77 of 433) Renaming /includes/tcpdf/examples/example_019.php
-( 78 of 433) Renaming /includes/tcpdf/examples/example_020.php
-( 79 of 433) Renaming /includes/tcpdf/examples/example_021.php
-( 80 of 433) Renaming /includes/tcpdf/examples/example_022.php
-( 81 of 433) Renaming /includes/tcpdf/examples/example_023.php
-( 82 of 433) Renaming /includes/tcpdf/examples/example_024.php
-( 83 of 433) Renaming /includes/tcpdf/examples/example_025.php
-( 84 of 433) Renaming /includes/tcpdf/examples/example_026.php
-( 85 of 433) Renaming /includes/tcpdf/examples/example_027.php
-( 86 of 433) Renaming /includes/tcpdf/examples/example_028.php
-( 87 of 433) Renaming /includes/tcpdf/examples/example_029.php
-( 88 of 433) Renaming /includes/tcpdf/examples/example_030.php
-( 89 of 433) Renaming /includes/tcpdf/examples/example_031.php
-( 90 of 433) Renaming /includes/tcpdf/examples/example_032.php
-( 91 of 433) Renaming /includes/tcpdf/examples/example_033.php
-( 92 of 433) Renaming /includes/tcpdf/examples/example_034.php
-( 93 of 433) Renaming /includes/tcpdf/examples/example_035.php
-( 94 of 433) Renaming /includes/tcpdf/examples/example_036.php
-( 95 of 433) Renaming /includes/tcpdf/examples/example_037.php
-( 96 of 433) Renaming /includes/tcpdf/examples/example_038.php
-( 97 of 433) Renaming /includes/tcpdf/examples/example_039.php
-( 98 of 433) Renaming /includes/tcpdf/examples/example_040.php
-( 99 of 433) Renaming /includes/tcpdf/examples/example_041.php
-(100 of 433) Renaming /includes/tcpdf/examples/example_042.php
-(101 of 433) Renaming /includes/tcpdf/examples/example_043.php
-(102 of 433) Renaming /includes/tcpdf/examples/example_044.php
-(103 of 433) Renaming /includes/tcpdf/examples/example_045.php
-(104 of 433) Renaming /includes/tcpdf/examples/example_046.php
-(105 of 433) Renaming /includes/tcpdf/examples/example_047.php
-(106 of 433) Renaming /includes/tcpdf/examples/example_048.php
-(107 of 433) Renaming /includes/tcpdf/examples/example_049.php
-(108 of 433) Renaming /includes/tcpdf/examples/example_050.php
-(109 of 433) Renaming /includes/tcpdf/examples/example_051.php
-(110 of 433) Renaming /includes/tcpdf/examples/example_052.php
-(111 of 433) Renaming /includes/tcpdf/examples/example_053.php
-(112 of 433) Renaming /includes/tcpdf/examples/example_054.php
-(113 of 433) Renaming /includes/tcpdf/examples/example_055.php
-(114 of 433) Renaming /includes/tcpdf/examples/example_056.php
-(115 of 433) Renaming /includes/tcpdf/examples/example_057.php
-(116 of 433) Renaming /includes/tcpdf/examples/example_058.php
-(117 of 433) Renaming /includes/tcpdf/examples/example_059.php
-(118 of 433) Renaming /includes/tcpdf/examples/example_060.php
-(119 of 433) Renaming /includes/tcpdf/examples/example_061.php
-(120 of 433) Renaming /includes/tcpdf/examples/example_062.php
-(121 of 433) Renaming /includes/tcpdf/examples/example_063.php
-(122 of 433) Renaming /includes/tcpdf/examples/example_064.php
-(123 of 433) Renaming /includes/tcpdf/examples/example_065.php
-(124 of 433) Renaming /includes/tcpdf/examples/images/_blank.png
-(125 of 433) Renaming /includes/tcpdf/examples/images/alpha.png
-(126 of 433) Renaming /includes/tcpdf/examples/images/image_demo.jpg
-(127 of 433) Renaming /includes/tcpdf/examples/images/image_with_alpha.png
-(128 of 433) Renaming /includes/tcpdf/examples/images/img.png
-(129 of 433) Renaming /includes/tcpdf/examples/images/logo_example.gif
-(130 of 433) Renaming /includes/tcpdf/examples/images/logo_example.jpg
-(131 of 433) Renaming /includes/tcpdf/examples/images/logo_example.png
-(132 of 433) Renaming /includes/tcpdf/examples/images/tcpdf_box.ai
-(133 of 433) Renaming /includes/tcpdf/examples/images/tcpdf_box.svg
-(134 of 433) Renaming /includes/tcpdf/examples/images/tcpdf_cell.png
-(135 of 433) Renaming /includes/tcpdf/examples/images/tcpdf_logo.jpg
-(136 of 433) Renaming /includes/tcpdf/examples/images/tcpdf_signature.png
-(137 of 433) Renaming /includes/tcpdf/examples/images/testsvg.svg
-(138 of 433) Renaming /includes/tcpdf/examples/images/tux.svg
-(139 of 433) Renaming /includes/tcpdf/examples/index.php
-(140 of 433) Renaming /includes/tcpdf/examples/lang/afr.php
-(141 of 433) Renaming /includes/tcpdf/examples/lang/ara.php
-(142 of 433) Renaming /includes/tcpdf/examples/lang/aze.php
-(143 of 433) Renaming /includes/tcpdf/examples/lang/bel.php
-(144 of 433) Renaming /includes/tcpdf/examples/lang/bra.php
-(145 of 433) Renaming /includes/tcpdf/examples/lang/bul.php
-(146 of 433) Renaming /includes/tcpdf/examples/lang/cat.php
-(147 of 433) Renaming /includes/tcpdf/examples/lang/ces.php
-(148 of 433) Renaming /includes/tcpdf/examples/lang/chi.php
-(149 of 433) Renaming /includes/tcpdf/examples/lang/cym.php
-(150 of 433) Renaming /includes/tcpdf/examples/lang/dan.php
-(151 of 433) Renaming /includes/tcpdf/examples/lang/eng.php
-(152 of 433) Renaming /includes/tcpdf/examples/lang/est.php
-(153 of 433) Renaming /includes/tcpdf/examples/lang/eus.php
-(154 of 433) Renaming /includes/tcpdf/examples/lang/far.php
-(155 of 433) Renaming /includes/tcpdf/examples/lang/fra.php
-(156 of 433) Renaming /includes/tcpdf/examples/lang/ger.php
-(157 of 433) Renaming /includes/tcpdf/examples/lang/gle.php
-(158 of 433) Renaming /includes/tcpdf/examples/lang/glg.php
-(159 of 433) Renaming /includes/tcpdf/examples/lang/hat.php
-(160 of 433) Renaming /includes/tcpdf/examples/lang/heb.php
-(161 of 433) Renaming /includes/tcpdf/examples/lang/hrv.php
-(162 of 433) Renaming /includes/tcpdf/examples/lang/hun.php
-(163 of 433) Renaming /includes/tcpdf/examples/lang/hye.php
-(164 of 433) Renaming /includes/tcpdf/examples/lang/ind.php
-(165 of 433) Renaming /includes/tcpdf/examples/lang/ita.php
-(166 of 433) Renaming /includes/tcpdf/examples/lang/jpn.php
-(167 of 433) Renaming /includes/tcpdf/examples/lang/kat.php
-(168 of 433) Renaming /includes/tcpdf/examples/lang/kor.php
-(169 of 433) Renaming /includes/tcpdf/examples/lang/mkd.php
-(170 of 433) Renaming /includes/tcpdf/examples/lang/mlt.php
-(171 of 433) Renaming /includes/tcpdf/examples/lang/msa.php
-(172 of 433) Renaming /includes/tcpdf/examples/lang/nld.php
-(173 of 433) Renaming /includes/tcpdf/examples/lang/nob.php
-(174 of 433) Renaming /includes/tcpdf/examples/lang/pol.php
-(175 of 433) Renaming /includes/tcpdf/examples/lang/por.php
-(176 of 433) Renaming /includes/tcpdf/examples/lang/ron.php
-(177 of 433) Renaming /includes/tcpdf/examples/lang/rus.php
-(178 of 433) Renaming /includes/tcpdf/examples/lang/slv.php
-(179 of 433) Renaming /includes/tcpdf/examples/lang/spa.php
-(180 of 433) Renaming /includes/tcpdf/examples/lang/sqi.php
-(181 of 433) Renaming /includes/tcpdf/examples/lang/srp.php
-(182 of 433) Renaming /includes/tcpdf/examples/lang/swa.php
-(183 of 433) Renaming /includes/tcpdf/examples/lang/swe.php
-(184 of 433) Renaming /includes/tcpdf/examples/lang/ukr.php
-(185 of 433) Renaming /includes/tcpdf/examples/lang/urd.php
-(186 of 433) Renaming /includes/tcpdf/examples/lang/yid.php
-(187 of 433) Renaming /includes/tcpdf/examples/lang/zho.php
-(188 of 433) Renaming /includes/tcpdf/examples/tcpdf_include.php
-(189 of 433) Renaming /includes/tcpdf/fonts/ae_fonts_2.0/ChangeLog
-(190 of 433) Renaming /includes/tcpdf/fonts/ae_fonts_2.0/COPYING
-(191 of 433) Renaming /includes/tcpdf/fonts/ae_fonts_2.0/README
-(192 of 433) Renaming /includes/tcpdf/fonts/aealarabiya.ctg.z
-(193 of 433) Renaming /includes/tcpdf/fonts/aealarabiya.php
-(194 of 433) Renaming /includes/tcpdf/fonts/aealarabiya.z
-(195 of 433) Renaming /includes/tcpdf/fonts/aefurat.ctg.z
-(196 of 433) Renaming /includes/tcpdf/fonts/aefurat.php
-(197 of 433) Renaming /includes/tcpdf/fonts/aefurat.z
-(198 of 433) Renaming /includes/tcpdf/fonts/cid0cs.php
-(199 of 433) Renaming /includes/tcpdf/fonts/cid0ct.php
-(200 of 433) Renaming /includes/tcpdf/fonts/cid0jp.php
-(201 of 433) Renaming /includes/tcpdf/fonts/cid0kr.php
-(202 of 433) Renaming /includes/tcpdf/fonts/courier.php
-(203 of 433) Renaming /includes/tcpdf/fonts/courierb.php
-(204 of 433) Renaming /includes/tcpdf/fonts/courierbi.php
-(205 of 433) Renaming /includes/tcpdf/fonts/courieri.php
-(206 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/AUTHORS
-(207 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/BUGS
-(208 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/langcover.txt
-(209 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/LICENSE
-(210 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/NEWS
-(211 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/README
-(212 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/status.txt
-(213 of 433) Renaming /includes/tcpdf/fonts/dejavu-fonts-ttf-2.34/unicover.txt
-(214 of 433) Renaming /includes/tcpdf/fonts/dejavusans.ctg.z
-(215 of 433) Renaming /includes/tcpdf/fonts/dejavusans.php
-(216 of 433) Renaming /includes/tcpdf/fonts/dejavusans.z
-(217 of 433) Renaming /includes/tcpdf/fonts/dejavusansb.ctg.z
-(218 of 433) Renaming /includes/tcpdf/fonts/dejavusansb.php
-(219 of 433) Renaming /includes/tcpdf/fonts/dejavusansb.z
-(220 of 433) Renaming /includes/tcpdf/fonts/dejavusansbi.ctg.z
-(221 of 433) Renaming /includes/tcpdf/fonts/dejavusansbi.php
-(222 of 433) Renaming /includes/tcpdf/fonts/dejavusansbi.z
-(223 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensed.ctg.z
-(224 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensed.php
-(225 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensed.z
-(226 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedb.ctg.z
-(227 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedb.php
-(228 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedb.z
-(229 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedbi.ctg.z
-(230 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedbi.php
-(231 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedbi.z
-(232 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedi.ctg.z
-(233 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedi.php
-(234 of 433) Renaming /includes/tcpdf/fonts/dejavusanscondensedi.z
-(235 of 433) Renaming /includes/tcpdf/fonts/dejavusansextralight.ctg.z
-(236 of 433) Renaming /includes/tcpdf/fonts/dejavusansextralight.php
-(237 of 433) Renaming /includes/tcpdf/fonts/dejavusansextralight.z
-(238 of 433) Renaming /includes/tcpdf/fonts/dejavusansi.ctg.z
-(239 of 433) Renaming /includes/tcpdf/fonts/dejavusansi.php
-(240 of 433) Renaming /includes/tcpdf/fonts/dejavusansi.z
-(241 of 433) Renaming /includes/tcpdf/fonts/dejavusansmono.ctg.z
-(242 of 433) Renaming /includes/tcpdf/fonts/dejavusansmono.php
-(243 of 433) Renaming /includes/tcpdf/fonts/dejavusansmono.z
-(244 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonob.ctg.z
-(245 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonob.php
-(246 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonob.z
-(247 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonobi.ctg.z
-(248 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonobi.php
-(249 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonobi.z
-(250 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonoi.ctg.z
-(251 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonoi.php
-(252 of 433) Renaming /includes/tcpdf/fonts/dejavusansmonoi.z
-(253 of 433) Renaming /includes/tcpdf/fonts/dejavuserif.ctg.z
-(254 of 433) Renaming /includes/tcpdf/fonts/dejavuserif.php
-(255 of 433) Renaming /includes/tcpdf/fonts/dejavuserif.z
-(256 of 433) Renaming /includes/tcpdf/fonts/dejavuserifb.ctg.z
-(257 of 433) Renaming /includes/tcpdf/fonts/dejavuserifb.php
-(258 of 433) Renaming /includes/tcpdf/fonts/dejavuserifb.z
-(259 of 433) Renaming /includes/tcpdf/fonts/dejavuserifbi.ctg.z
-(260 of 433) Renaming /includes/tcpdf/fonts/dejavuserifbi.php
-(261 of 433) Renaming /includes/tcpdf/fonts/dejavuserifbi.z
-(262 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensed.ctg.z
-(263 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensed.php
-(264 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensed.z
-(265 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedb.ctg.z
-(266 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedb.php
-(267 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedb.z
-(268 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedbi.ctg.z
-(269 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedbi.php
-(270 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedbi.z
-(271 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedi.ctg.z
-(272 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedi.php
-(273 of 433) Renaming /includes/tcpdf/fonts/dejavuserifcondensedi.z
-(274 of 433) Renaming /includes/tcpdf/fonts/dejavuserifi.ctg.z
-(275 of 433) Renaming /includes/tcpdf/fonts/dejavuserifi.php
-(276 of 433) Renaming /includes/tcpdf/fonts/dejavuserifi.z
-(277 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/AUTHORS
-(278 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/ChangeLog
-(279 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/COPYING
-(280 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/CREDITS
-(281 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/INSTALL
-(282 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/README
-(283 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/TROUBLESHOOTING
-(284 of 433) Renaming /includes/tcpdf/fonts/freefont-20120503/USAGE
-(285 of 433) Renaming /includes/tcpdf/fonts/freemono.ctg.z
-(286 of 433) Renaming /includes/tcpdf/fonts/freemono.php
-(287 of 433) Renaming /includes/tcpdf/fonts/freemono.z
-(288 of 433) Renaming /includes/tcpdf/fonts/freemonob.ctg.z
-(289 of 433) Renaming /includes/tcpdf/fonts/freemonob.php
-(290 of 433) Renaming /includes/tcpdf/fonts/freemonob.z
-(291 of 433) Renaming /includes/tcpdf/fonts/freemonobi.ctg.z
-(292 of 433) Renaming /includes/tcpdf/fonts/freemonobi.php
-(293 of 433) Renaming /includes/tcpdf/fonts/freemonobi.z
-(294 of 433) Renaming /includes/tcpdf/fonts/freemonoi.ctg.z
-(295 of 433) Renaming /includes/tcpdf/fonts/freemonoi.php
-(296 of 433) Renaming /includes/tcpdf/fonts/freemonoi.z
-(297 of 433) Renaming /includes/tcpdf/fonts/freesans.ctg.z
-(298 of 433) Renaming /includes/tcpdf/fonts/freesans.php
-(299 of 433) Renaming /includes/tcpdf/fonts/freesans.z
-(300 of 433) Renaming /includes/tcpdf/fonts/freesansb.ctg.z
-(301 of 433) Renaming /includes/tcpdf/fonts/freesansb.php
-(302 of 433) Renaming /includes/tcpdf/fonts/freesansb.z
-(303 of 433) Renaming /includes/tcpdf/fonts/freesansbi.ctg.z
-(304 of 433) Renaming /includes/tcpdf/fonts/freesansbi.php
-(305 of 433) Renaming /includes/tcpdf/fonts/freesansbi.z
-(306 of 433) Renaming /includes/tcpdf/fonts/freesansi.ctg.z
-(307 of 433) Renaming /includes/tcpdf/fonts/freesansi.php
-(308 of 433) Renaming /includes/tcpdf/fonts/freesansi.z
-(309 of 433) Renaming /includes/tcpdf/fonts/freeserif.ctg.z
-(310 of 433) Renaming /includes/tcpdf/fonts/freeserif.php
-(311 of 433) Renaming /includes/tcpdf/fonts/freeserif.z
-(312 of 433) Renaming /includes/tcpdf/fonts/freeserifb.ctg.z
-(313 of 433) Renaming /includes/tcpdf/fonts/freeserifb.php
-(314 of 433) Renaming /includes/tcpdf/fonts/freeserifb.z
-(315 of 433) Renaming /includes/tcpdf/fonts/freeserifbi.ctg.z
-(316 of 433) Renaming /includes/tcpdf/fonts/freeserifbi.php
-(317 of 433) Renaming /includes/tcpdf/fonts/freeserifbi.z
-(318 of 433) Renaming /includes/tcpdf/fonts/freeserifi.ctg.z
-(319 of 433) Renaming /includes/tcpdf/fonts/freeserifi.php
-(320 of 433) Renaming /includes/tcpdf/fonts/freeserifi.z
-(321 of 433) Renaming /includes/tcpdf/fonts/helvetica.php
-(322 of 433) Renaming /includes/tcpdf/fonts/helveticab.php
-(323 of 433) Renaming /includes/tcpdf/fonts/helveticabi.php
-(324 of 433) Renaming /includes/tcpdf/fonts/helveticai.php
-(325 of 433) Renaming /includes/tcpdf/fonts/hysmyeongjostdmedium.php
-(326 of 433) Renaming /includes/tcpdf/fonts/kozgopromedium.php
-(327 of 433) Renaming /includes/tcpdf/fonts/kozminproregular.php
-(328 of 433) Renaming /includes/tcpdf/fonts/msungstdlight.php
-(329 of 433) Renaming /includes/tcpdf/fonts/pdfacourier.php
-(330 of 433) Renaming /includes/tcpdf/fonts/pdfacourier.z
-(331 of 433) Renaming /includes/tcpdf/fonts/pdfacourierb.php
-(332 of 433) Renaming /includes/tcpdf/fonts/pdfacourierb.z
-(333 of 433) Renaming /includes/tcpdf/fonts/pdfacourierbi.php
-(334 of 433) Renaming /includes/tcpdf/fonts/pdfacourierbi.z
-(335 of 433) Renaming /includes/tcpdf/fonts/pdfacourieri.php
-(336 of 433) Renaming /includes/tcpdf/fonts/pdfacourieri.z
-(337 of 433) Renaming /includes/tcpdf/fonts/pdfahelvetica.php
-(338 of 433) Renaming /includes/tcpdf/fonts/pdfahelvetica.z
-(339 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticab.php
-(340 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticab.z
-(341 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticabi.php
-(342 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticabi.z
-(343 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticai.php
-(344 of 433) Renaming /includes/tcpdf/fonts/pdfahelveticai.z
-(345 of 433) Renaming /includes/tcpdf/fonts/pdfasymbol.php
-(346 of 433) Renaming /includes/tcpdf/fonts/pdfasymbol.z
-(347 of 433) Renaming /includes/tcpdf/fonts/pdfatimes.php
-(348 of 433) Renaming /includes/tcpdf/fonts/pdfatimes.z
-(349 of 433) Renaming /includes/tcpdf/fonts/pdfatimesb.php
-(350 of 433) Renaming /includes/tcpdf/fonts/pdfatimesb.z
-(351 of 433) Renaming /includes/tcpdf/fonts/pdfatimesbi.php
-(352 of 433) Renaming /includes/tcpdf/fonts/pdfatimesbi.z
-(353 of 433) Renaming /includes/tcpdf/fonts/pdfatimesi.php
-(354 of 433) Renaming /includes/tcpdf/fonts/pdfatimesi.z
-(355 of 433) Renaming /includes/tcpdf/fonts/pdfazapfdingbats.php
-(356 of 433) Renaming /includes/tcpdf/fonts/pdfazapfdingbats.z
-(357 of 433) Renaming /includes/tcpdf/fonts/stsongstdlight.php
-(358 of 433) Renaming /includes/tcpdf/fonts/symbol.php
-(359 of 433) Renaming /includes/tcpdf/fonts/times.php
-(360 of 433) Renaming /includes/tcpdf/fonts/timesb.php
-(361 of 433) Renaming /includes/tcpdf/fonts/timesbi.php
-(362 of 433) Renaming /includes/tcpdf/fonts/timesi.php
-(363 of 433) Renaming /includes/tcpdf/fonts/uni2cid_ac15.php
-(364 of 433) Renaming /includes/tcpdf/fonts/uni2cid_ag15.php
-(365 of 433) Renaming /includes/tcpdf/fonts/uni2cid_aj16.php
-(366 of 433) Renaming /includes/tcpdf/fonts/uni2cid_ak12.php
-(367 of 433) Renaming /includes/tcpdf/fonts/zapfdingbats.php
-(368 of 433) Renaming /includes/tcpdf/include/barcodes/datamatrix.php
-(369 of 433) Renaming /includes/tcpdf/include/barcodes/pdf417.php
-(370 of 433) Renaming /includes/tcpdf/include/barcodes/qrcode.php
-(371 of 433) Renaming /includes/tcpdf/include/sRGB.icc
-(372 of 433) Renaming /includes/tcpdf/include/tcpdf_colors.php
-(373 of 433) Renaming /includes/tcpdf/include/tcpdf_filters.php
-(374 of 433) Renaming /includes/tcpdf/include/tcpdf_font_data.php
-(375 of 433) Renaming /includes/tcpdf/include/tcpdf_fonts.php
-(376 of 433) Renaming /includes/tcpdf/include/tcpdf_images.php
-(377 of 433) Renaming /includes/tcpdf/include/tcpdf_static.php
-(378 of 433) Renaming /includes/tcpdf/LICENSE.TXT
-(379 of 433) Renaming /includes/tcpdf/README.TXT
-(380 of 433) Renaming /includes/tcpdf/tcpdf.php
-(381 of 433) Renaming /includes/tcpdf/tcpdf_autoconfig.php
-(382 of 433) Renaming /includes/tcpdf/tcpdf_barcodes_1d.php
-(383 of 433) Renaming /includes/tcpdf/tcpdf_barcodes_2d.php
-(384 of 433) Renaming /includes/tcpdf/tcpdf_import.php
-(385 of 433) Renaming /includes/tcpdf/tcpdf_parser.php
-(386 of 433) Renaming /includes/tcpdf/tools/.htaccess
-(387 of 433) Renaming /includes/tcpdf/tools/convert_fonts_examples.txt
-(388 of 433) Renaming /includes/tcpdf/tools/tcpdf_addfont.php
-(389 of 433) Renaming /includes/vendor/dompdf/dompdf/lib/fonts/Helvetica-Bold.afm.php
-(390 of 433) Renaming /includes/vendor/dompdf/dompdf/lib/fonts/Helvetica.afm.php
-(391 of 433) Renaming /includes/vendor/dompdf/dompdf/lib/fonts/log.htm
-(392 of 433) Renaming /includes/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm.php
-(393 of 433) Renaming /includes/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm.php
-(394 of 433) Renaming /index.php
-(395 of 433) Renaming /media/icons/binoption2.svg
-(396 of 433) Renaming /media/icons/delete_icon.svg
-(397 of 433) Renaming /media/icons/download_icon.svg
-(398 of 433) Renaming /media/icons/download_icon_color.svg
-(399 of 433) Renaming /media/icons/duplicate_icon.svg
-(400 of 433) Renaming /media/icons/duplicate_icon2.svg
-(401 of 433) Renaming /media/icons/edit_edit.svg
-(402 of 433) Renaming /media/icons/edit_icon.png
-(403 of 433) Renaming /media/icons/edit_icon.svg
-(404 of 433) Renaming /media/icons/edit_icon_whitty.svg
-(405 of 433) Renaming /media/icons/print_icon.svg
-(406 of 433) Renaming /media/icons/rearrange2.svg
-(407 of 433) Renaming /media/icons/rearrange3.svg
-(408 of 433) Renaming /media/icons/saved.svg
-(409 of 433) Renaming /media/icons/saved_dik.svg
-(410 of 433) Renaming /media/icons/search_icon.png
-(411 of 433) Renaming /media/icons/search_icon.svg
-(412 of 433) Renaming /media/icons/unsaved.svg
-(413 of 433) Renaming /media/icons/view_icon_final.svg
-(414 of 433) Renaming /media/nlg_logo.jpg
-(415 of 433) Renaming /pages/404.php
-(416 of 433) Renaming /pages/create_pdf.php
-(417 of 433) Renaming /pages/document_edit.php
-(418 of 433) Renaming /pages/document_preview.php
-(419 of 433) Renaming /pages/documents.php
-(420 of 433) Renaming /pages/module_edit.php
-(421 of 433) Renaming /pages/module_preview.php
-(422 of 433) Renaming /pages/modules.php
-(423 of 433) Renaming /scripts/document_edit.js
-(424 of 433) Renaming /scripts/document_module.js
-(425 of 433) Renaming /scripts/documents.js
-(426 of 433) Renaming /scripts/jquery-2.1.4.min.js
-(427 of 433) Renaming /scripts/jquery-ui.min.js
-(428 of 433) Renaming /scripts/jquery.tagsinput.min.js
-(429 of 433) Renaming /scripts/modules.js
-(430 of 433) Renaming /scripts/scripts.js
-(431 of 433) Renaming /style.css
-(432 of 433) Renaming /style.scss
-(433 of 433) Renaming /.htdeployment
+( 1 of 39) Renaming /api/get_modules.php
+( 2 of 39) Renaming /api/module.php
+( 3 of 39) Renaming /classes/Module.php
+( 4 of 39) Renaming /css/document.scss
+( 5 of 39) Renaming /css/document_edit.scss
+( 6 of 39) Renaming /css/module.scss
+( 7 of 39) Renaming /css/module_edit.css
+( 8 of 39) Renaming /css/module_edit.scss
+( 9 of 39) Renaming /media/icons/bin.svg
+(10 of 39) Renaming /media/icons/bin_black.svg
+(11 of 39) Renaming /media/icons/checkbox_ticked.svg
+(12 of 39) Renaming /media/icons/checkbox_ticked_black.svg
+(13 of 39) Renaming /media/icons/checkbox_unticked.svg
+(14 of 39) Renaming /media/icons/checkbox_unticked_black.svg
+(15 of 39) Renaming /media/icons/delete_icon.svg
+(16 of 39) Renaming /media/icons/delete_icon_black.svg
+(17 of 39) Renaming /media/icons/download_icon.svg
+(18 of 39) Renaming /media/icons/download_icon_black.svg
+(19 of 39) Renaming /media/icons/duplicate_icon.svg
+(20 of 39) Renaming /media/icons/duplicate_icon_black.svg
+(21 of 39) Renaming /media/icons/edit_icon.svg
+(22 of 39) Renaming /media/icons/edit_icon_black.svg
+(23 of 39) Renaming /media/icons/preview.svg
+(24 of 39) Renaming /media/icons/preview_black.svg
+(25 of 39) Renaming /media/icons/print_icon.svg
+(26 of 39) Renaming /media/icons/print_icon_black.svg
+(27 of 39) Renaming /media/icons/rearrange.svg
+(28 of 39) Renaming /media/icons/rearrange_black.svg
+(29 of 39) Renaming /media/icons/search_icon.svg
+(30 of 39) Renaming /media/icons/search_icon_black.svg
+(31 of 39) Renaming /media/icons/unsaved.svg
+(32 of 39) Renaming /media/icons/unsaved_black.svg
+(33 of 39) Renaming /pages/document_edit.php
+(34 of 39) Renaming /pages/documents.php
+(35 of 39) Renaming /pages/modules.php
+(36 of 39) Renaming /scripts/modules.js
+(37 of 39) Renaming /style.css
+(38 of 39) Renaming /style.scss
+(39 of 39) Renaming /.htdeployment
+
+Deleting:
+( 1 of 12) Deleting /media/icons/view_icon_final.svg
+( 2 of 12) Deleting /media/icons/search_icon.png
+( 3 of 12) Deleting /media/icons/saved_dik.svg
+( 4 of 12) Deleting /media/icons/saved.svg
+( 5 of 12) Deleting /media/icons/rearrange3.svg
+( 6 of 12) Deleting /media/icons/rearrange2.svg
+( 7 of 12) Deleting /media/icons/edit_icon_whitty.svg
+( 8 of 12) Deleting /media/icons/edit_icon.png
+( 9 of 12) Deleting /media/icons/edit_edit.svg
+(10 of 12) Deleting /media/icons/duplicate_icon2.svg
+(11 of 12) Deleting /media/icons/download_icon_color.svg
+(12 of 12) Deleting /media/icons/binoption2.svg
 
 Cleaning temp/cache
 
 Deleting remote file .htdeployment.running
 
-Finished at [2015/07/01 13:29] (in 154 seconds)
+Finished at [2015/07/01 15:36] (in 4 seconds)
