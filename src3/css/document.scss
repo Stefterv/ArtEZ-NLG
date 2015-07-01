@@ -118,15 +118,13 @@
 	top: 3px;
 	right: 3px;
 	display: none;
+	display:inline-block;
 	a{
 		text-decoration: none;
 	}
-	svg{
+	img{
 		width: 35px;
 		height: 35px;
-	}
-	svg *{
-		stroke: black;
 	}
 	&.show{
 		display: block;
