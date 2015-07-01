@@ -601,7 +601,8 @@ svg {
   font-size: 0.9em;
   color: white;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  white-space: nowrap; }
   .module_item a {
     color: white;
     text-decoration: none; }
@@ -616,7 +617,8 @@ svg {
   background: white;
   display: inline-block;
   position: relative;
-  left: -5px; }
+  left: -5px;
+  white-space: nowrap; }
 
 .module_title {
   padding: 0;
