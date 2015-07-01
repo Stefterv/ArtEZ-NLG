@@ -61,6 +61,13 @@ $("#modulesbutton").on('click', '.createnew', function(event) {
 			id: "new"
 		},
 		success : function (result) { // when succesful
+			var result = $(result);
+			result.find("[data-input]").on('input', function(event) {
+				event.preventDefault();
+				var inputName = $(this).data("input");
+				console.log(inputName);
+				$(this).closest("form").find("[name="+inputName+"]").val($(this).html());
+			});
 			$(".module_preview").html(result);
 		}
 	});
@@ -72,13 +79,13 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 	var data = $(this).serialize();
 	data += "&submit=edit";
 	console.log(data);
-	id = $('.document_container .module_selected').data("id");
 	$.ajax({
 		url: 'api/module.php',
 		type: 'POST',
 		data: data
 	})
 	.done(function(result) {
+		
 		$(".module_preview").html(result);
 	})
 	.fail(function() {

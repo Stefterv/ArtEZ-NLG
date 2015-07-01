@@ -54,6 +54,7 @@ class Module extends databaseObject{
 			<input type="hidden" name="module_id" value="<?=$this->id?>">
 			<input type="hidden" name="title" value="<?=$this->title?>">
 			<input type="hidden" name="content" value="<?=$this->content?>">
+			<input type="hidden" name="master" value="1">
 			<?
 					$tags = Tag_Link::getTags("Module",$this->id);
 					$tagString = "";
