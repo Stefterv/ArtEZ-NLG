@@ -1,5 +1,5 @@
 ##### FTP Access:
-Adress: ftp.steftervelde.nl
+Adress: ftp.tervelde.eu
 
 User: nlg@steftervelde.nl
 

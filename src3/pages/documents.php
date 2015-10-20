@@ -11,13 +11,13 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 				// $tags = Tag::findAll();
 				$tags = Tag::find("SELECT * FROM tags
 													WHERE (
-													 SELECT COUNT(*) 
+													 SELECT COUNT(*)
 													        FROM tag_links WHERE tag_links.link_type = 'Document' AND tag_links.tag_id = tags.id
 													) > 0 AND title != '' ");
 			?>
 			<div class="document_tags">
 				<? foreach($tags as $tag): ?>
-				<div class="tag" data-pagetype="documents"><?=htmlentities($tag->title)?></div>
+				<div class="tag" data-pagetype="documents"><?=htmlspecialchars($tag->title)?></div>
 				<? endforeach; ?>
 			</div>
 		</div>
@@ -30,15 +30,15 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= "tag_".htmlentities($tag->title)." ";
+							$tagString .= "tag_".htmlspecialchars($tag->title)." ";
 						}
 					}
 				?>
-				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=htmlentities($document->title)?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
-					<?=htmlentities($document->title)?>
+				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=htmlspecialchars($document->title)?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
+					<?=htmlspecialchars($document->title)?>
 				</div>
 				<? endforeach; ?>
-				
+
 			</div>
 		</div>
 		<div class="preview">

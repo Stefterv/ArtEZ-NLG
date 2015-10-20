@@ -3,11 +3,11 @@
 	$duplicate = false;
 	if(isset($_GET['document'])){
 		$document = Document::findByID($_GET['document']);
-	} 
+	}
 	if(isset($_GET['duplicate'])){
 		$document = Document::findByID($_GET['duplicate']);
 		$duplicate = true;
-	} 
+	}
 	if(!$document){
 		$document = new Document();
 	}
@@ -22,7 +22,7 @@
 				<? else: ?>
 				<input type="hidden" name="document_id" value="<?=$document->id?>">
 				<? endif; ?>
-				<input type="hidden" name="title" value="<?=htmlentities($document->title)?>" placeholder="Document Title">
+				<input type="hidden" name="title" value="<?=htmlspecialchars($document->title)?>" placeholder="Document Title">
 				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
@@ -34,7 +34,7 @@
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= htmlentities($tag->title).",";
+							$tagString .= htmlspecialchars($tag->title).",";
 						}
 					}
 				?>
