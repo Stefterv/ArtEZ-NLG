@@ -22,9 +22,9 @@ class Module extends databaseObject{
 				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=htmlspecialchars($this->content)?></div>
 				<div class="module_buttons">
 					<!-- <a href="#" class="module_move">reorder</a> -->
-					<a href="#" alt="Re-order module" class="module_move"><img src="media/icons/rearrange.svg" alt=""></a>
-					<a href="#" alt="Edit module" class="module_edit"><img src="media/icons/edit_icon.svg" alt=""></a>
-					<a href="#" alt="Delete module" class="module_remove"><img src="media/icons/bin.svg" alt=""></a>
+					<a href="#" title="Re-order module" class="module_move"><img src="media/icons/rearrange.svg" alt=""></a>
+					<a href="#" title="Edit module" class="module_edit"><img src="media/icons/edit_icon.svg" alt=""></a>
+					<a href="#" title="Delete module" class="module_remove"><img src="media/icons/bin.svg" alt=""></a>
 				</div>
 		</div>
 		<?
@@ -66,10 +66,13 @@ class Module extends databaseObject{
 				?>
 			<div class="title_edit" contenteditable data-input="title" data-placeholder="This is a placeholder title"><?=htmlspecialchars($this->title)?></div>
 			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
+			
 			<div class="content_edit" contenteditable data-input="content" data-placeholder="This is placeholder content"><?=htmlspecialchars($this->content)?></div>
+			<div class="button-container">
 			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
 			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
 			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
+			</div>
 
 		</form>
 		<script type="text/javascript" src="scripts/jquery.tagsinput.min.js"></script>

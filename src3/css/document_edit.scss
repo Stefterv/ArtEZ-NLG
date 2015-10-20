@@ -224,10 +224,15 @@ html, body{
 	@extend .tag;
 	padding-top: 1px;
 	padding-bottom: 2px;
+	background: #1d9099;
+
 	input{
-		width: 70px;
+		width: 75px;
 		border: 0;
+		background: #1d9099;
 		font-size: 0.95em;
+		color: white !important;
+		text-transform: uppercase;
 	}
 }
 .document_buttons>*{
@@ -235,6 +240,7 @@ html, body{
 	position: relative;
 	padding: 0px 10px;
 	padding-left: 30px;
+	cursor: pointer;
 	.icon{
 		position: absolute;
 		top: -8px;

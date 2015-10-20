@@ -67,9 +67,18 @@
 				</div>
 				<button type="submit" id="submit" name="submit" value="edit" style="display: none">Submit</button>
 				<div class="document_buttons">
-					<div data-trigger="submit"><img class="icon" src="media/icons/unsaved_black.svg" />Save</div><div data-trigger="delete"><img class="icon" src="media/icons/bin_black.svg" />Delete</div>
-				</div>
+				
+					<div data-trigger="submit">
+						<img class="icon" title="Save" src="media/icons/unsaved_black.svg" />
+						Save
+					</div>
+					<div data-trigger="delete">
+						<img class="icon" title="Delete" src="media/icons/bin_black.svg" />
+							Delete
+					</div>
+				
 				<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
+				</div>
 			</form>
 			<script type="text/javascript" src="scripts/jquery.tagsinput.min.js"></script>
 			<script type="text/javascript" src="scripts/document_edit.js"></script>
@@ -77,8 +86,8 @@
 		<div class="preview">
 			<div class="document_preview_container">
 				<div class="preview_buttons show">
-					<a onclick="window.print();" id="printDocument"><img class="icon" src="media/icons/print_icon_black.svg" />	</a>
-					<a href="/api/download_document.php?document=<?=$document->id?>" alt="Download Document"><img class="icon" src="media/icons/download_icon_black.svg" /></a>
+					<a onclick="window.print();" id="printDocument"><img class="icon" title="Print Document" src="media/icons/print_icon_black.svg" />	</a>
+					<a href="/api/download_document.php?document=<?=$document->id?>" title="Download Document" alt="Download Document"><img class="icon" src="media/icons/download_icon_black.svg" /></a>
 				</div>
 					<? $document->preview(); ?>
 			</div>

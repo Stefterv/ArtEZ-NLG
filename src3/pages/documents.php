@@ -44,9 +44,9 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 		<div class="preview">
 			<div class="document_preview_container" data-id="0">
 				<div class="preview_buttons">
-					<a href="document_edit?document=" alt="Edit Document"><img src="media/icons/edit_icon_black.svg" /></a>
-					<a href="document_edit?duplicate=" alt="Duplicate Document"><img src="media/icons/duplicate_icon_black.svg" /></a>
-					<a href="/api/download_document.php?document=" alt="Download Document"><img src="media/icons/download_icon_black.svg" /></a>
+					<a href="document_edit?document=" title="Edit Document"><img src="media/icons/edit_icon_black.svg" /></a>
+					<a href="document_edit?duplicate=" title="Duplicate Document"><img src="media/icons/duplicate_icon_black.svg" /></a>
+					<a href="/api/download_document.php?document=" title="Download Document"><img src="media/icons/download_icon_black.svg" /></a>
 				</div>
 				<div class="document_preview">
 					<i style="margin: 32px 0 5px 0; display: inline-block;" >click a document to preview</i>
