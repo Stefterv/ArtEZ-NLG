@@ -11,7 +11,7 @@ class MC_TCPDF extends TCPDF {
 
   public function ChapterBody($file) {
     $this->selectColumn();
-    $content = $file;    
+    $content = $file;
     $this->SetFont('Helvetica', '', 9);
     $this->SetTextColor(50, 50, 50);
     $this->writeHTML($content, true, false, true, false, 'J');
@@ -19,21 +19,49 @@ class MC_TCPDF extends TCPDF {
   }
 
   public function Header(){
+    // get the current page break margin
+    $bMargin = $this->getBreakMargin();
+    // get current auto-page-break mode
+    $auto_page_break = $this->AutoPageBreak;
+    // disable auto-page-break
+    $this->SetAutoPageBreak(false, 0);
+    // set bacground image
+    $img_file = '../media/foldlines-02.jpg';
+    $this->Image($img_file, 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
+    // restore auto-page-break status
+    $this->SetAutoPageBreak($auto_page_break, $bMargin);
+    // set the starting point for the page content
+    $this->setPageMark();
+
   	error_log($this->getPage());
 		$pagewidth = 297 - 7 * 2;
 		$pagewidth -= 3*14; // remove margins
 		$columnwidth = $pagewidth/4;
 		$margingwidth = $columnwidth+14+7;
+
+
+
   	if($this->getPage() % 2 == 1 ) {
-
-
+      // get the current page break margin
+      $bMargin = $this->getBreakMargin();
+      // get current auto-page-break mode
+      $auto_page_break = $this->AutoPageBreak;
+      // disable auto-page-break
+      $this->SetAutoPageBreak(false, 0);
+      // set bacground image
+      $img_file = '../media/foldlines-01.jpg';
+      $this->Image($img_file, 0, 0, 297, 210, '', '', '', false, 300, '', false, false, 0);
+      // restore auto-page-break status
+      $this->SetAutoPageBreak($auto_page_break, $bMargin);
+      // set the starting point for the page content
+      $this->setPageMark();
 
 			$this->setEqualColumns(0, $columnwidth);
 			$w = $columnwidth;
 			$h = (210-14*2)/2;
 			$x = 7;
 			$y = 14;
-			
+
 
 			ob_start(); ?>
 				<?
@@ -56,7 +84,7 @@ class MC_TCPDF extends TCPDF {
 				  <td width="140" style="font-size:0.5em;"><p>MFY Legal Services, Inc.<br>WorkplaceJustice Project<br>Monday and Tuesday<br>2:00 pm - 5:00 pm<br>212-417-3838</p></td>
 				 </tr>
 				</table>
-			<? 
+			<?
 			$html = ob_get_clean();
 			// $this->writeHTMLCell($w, $h,$x,$y+$h,$html,0,0,false,true,'',false);
 
@@ -157,7 +185,7 @@ foreach($pages as  $pageNum => $page){
 		<? endif; ?>
 		<? endforeach; ?>
 		</table>
-	<? 
+	<?
 	$html = ob_get_clean();
 	$pdf->writeHTMLCell($w, $h,$x,$y,$html,0,0,false,true,'',true);
 	$i++;

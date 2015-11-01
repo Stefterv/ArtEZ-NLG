@@ -11,7 +11,7 @@
 			<?
 				$tags = Tag::find("SELECT * FROM tags
 													WHERE (
-													 SELECT COUNT(*) 
+													 SELECT COUNT(*)
 													        FROM tag_links WHERE tag_links.link_type = 'Module' AND tag_links.tag_id = tags.id
 													) > 0 AND title != '' ");
 			?>
@@ -37,14 +37,14 @@
 					<div class="module_selection">&nbsp;</div>
 					<div class="module_title"><?=htmlspecialchars($module->title);?></div>
 					<div class="module_date">
-						<? $date = date_create_from_format("Y-m-d H:i:s",$module->created==""?"2015-06-02 14:54:04":$module->created); ?>
+						<? $date = date_create_from_format("Y-m-d H:i:s", $module->created==""?"2015-06-02 14:54:04":$module->created); ?>
 						<div class="changed"><?=date_format($date, "m-d-Y");?></div>
-						<? $date = date_create_from_format("Y-m-d H:i:s",$module->changed==""?"2015-06-02 14:54:04":$module->changed); ?>
+						<? $date = date_create_from_format("Y-m-d H:i:s", $module->changed==""?"2015-06-02 14:54:04":$module->changed); ?>
 						<div class="changed"><?=date_format($date, "m-d-Y");?></div>
 					</div>
 				</div>
 			<? endforeach; ?>
-			
+
 			</div>
 		</div>
 		<div class="preview">
