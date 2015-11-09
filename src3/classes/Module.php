@@ -7,6 +7,10 @@ class Module extends databaseObject{
 	public $master;
 	public $changed;
 	public $created;
+	function __construct(){
+		$this->created = date("Y-m-d H:i:s");
+		error_log($this->created);
+	}
 	function getTags(){
 		return Tag_Link::getTags(1,$this->id);
 	}
@@ -18,7 +22,7 @@ class Module extends databaseObject{
 				<input type="hidden" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=htmlspecialchars($this->content)?>" placeholder="Content">
 				<div class="module_title" contenteditable data-inputvalue="title" data-placeholder="Title"><?=htmlspecialchars($this->title)?></div>
-				
+
 				<div class="module_text" contenteditable data-inputvalue="content" data-placeholder="Text"><?=htmlspecialchars($this->content)?></div>
 				<div class="module_buttons">
 					<!-- <a href="#" class="module_move">reorder</a> -->
@@ -66,7 +70,7 @@ class Module extends databaseObject{
 				?>
 			<div class="title_edit" contenteditable data-input="title" data-placeholder="This is a placeholder title"><?=htmlspecialchars($this->title)?></div>
 			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
-			
+
 			<div class="content_edit" contenteditable data-input="content" data-placeholder="This is placeholder content"><?=htmlspecialchars($this->content)?></div>
 			<div class="button-container">
 			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
