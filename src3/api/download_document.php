@@ -77,12 +77,12 @@ class MC_TCPDF extends TCPDF {
 				  <td width="10" rowspan="4"></td>
 				  <td width="60" rowspan="4"><img src="../media/nlg_logo.jpg"></td>
 				 </tr>
-				 <tr style="text-transform: uppercase;">
+				 <!-- <tr style="text-transform: uppercase;">
 				  <td width="140" style="font-size:0.5em;"><p>To speak to<br>an attorney,<br>please call:</p></td>
 				 </tr>
 				 <tr style="text-transform: uppercase;">
 				  <td width="140" style="font-size:0.5em;"><p>MFY Legal Services, Inc.<br>WorkplaceJustice Project<br>Monday and Tuesday<br>2:00 pm - 5:00 pm<br>212-417-3838</p></td>
-				 </tr>
+				 </tr> -->
 				</table>
 			<?
 			$html = ob_get_clean();
