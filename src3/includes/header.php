@@ -1,4 +1,6 @@
 <?
+date_default_timezone_set('America/New_York'); 
+
 $documentspages = array("documents");
 $document_editpages = array("document_edit");
 $modulespages = array("module_edit","modules");

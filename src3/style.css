@@ -1,3 +1,7 @@
+input {
+  background: none;
+}
+
 html, body {
   margin: 0;
   width: 100%;
@@ -668,12 +672,12 @@ svg {
 textarea {
   resize: none;
   width: 100%;
-  border: 0;
   padding: 20px;
   box-sizing: border-box;
   box-sizing: border-box;
   font-weight: 200;
-  font-size: 0.9em; }
+  font-size: 0.9em; 
+}
 
 .document_container.filtered .module_item {
   display: none; }

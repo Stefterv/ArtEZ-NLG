@@ -4,12 +4,11 @@ $(".document_search_module_field").keydown(function(e) {
 		event.preventDefault();
 		$.ajax({
 			url: 'api/search_module.php',
-			data: { query: $(this).html()},
+			data: { query: $(this).val()},
 		})
 		.done(function(result) {
 			result = $(result);
 			$(".document_search_result").html(result);
-			console.log(result.find(".result"));
 			result.on('click', function(event) {
 				event.preventDefault();
 				var id = $(this).data('id');
@@ -26,17 +25,17 @@ $(".document_search_module_field").keydown(function(e) {
 					moduleEvent(result);
 				})
 				.fail(function() {
-					console.log("error");
+					console.error("error");
 				})
 				.always(function() {
-					console.log("complete");
+				
 				});
 					
 				$(".document_search_result").empty();
 			});
 		})
 		.fail(function() {
-			console.log("error");
+			console.error("error");
 		});
 		
 	}
@@ -45,7 +44,7 @@ $(".document_search_module_field").keydown(function(e) {
 
 $(".document_search_module_field").focusout(function(event) {
 	// alert("NOFOCUS");
-	if($(this).html() == "" || $(this).html() == "<br>"){
+	if($(this).html() === "" || $(this).html() === "<br>"){
 		$(".document_search_result").empty();
 	}
 });

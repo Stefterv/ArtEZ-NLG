@@ -23,7 +23,7 @@ $( '.module_item' ).on( 'click', function () { // on click module
 			error : function () {
 			  $('.module_preview').html('Unable to load'); // if unable to load display this error message
 			}
-		})
+		});
 	}
 });
 
@@ -36,20 +36,19 @@ $('.module_preview').on('click', '.module_edit_button', function(){
 			data: {
 				id: id
 			},
-			success : function (result) { // when succesful
-				var result = $(result);
+			success : function (data) { // when succesful
+				var result = $(data);
 				result.find("[data-input]").on('input', function(event) {
 					event.preventDefault();
 					var inputName = $(this).data("input");
-					console.log(inputName);
-					$(this).closest("form").find("[name="+inputName+"]").val($(this).html());
+					$(this).closest("form").find("[name="+inputName+"]").val($(this).val());
 				});
 				$(".module_preview").html(result);
 			},
 			error : function () {
 			  $('.module_preview').html('Unable to load'); // if unable to load display this error message
 			}
-		})
+		});
 });
 
 $("#modulesbutton").on('click', '.createnew', function(event) {
@@ -60,15 +59,16 @@ $("#modulesbutton").on('click', '.createnew', function(event) {
 		data: {
 			id: "new"
 		},
-		success : function (result) { // when succesful
-			var result = $(result);
+		success : function (data) { // when succesful
+			var result = $(data);
 			result.find("[data-input]").on('input', function(event) {
 				event.preventDefault();
 				var inputName = $(this).data("input");
-				console.log(inputName);
-				$(this).closest("form").find("[name="+inputName+"]").val($(this).html());
+				$(this).closest("form").find("[name="+inputName+"]").val($(this).val());
 			});
 			$(".module_preview").html(result);
+
+
 		}
 	});
 });
@@ -78,15 +78,24 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 	var form = $(this);
 	var data = $(this).serialize();
 	data += "&submit=edit";
-	console.log(data);
 	$.ajax({
 		url: 'api/module.php',
 		type: 'POST',
 		data: data
 	})
 	.done(function(result) {
-		
 		$(".module_preview").html(result);
+		console.log('ok!!!!!!!!!!!!!!!!!!');
+		$.ajax({
+			url: 'pages/modules_list.php',
+			success: function(data) {
+				console.log(data);
+				$('.document_container').html(data);
+			},
+			error: function(a, b, c) {
+				console.error([a, b, c]);
+			}
+		});
 	})
 	.fail(function() {
 		console.log("error");
@@ -97,14 +106,13 @@ $(".module_preview").on('submit',"#save_master_module", function(event) {
 	
 });
 $(".search").on('input', function() {
-  var search = $(this).text().toLowerCase();
-  console.log(search);
+  var search = $(this).val().toLowerCase();
+  
   var list = $(".module_item");
   $(".document_container").addClass('filtered');
   $(".documentVisible").removeClass("documentVisible");
   $(list).each(function() {
-    var documentName = $(this).data("title").toLowerCase();
-    console.log(documentName);
+    var documentName = $(this).data("title").toString().toLowerCase();
     if (documentName.indexOf(search) >= 0) {
       $(this).addClass('documentVisible');
     }
@@ -170,7 +178,6 @@ $(".module_preview").on('click',"#modulescreate", function(event) {
 		data.modules[index] = $(this).data("id");
 	});
 	makePostRequest("document_edit",data);
-	// console.log(data);
 });
 
 $(".module_selection").on('click', function(event) {
@@ -182,7 +189,7 @@ function makePostRequest(url, data) {
     var jForm = $('<form></form>');
     jForm.attr('action', url);
     jForm.attr('method', 'post');
-    for (name in data) {
+    for (var name in data) {
         var jInput = $("<input>");
         jInput.attr('name', name);
         jInput.attr('value', data[name]);

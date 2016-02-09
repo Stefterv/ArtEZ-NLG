@@ -98,7 +98,15 @@ class Object extends databaseObject{
 				//Create the item in the database
 				$query = "INSERT INTO ".static::$dbName." ".$set;
 				echo $echo?$query:"";
+
 				$result = $db->query($query);
+				if ($result == false) {
+					echo "<pre>";
+				    echo "Error: " . $query . "<br>" . $db->error;
+				    echo "</pre>";
+				    die();
+				}
+
 				$this->id = $db->insert_id;
 			}
 		}

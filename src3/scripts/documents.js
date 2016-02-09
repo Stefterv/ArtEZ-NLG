@@ -1,12 +1,10 @@
-$(".search").on('input', function() {
-  var search = $(this).text().toLowerCase();
-  console.log(search);
+$(".search").on('keyup', function() {
+  var search = $(this).val().toLowerCase();
   var list = $(".document");
   $(".document_container").addClass('filtered');
   $(".documentVisible").removeClass("documentVisible");
   $(list).each(function() {
     var documentName = $(this).data("title").toLowerCase();
-    console.log(documentName);
     if (documentName.indexOf(search) >= 0) {
       $(this).addClass('documentVisible');
     }

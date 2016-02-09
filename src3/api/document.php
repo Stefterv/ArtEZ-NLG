@@ -7,6 +7,10 @@ if(isset($_POST['submit'])):
 			$document = new Document();
 		}
 		$document->parser($_POST);
+		if ($document->based_on == '') {
+			$document->based_on = 0;
+		}
+
 		$document->submit(); 
 		if(isset($_POST['nodes'])){
 			$nodes = $_POST['nodes'];
@@ -31,8 +35,7 @@ if(isset($_POST['submit'])):
 				$link->submit();
 			}
 		}
-		Tag::saveTags($document,$_POST['tags']);
-		
+		Tag::saveTags($document,$_POST['tags']);		
 		header("Location: /document_edit?document={$document->id}");
 	}
 	if($_POST['submit'] == "delete"){

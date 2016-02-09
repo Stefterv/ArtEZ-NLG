@@ -22,26 +22,27 @@
 				<? else: ?>
 				<input type="hidden" name="document_id" value="<?=$document->id?>">
 				<? endif; ?>
-				<input type="hidden" name="title" value="<?=htmlspecialchars($document->title)?>" placeholder="Document Title">
-				<!-- <input type="hidden" name="author" value="<?=$document->author?>"  placeholder="Document Author"> -->
+				<input type="hidden" name="title" value="<?=$document->title?>" placeholder="Document Title">
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
-				<div class="title_edit" contenteditable data-input="title" data-placeholder="Add document title"></div>
-				<!-- <div class="document_attr" contenteditable data-input="author"></div> -->
+				<div>
+					<input type="text" class="title_edit" data-input="title" placeholder="Add document title" />
+				</div>
 
 				<?
 					$tags = Tag_Link::getTags("Document",$document->id);
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= htmlspecialchars($tag->title).",";
+							$tagString .= $tag->title.",";
 						}
 					}
 				?>
 				<input id="document_tags" name="tags" type="text" value="<?=$tagString?>">
 				<div class="document_module_bottons">
 					<div class="document_search_module search">
-						<div class="document_search_module_field" contenteditable data-placeholder="search for module"></div>
+						<input class="document_search_module_field" placeholder="search for module" />
+
 						<div class="document_search_result"></div>
 					</div>
 					<a id="addmodule" class="insertModule" href="#">insert text</a>

@@ -8,7 +8,7 @@ $(function() {
   	width: "auto",
   	height: "auto",
   	'defaultText':'Create Tag'
-  })
+  });
 });
 $("#addmodule").on('click', function(event) {
 	event.preventDefault();
@@ -20,7 +20,7 @@ $("#addmodule").on('click', function(event) {
 		var el = $(data);
 		$("#nodes").append(el);
 		moduleEvent(el);
-	})
+	});
 });	
 $("[data-trigger]").on('click', function(event) {
 	event.preventDefault();
@@ -54,7 +54,7 @@ function moduleEvent(el){
 	});
 	el.find("[data-inputvalue]").on('input', function(event) {
 		var elName = $(this).data("inputvalue");
-		$(this).closest(".module").find("[data-inputname="+elName+"]").val($(this).html());
+		$(this).closest(".module").find("[data-inputname="+elName+"]").val($(this).val());
 	});
 }
 function nodeForm(){
@@ -79,6 +79,6 @@ function inputEvent(el){
 	el.html(value);
 	el.on('input', function(event) {
 		var elName = $(this).data("input");
-		$("[name="+elName+"]").val($(this).html());
+		$("[name="+elName+"]").val($(this).val());
 	});
 }

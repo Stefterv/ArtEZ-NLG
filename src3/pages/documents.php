@@ -5,7 +5,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 	<div class="container">
 		<div class="properties">
 			<h2>FILTER BY TITLE</h2>
-			<div data-placeholder="Search" class="search" contenteditable></div>
+			<input type="text" placeholder="Search" class="search" />
 			<h2>FILTER BY TAG</h2>
 			<?
 				// $tags = Tag::findAll();
@@ -17,7 +17,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 			?>
 			<div class="document_tags">
 				<? foreach($tags as $tag): ?>
-				<div class="tag" data-pagetype="documents"><?=htmlspecialchars($tag->title)?></div>
+				<div class="tag" data-pagetype="documents"><?=$tag->title?></div>
 				<? endforeach; ?>
 			</div>
 		</div>
@@ -30,12 +30,12 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 					$tagString = "";
 					if($tags){
 						foreach($tags as $tag){
-							$tagString .= "tag_".htmlspecialchars($tag->title)." ";
+							$tagString .= "tag_".$tag->title." ";
 						}
 					}
 				?>
-				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=htmlspecialchars($document->title)?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
-					<?=htmlspecialchars($document->title)?>
+				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
+					<?=$document->title?>
 				</div>
 				<? endforeach; ?>
 
