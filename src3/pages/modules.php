@@ -14,7 +14,7 @@ $page = "modules"
 			<?
 				$tags = Tag::find("SELECT * FROM tags
 													WHERE (
-													 SELECT COUNT(*) 
+													 SELECT COUNT(*)
 													        FROM tag_links WHERE tag_links.link_type = 'Module' AND tag_links.tag_id = tags.id
 													) > 0 AND title != '' ");
 			?>
@@ -37,4 +37,3 @@ $page = "modules"
 		<script src="scripts/modules.js"></script>
 	</div>
 </main>
-
