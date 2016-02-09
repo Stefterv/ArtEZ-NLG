@@ -90,16 +90,23 @@
 	background: $modulescolorhover;
 }
 
+
+input[type=text] {
+	background: none;
+	// border: none;
+}
+
 textarea{
 	resize:none;
 	width:100%;
 	border:0;
 	padding: 20px;
 	box-sizing: border-box;
-	
+	height: 100px;
 	box-sizing: border-box;
 	font-weight: 200;
 	font-size: 0.9em;
+	height: 200px;
 }
 
 .document_container.filtered .module_item {
