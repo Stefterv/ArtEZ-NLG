@@ -321,7 +321,8 @@ main {
     letter-spacing: 1px;
     margin-top: 20px; }
   .document_preview_container .document_preview {
-    padding: 12px 40px 35px 40px; }
+    padding: 12px 40px 35px 40px;
+    word-wrap: break-word; }
 
 .document_container.filtered .document {
   display: none; }
