@@ -513,8 +513,10 @@ html, body {
     background: #1d9099;
     font-size: 1em;
     color: white !important;
-    text-transform: uppercase;
-    border-width: 0; }
+    text-transform: uppercase; }
+
+input {
+  border-width: 0; }
 
 .document_buttons {
   margin-top: 30px;

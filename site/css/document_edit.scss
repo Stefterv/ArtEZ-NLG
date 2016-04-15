@@ -234,8 +234,11 @@ html, body{
 		font-size: 1em;
 		color: white !important;
 		text-transform: uppercase;
-		border-width: 0;
 	}
+}
+
+input {
+	border-width: 0;
 }
 
 .document_buttons {
