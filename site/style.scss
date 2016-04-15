@@ -149,6 +149,7 @@ main{
 	padding: 5px 13px;
 	font-size: 0.95em;
 	cursor:pointer;
+	text-transform: lowercase;
 	&.selected{
 		&[data-pagetype="documents"] {
 			background: $documentscolor;

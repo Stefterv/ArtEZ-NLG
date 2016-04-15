@@ -119,7 +119,8 @@ main {
   margin: 7px 4px;
   padding: 5px 13px;
   font-size: 0.95em;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: lowercase; }
   .tag.selected[data-pagetype="documents"], .selected[data-pagetype="documents"]#document_tags_addTag {
     background: #8dddd1; }
   .tag.selected[data-pagetype="modules"], .selected[data-pagetype="modules"]#document_tags_addTag {
@@ -568,6 +569,7 @@ svg {
   display: inline-block;
   box-shadow: 5px 5px 0px black;
   min-width: 100px;
+  width: calc(100% - 30px);
   padding: 7px 15px; }
 
 .content_edit {
@@ -579,7 +581,7 @@ svg {
   display: inline-block;
   box-shadow: 5px 5px 0px black;
   min-width: 100px;
-  max-width: 200px;
+  width: 100%;
   padding: 7px 15px; }
 
 #module_tags_tag {
