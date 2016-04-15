@@ -518,6 +518,9 @@ html, body {
 input {
   border-width: 0; }
 
+input.module_title {
+  text-transform: uppercase; }
+
 .document_buttons {
   margin-top: 30px;
   margin-bottom: 50px; }
