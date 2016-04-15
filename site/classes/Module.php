@@ -31,10 +31,12 @@ class Module extends databaseObject{
 				</div>
 
 				<div class="module_buttons">
-					<!-- <a href="#" class="module_move">reorder</a> -->
-					<a href="#" title="Re-order module" class="module_move"><img src="media/icons/rearrange.svg" alt=""></a>
-					<a href="#" title="Edit module" class="module_edit"><img src="media/icons/edit_icon.svg" alt=""></a>
-					<a href="#" title="Delete module" class="module_remove"><img src="media/icons/bin.svg" alt=""></a>
+					<a href="#" title="Re-order module" class="module_move"><div class="module_button_image"></div></a>
+					<a href="#" title="Edit module" class="module_edit"><div class="module_button_image"></div></a>
+					<a href="#" title="Delete module" class="module_remove"><div class="module_button_image"></div></a>
+					<!-- <a href="#" title="Re-order module" class="module_move"><img src="media/icons/rearrange.svg" alt=""></a> -->
+					<!-- <a href="#" title="Edit module" class="module_edit"><img src="media/icons/edit_icon.svg" alt=""></a> -->
+					<!-- <a href="#" title="Delete module" class="module_remove"><img src="media/icons/bin.svg" alt=""></a> -->
 				</div>
 		</div>
 		<?

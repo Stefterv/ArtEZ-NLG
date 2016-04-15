@@ -397,6 +397,17 @@ html, body {
       height: 28px; }
     .module .module_buttons img {
       height: 28px; }
+  .module .module_button_image {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: red; }
+  .module .module_move .module_button_image {
+    background-image: url(media/icons/rearrange.svg); }
+  .module .module_edit .module_button_image {
+    background-image: url(media/icons/edit_icon.svg); }
+  .module .module_remove .module_button_image {
+    background-image: url(media/icons/bin.svg); }
   .module.open {
     border: 2px solid black;
     box-shadow: 5px 5px 0px black;

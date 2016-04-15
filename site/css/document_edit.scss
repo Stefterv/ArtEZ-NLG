@@ -40,7 +40,7 @@ html, body{
 
 
 .add_module{
-	margin-top: 20px; 
+	margin-top: 20px;
 }
 .document_overview .search{
 	margin-bottom: 20px;
@@ -92,7 +92,21 @@ html, body{
 			height: 28px;
 		}
 	}
-
+	.module_button_image {
+		display:inline-block;
+		width:28px;
+		height:28px;
+		background:red;
+	}
+	.module_move .module_button_image {
+		background-image: url(media/icons/rearrange.svg);
+	}
+	.module_edit .module_button_image {
+		background-image: url(media/icons/edit_icon.svg);
+	}
+	.module_remove .module_button_image {
+		background-image: url(media/icons/bin.svg);
+	}
 	&.open{
 		border: 2px solid black;
 		box-shadow: 5px 5px 0px black;
@@ -213,13 +227,13 @@ html, body{
 	left: 20px;
 	width: calc(66% - 10px);
 	height: 100%;
-	
+
 }
 .document_edit_preview{
 	height: auto;
 	@extend .document_edit_navigation;
 	width: calc(33% - 20px);
-	left: calc(66% + 10px);	
+	left: calc(66% + 10px);
 }
 #document_tags_addTag{
 	@extend .tag;
@@ -278,7 +292,7 @@ html, body{
 svg{
 	margin-top:4px;
 	width: 35px;
-	height: 35px; 
+	height: 35px;
 	stroke: black;
 	stroke-width:2;
 }
