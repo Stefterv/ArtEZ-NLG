@@ -701,6 +701,9 @@ textarea {
   font-size: 13px;
   cursor: pointer; }
 
+.button {
+  cursor: pointer; }
+
 svg {
   margin-top: 4px;
   width: 35px;
