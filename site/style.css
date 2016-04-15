@@ -313,6 +313,7 @@ main {
   min-height: 70vh;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 50px;
   font-weight: 200;
   font-size: 0.9em; }
   .document_preview_container h2 {

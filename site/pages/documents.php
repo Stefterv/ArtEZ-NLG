@@ -34,6 +34,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 						}
 					}
 				?>
+				
 				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
 					<?=$document->title?>
 				</div>
