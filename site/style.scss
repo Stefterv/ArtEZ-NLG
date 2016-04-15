@@ -227,6 +227,9 @@ main{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	pointer-events: none;
 }
+input {
+	border-width: 0;
+}
 @import "css/document";
 @import "css/document_edit";
 @import "css/module_edit";
