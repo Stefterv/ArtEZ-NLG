@@ -517,14 +517,17 @@ html, body {
 #document_tags_addTag {
   padding-top: 1px;
   padding-bottom: 2px;
-  background: #1d9099; }
+  background: #1d9099;
+  border-width: 6px; }
   #document_tags_addTag input {
     width: 75px;
-    border: 0;
     background: #1d9099;
-    font-size: 0.95em;
+    font-size: 1em;
     color: white !important;
     text-transform: uppercase; }
+
+input {
+  border-width: 0; }
 
 .document_buttons {
   margin-top: 30px;
