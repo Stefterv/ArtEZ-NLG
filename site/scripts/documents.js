@@ -53,11 +53,24 @@ $(".sortdocuments").click(function(event) {
   event.preventDefault();
   // var list = $(".document").get();
   var sorttype = $(this).data("sorttype");
+
   var list = $('.document_container .document').detach();
   list.sort(function (a, b) {
     var aTitle = $(a).data(sorttype)+"";
-    var bTitle = $(b).data(sorttype)+"";
-    return aTitle.localeCompare(bTitle);
+    var bTitle = $(b).data(sorttype)+"";  
+    if(sorttype == "modified"){      
+      aTitle = aTitle.replace(/:/gi,'');
+      aTitle = aTitle.replace(/ /gi,'');
+      aTitle = aTitle.replace(/-/gi,'');
+      bTitle = bTitle.replace(/:/gi,'');
+      bTitle = bTitle.replace(/ /gi,'');
+      bTitle = bTitle.replace(/-/gi,'');
+    }
+    var sortedList = aTitle.localeCompare(bTitle);
+    if(sorttype == "modified"){
+      sortedList = sortedList *-1;
+    }
+    return sortedList;
     // return + - +b.data("title");
   });
 
