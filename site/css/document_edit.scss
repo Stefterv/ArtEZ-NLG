@@ -96,7 +96,8 @@ html, body{
 		display:inline-block;
 		width:28px;
 		height:28px;
-		background:red;
+		margin-right:1px;
+		margin-top:1px;
 	}
 	.module_move .module_button_image {
 		background-image: url(media/icons/rearrange.svg);
@@ -120,6 +121,19 @@ html, body{
 		}
 		svg{
 			stroke: black;
+		}
+		.module_button_image {
+			margin-top:0px;
+			margin-right:0px;
+		}
+		.module_move .module_button_image {
+			background-image: url(media/icons/rearrange_black.svg);
+		}
+		.module_edit .module_button_image {
+			background-image: url(media/icons/edit_icon_black.svg);
+		}
+		.module_remove .module_button_image {
+			background-image: url(media/icons/bin_black.svg);
 		}
 	}
 	&.ui-sortable-helper{
