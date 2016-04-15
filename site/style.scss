@@ -230,6 +230,9 @@ main{
 input {
 	border-width: 0;
 }
+input.module_title {
+	text-transform: uppercase;
+}
 @import "css/document";
 @import "css/document_edit";
 @import "css/module_edit";
