@@ -28,7 +28,7 @@ class Module extends databaseObject{
 
 				<div>
 					<textarea class="module_text" data-inputvalue="content"><?=$this->content;?></textarea>
-				</div>				
+				</div>
 
 				<div class="module_buttons">
 					<!-- <a href="#" class="module_move">reorder</a> -->
@@ -75,7 +75,7 @@ class Module extends databaseObject{
 				}
 			?>
 			<div>
-				<input type="text" class="title_edit" data-input="title" placeholder="This is a placeholder title" value="<?=$this->title;?>" />
+				<input type="text" class="title_edit" data-input="title" placeholder="TITLE" value="<?=$this->title;?>" />
 			</div>
 
 			<input type="text" id="module_tags" name="tags" value="<?=$tagString?>">
