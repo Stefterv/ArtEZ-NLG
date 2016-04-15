@@ -567,6 +567,7 @@ svg {
   display: inline-block;
   box-shadow: 5px 5px 0px black;
   min-width: 100px;
+  width: calc(100% - 30px);
   padding: 7px 15px; }
 
 .content_edit {
@@ -578,7 +579,7 @@ svg {
   display: inline-block;
   box-shadow: 5px 5px 0px black;
   min-width: 100px;
-  max-width: 200px;
+  width: 100%;
   padding: 7px 15px; }
 
 #module_tags_tag {
