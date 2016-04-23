@@ -1,5 +1,4 @@
-$(".document_search_module_field").keydown(function(e) {
-	if(e.which == 13){
+$(".document_search_module_field").keyup(function(e) {
 		// alert("NO ENTER!");
 		event.preventDefault();
 		$.ajax({
@@ -9,6 +8,7 @@ $(".document_search_module_field").keydown(function(e) {
 		.done(function(result) {
 			result = $(result);
 			$(".document_search_result").html(result);
+			
 			result.on('click', function(event) {
 				event.preventDefault();
 				var id = $(this).data('id');
@@ -37,14 +37,12 @@ $(".document_search_module_field").keydown(function(e) {
 		.fail(function() {
 			console.error("error");
 		});
-		
-	}
-
 });
 
-$(".document_search_module_field").focusout(function(event) {
-	// alert("NOFOCUS");
-	if($(this).html() === "" || $(this).html() === "<br>"){
-		$(".document_search_result").empty();
-	}
-});
+
+// $(".document_search_module_field").focusout(function(event) {
+// 	// alert("NOFOCUS");
+// 	if($(this).html() === "" || $(this).html() === "<br>"){
+// 		$(".document_search_result").empty();
+// 	}
+// });
