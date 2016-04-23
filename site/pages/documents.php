@@ -22,7 +22,11 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 			</div>
 		</div>
 		<div class="navigation">
-			<div class="sort"><a href="#" class="sortdocuments" data-sorttype="title">name a-z</a><a href="#" class="sortdocuments" data-sorttype="added">created</a><a href="#" class="sortdocuments" data-sorttype="modified">edited</a></div>
+			<div class="sort">
+				<a href="#" class="sortdocuments" data-sorttype="title">name a-z</a>
+				<a href="#" class="sortdocuments" data-sorttype="added">created</a>
+				<a href="#" class="sortdocuments" data-sorttype="modified">edited</a>
+			</div>
 			<div class="document_container">
 				<? foreach($documents as $document): ?>
 				<?
@@ -36,7 +40,7 @@ $documents = Document::find("SELECT * FROM documents WHERE deleted=0");
 				?>
 				
 				<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-modified="<?=$document->changed?>">
-					<?=$document->title?>
+					<?=$document->title?> <span class="date"><?=date("F j Y", strtotime($document->changed));?></span>
 				</div>
 				<? endforeach; ?>
 
