@@ -1,7 +1,12 @@
 <?
 include "../functions.php";
+
 if(isset($_POST['submit'])):
-	if($_POST['submit'] === "edit"){
+
+	if ($_POST['action'] == "delete") {
+		$module = Module::findByID($_POST['module_id']);
+		$module->remove();
+	} else if($_POST['submit'] === "edit"){
 		$module = Module::findByID($_POST['module_id']);
 		if($_POST['module_id'] == 0){
 			$module = new Module();
@@ -15,14 +20,5 @@ if(isset($_POST['submit'])):
 		Tag::saveTags($module,$_POST['tags']);
 		$module->modules_preview();
 	}
-
-	if ($_POST['submit'] === "delete") {
-		$module = Module::findByID($_POST['module_id']);
-		if($module){
-			$module->deleted = 1;
-			$module->submit();
-		}
-	}
-	
 endif;
 ?>

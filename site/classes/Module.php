@@ -90,9 +90,9 @@ class Module extends databaseObject{
 			</div>
 
 			<div class="button-container">
-			<button type="submit" id="submit" name="submit" value="edit" style="display:none">Submit</button>
-			<div class="button" data-trigger="submit">Save</div><div data-trigger="delete" class="button delete">Delete</div>
-			<button type="delete" id="delete" name="submit" value="delete" style="display: none">Delete Document</button>
+				<input type="hidden" name="action" />
+				<button type="submit" id="submit" name="submit" value="edit">Submit</button>
+				<button type="button" id="delete" name="delete" value="delete">Delete</button>
 			</div>
 
 		</form>
