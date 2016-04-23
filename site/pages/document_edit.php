@@ -1,16 +1,17 @@
 <?
-	$document = false;
-	$duplicate = false;
-	if(isset($_GET['document'])){
-		$document = Document::findByID($_GET['document']);
-	}
-	if(isset($_GET['duplicate'])){
-		$document = Document::findByID($_GET['duplicate']);
-		$duplicate = true;
-	}
-	if(!$document){
-		$document = new Document();
-	}
+$document = false;
+$duplicate = false;
+if(isset($_GET['document'])){
+	$document = Document::findByID($_GET['document']);
+}
+if(isset($_GET['duplicate'])){
+	$document = Document::findByID($_GET['duplicate']);
+	$duplicate = true;
+}
+if(!$document){
+	$document = new Document();
+}
+
 ?>
 <main>
 	<div class="container">
@@ -26,7 +27,7 @@
 				<input type="hidden" name="based_on" value="<?=$document->based_on?>"  placeholder="Based on Document ID">
 
 				<div>
-					<input type="text" class="title_edit" data-input="title" placeholder="Add document title" />
+					<input type="text" class="title_edit" data-input="title" placeholder="Add document title" value="<?=$document->title;?>" />
 				</div>
 
 				<?

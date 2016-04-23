@@ -5,8 +5,9 @@ class Module extends databaseObject{
 	public $title;
 	public $deleted;
 	public $master;
-	public $changed;
 	public $created;
+	public $modified;
+
 	function __construct(){
 		$this->created = date("Y-m-d H:i:s");
 		error_log($this->created);

@@ -3,9 +3,15 @@ include "../functions.php";
 if(isset($_POST['submit'])):
 	if($_POST['submit'] === "edit"){
 		$document = Document::findByID($_POST['document_id']);
+		
 		if($_POST['document_id'] == 0){
 			$document = new Document();
+			$document->created = date("Y-m-d H:i:s", time());
+			$document->modified = date("Y-m-d H:i:s", time());
+		} else {
+			$document->modified = date("Y-m-d H:i:s", time());
 		}
+
 		$document->parser($_POST);
 		if ($document->based_on == '') {
 			$document->based_on = 0;
