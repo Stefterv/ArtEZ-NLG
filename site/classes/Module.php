@@ -92,7 +92,9 @@ class Module extends databaseObject{
 			<div class="button-container">
 				<input type="hidden" name="action" />
 				<button type="submit" id="submit" name="submit" value="edit">Submit</button>
-				<button type="button" id="delete" name="delete" value="delete">Delete</button>
+				<? if ($this->id > 0) { ?>
+					<button type="button" id="delete" name="delete" value="delete">Delete</button>
+				<? } ?>
 			</div>
 
 		</form>

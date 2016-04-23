@@ -7,9 +7,6 @@ function initiModuleForm() {
 
 	$('#save_master_module').on('submit', function(event) {
 		event.preventDefault();
-		
-
-
 		var form = $(this);
 		var data = $(this).serialize();
 		data += "&submit=edit";
@@ -116,7 +113,7 @@ function initModulesList() {
 				});
 				$(".module_preview").html(result);
 
-
+				initiModuleForm();
 			}
 		});
 	});
