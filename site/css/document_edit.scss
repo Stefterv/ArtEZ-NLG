@@ -222,19 +222,7 @@ html, body{
 	margin-top: 30px;
 }
 
-.document_edit_tags .tag{
-	position: relative;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 15px;
-			height: 15px;
-			margin-left: 5px;
-			background: url('img/delete_icon.svg');
-			background-size: 100%;
-			vertical-align: text-top;
-		}
-}
+
 .document_edit_navigation{
 	position: absolute;
 	top: 0;
@@ -249,21 +237,7 @@ html, body{
 	width: calc(33% - 20px);
 	left: calc(66% + 10px);
 }
-#document_tags_addTag{
-	@extend .tag;
-	padding-top: 1px;
-	padding-bottom: 2px;
-	background: #1d9099;
-	border-width: 6px;
 
-	input{
-		width: 75px;
-		background: #1d9099;
-		font-size: 1em;
-		color: white !important;
-		text-transform: uppercase;
-	}
-}
 .document_buttons {
 	margin-top: 30px;
 	margin-bottom: 50px;

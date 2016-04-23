@@ -21,15 +21,6 @@
 	font-size: 0.9em;
 	position: relative;
 }
-.module_properties{
-	.tag{
-		background: white;
-		border-color: $modulescolor;
-		&.selected{
-			background: $modulescolorhover;
-		}
-	}
-}
 
 .module_item{
 	background: $modulescolor;

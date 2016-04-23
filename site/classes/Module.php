@@ -69,13 +69,15 @@ class Module extends databaseObject{
 			<input type="hidden" name="content" value="<?=$this->content?>">
 			<input type="hidden" name="master" value="1">
 			<?
-				$tags = Tag_Link::getTags("Module",$this->id);
-				$tagString = "";
+			$tagString = "";
+			if ($this->id > 0) {
+				$tags = Tag_Link::getTags("Module",$this->id);	
 				if($tags){
 					foreach($tags as $tag){
 						$tagString .= $tag->title.",";
 					}
 				}
+			}
 			?>
 			<div>
 				<input type="text" class="title_edit" data-input="title" placeholder="TITLE" value="<?=$this->title;?>" />
