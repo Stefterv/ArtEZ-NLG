@@ -13,8 +13,10 @@ foreach($documents as $document):
 	?>
 	<div class="document <?=$tagString?>" data-id="<?=$document->id?>" data-indent="<?=$document->getIndent()?>" data-title="<?=$document->title?>" data-added="<?=$document->id?>" data-created="<?=strtotime($document->created);?>" data-modified="<?=strtotime($document->modified);?>">
 		<div class="document_title"><?=$document->title?></div>
-		<div class="document_date created"><?=date(DISPLAY_DATE_FORMAT, strtotime($document->created));?></div>
-		<div class="document_date modified"><?=date(DISPLAY_DATE_FORMAT, strtotime($document->modified));?></div>
+		<div class="document_dates">
+			<div class="document_date created"><?=date(DISPLAY_DATE_FORMAT, strtotime($document->created));?></div>
+			<div class="document_date modified"><?=date(DISPLAY_DATE_FORMAT, strtotime($document->modified));?></div>
+		</div>
 	</div>
 
 	<? 
