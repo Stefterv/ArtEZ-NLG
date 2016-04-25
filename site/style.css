@@ -230,7 +230,8 @@ input.module_title {
 
 .document_container {
   overflow-y: scroll;
-  position: relative; }
+  position: relative;
+  margin-bottom: 20px; }
 
 .document_date {
   position: absolute;
