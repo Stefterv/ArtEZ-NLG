@@ -601,18 +601,18 @@ svg {
   text-overflow: ellipsis;
   display: inline-block; }
 
+.module_dates {
+  position: relative;
+  text-align: right; }
+
 .module_date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.75em; }
-  .module_date * {
-    display: inline-block;
-    padding: 0 20px;
-    margin-top: 10px;
-    border-left-style: solid;
-    border-left-color: white;
-    border-left-width: 1px; }
+  position: relative;
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0 10px; }
+  .module_date.created {
+    border-right: solid white 1px;
+    padding-right: 12px; }
 
 .module_selected {
   background: #f3746c; }

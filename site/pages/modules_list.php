@@ -16,7 +16,9 @@ $modules = Module::findByAttr(array("master="=>"1"));
 	<div class="module_item <?=$tagString?>" data-id=<?=$module->id;?> data-title="<?=$module->title?>" data-added="<?=$module->id?>" data-created="<?=strtotime($module->created);?>" data-modified="<?=strtotime($module->modified);?>">
 		<div class="module_selection">&nbsp;</div>
 		<div class="module_title"><?=$module->title;?></div>
-		<div class="module_date created"><?=date(DISPLAY_DATE_FORMAT, strtotime($module->created));?></div>
-		<div class="module_date modified"><?=date(DISPLAY_DATE_FORMAT, strtotime($module->modified));?></div>
+		<div class="module_dates">
+			<div class="module_date created"><?=date(DISPLAY_DATE_FORMAT, strtotime($module->created));?></div>
+			<div class="module_date modified"><?=date(DISPLAY_DATE_FORMAT, strtotime($module->modified));?></div>
+		</div>
 	</div>
 <? endforeach; ?>

@@ -62,18 +62,18 @@
 	text-overflow: ellipsis;
 	display: inline-block;
 }
+.module_dates{
+	position: relative;
+	text-align: right;
+}
 .module_date{
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: relative;
+	display: inline-block;
 	font-size: 0.75em;
-	*{
-		display: inline-block;
-		padding: 0 20px;
-		margin-top: 10px;
-		border-left-style: solid;
-		border-left-color: white;
-		border-left-width: 1px;
+	padding: 0 10px;
+	&.created {
+		border-right: solid white 1px;
+		padding-right: 12px;
 	}
 }
 
