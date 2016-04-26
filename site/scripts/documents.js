@@ -67,9 +67,10 @@ $(".sortdocuments").click(function(event) {
 			bTitle = bTitle.replace(/-/gi,'');
 		}
 		var sortedList = aTitle.localeCompare(bTitle);
-		if(sorttype == "modified"){
+		if(sorttype == "modified" || sorttype == "modified"){
 			sortedList = sortedList *-1;
 		}
+
 		return sortedList;
 		// return + - +b.data("title");
 	});
