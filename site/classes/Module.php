@@ -24,7 +24,7 @@ class Module extends databaseObject{
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=$this->content?>" placeholder="Content">
 
 				<div>
-					<input type="text" class="module_title" data-inputvalue="title" value="<?=$this->title;?>" readonly/>
+					<input type="text" class="module_title" data-inputvalue="title" value="<?=$this->title;?>"/>
 				</div>
 
 				<div>

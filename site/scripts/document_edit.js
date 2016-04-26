@@ -18,6 +18,7 @@ $("#addmodule").on('click', function(event) {
 	})
 	.done(function(data) {
 		var el = $(data);
+    el.addClass('open');
 		$("#nodes").append(el);
 		moduleEvent(el);
 	});
@@ -51,8 +52,8 @@ function moduleEvent(el){
 	});
 	el.find(".module_edit").on('click', function(event) {
 		$(this).closest('.module').toggleClass('open');
-    $(this).closest('.module').find('.module_title').prop('readonly', true);
-    $(this).closest('.open').find('.module_title').prop('readonly', false);
+    // $(this).closest('.module').find('.module_title').prop('readonly', true);
+    // $(this).closest('.open').find('.module_title').prop('readonly', false);
 	});
 	el.find("[data-inputvalue]").on('input', function(event) {
 		var elName = $(this).data("inputvalue");
