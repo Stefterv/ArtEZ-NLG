@@ -160,6 +160,7 @@ function initModulesList() {
 	});
 
 	$(".sortdocuments").click(function(event) {
+
 		$(".sortdocuments").each(function( index ) {
 			$(this).removeClass('selected');
 		});
@@ -172,7 +173,14 @@ function initModulesList() {
 		list.sort(function (a, b) {
 			var aTitle = $(a).data(sorttype)+"";
 			var bTitle = $(b).data(sorttype)+"";
-			return aTitle.localeCompare(bTitle);
+			var sortedList = aTitle.localeCompare(bTitle);
+
+			if(sorttype == "created" || sorttype == "modified"){
+				sortedList = sortedList *-1;
+			}
+
+			return sortedList;
+
 			// return + - +b.data("title");
 		});
 

@@ -11,6 +11,12 @@
 	padding:7px 15px;
 }
 
+#module_tags_tag {
+	font-size: 0.95em;
+	padding: 0;
+	padding-left: 5px;
+}
+
 .content_edit{
 	margin-bottom: 30px;
 	font-size: 0.95em;
@@ -25,4 +31,18 @@
 	margin-top: 30px;
 }
 
-
+.button-container button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: white;
+	border: solid 2px black;
+	font-family: Raleway;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	margin-top: 10px;
+	&#submit {
+		margin-right: 5px;
+	}
+}
