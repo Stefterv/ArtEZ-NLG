@@ -350,7 +350,7 @@ html, body {
   padding: 10px 15px;
   padding-right: 15px;
   margin-right: 5px;
-  margin-bottom: 22px;
+  margin-bottom: 17px;
   position: relative;
   cursor: pointer; }
   .module .module_text {
@@ -488,7 +488,7 @@ html, body {
   left: calc(66% + 10px); }
 
 .document_buttons {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 50px; }
 
 .document_buttons > * {
@@ -506,11 +506,12 @@ html, body {
 
 .document_module_bottons {
   position: relative;
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-bottom: 20px; }
 
 .insertModule {
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 0;
   color: black;
   text-decoration: none; }
