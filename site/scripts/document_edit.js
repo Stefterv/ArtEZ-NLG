@@ -21,7 +21,7 @@ $("#addmodule").on('click', function(event) {
 		$("#nodes").append(el);
 		moduleEvent(el);
 	});
-});	
+});
 $("[data-trigger]").on('click', function(event) {
 	event.preventDefault();
 	var el = $(this).data("trigger");
@@ -51,6 +51,8 @@ function moduleEvent(el){
 	});
 	el.find(".module_edit").on('click', function(event) {
 		$(this).closest('.module').toggleClass('open');
+    $(this).closest('.module').find('.module_title').prop('readonly', true);
+    $(this).closest('.open').find('.module_title').prop('readonly', false);
 	});
 	el.find("[data-inputvalue]").on('input', function(event) {
 		var elName = $(this).data("inputvalue");
@@ -70,7 +72,7 @@ function nodeForm(){
 }
 $("[data-input]").each(function(index, el) {
 	inputEvent($(this));
-	
+
 });
 
 function inputEvent(el){

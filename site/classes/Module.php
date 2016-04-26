@@ -24,7 +24,7 @@ class Module extends databaseObject{
 				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=$this->content?>" placeholder="Content">
 
 				<div>
-					<input type="text" class="module_title" data-inputvalue="title" value="<?=$this->title;?>" />
+					<input type="text" class="module_title" data-inputvalue="title" value="<?=$this->title;?>" readonly/>
 				</div>
 
 				<div>
@@ -71,7 +71,7 @@ class Module extends databaseObject{
 			<?
 			$tagString = "";
 			if ($this->id > 0) {
-				$tags = Tag_Link::getTags("Module",$this->id);	
+				$tags = Tag_Link::getTags("Module",$this->id);
 				if($tags){
 					foreach($tags as $tag){
 						$tagString .= $tag->title.",";

@@ -348,17 +348,20 @@ html, body {
   color: black;
   box-sizing: border-box;
   padding: 10px 15px;
-  padding-right: 25px;
+  padding-right: 15px;
   margin-right: 5px;
   margin-bottom: 22px;
   position: relative;
   cursor: pointer; }
   .module .module_text {
-    display: none; }
+    display: none;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px; }
   .module .module_buttons {
     position: absolute;
     top: 3px;
-    right: 0; }
+    right: 10px; }
     .module .module_buttons svg {
       height: 28px; }
     .module .module_buttons img {
@@ -381,9 +384,15 @@ html, body {
     background: white; }
     .module.open .module_title {
       color: #1d9099;
-      font-weight: 600; }
+      background: white;
+      font-weight: 600;
+      padding: 5px 10px;
+      width: calc(100% - 120px);
+      border: 1px solid black; }
     .module.open .module_text {
       display: block; }
+    .module.open .module_buttons {
+      top: 7px; }
     .module.open svg {
       stroke: black; }
     .module.open .module_button_image {
