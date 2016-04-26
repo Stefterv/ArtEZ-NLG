@@ -86,10 +86,8 @@ main {
   left: 0;
   width: calc(33% - 100px);
   width: calc(100% / 3);
-  overflow-x: hidden;
   padding: 0 50px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .properties {
   padding-right: 75px;
