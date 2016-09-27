@@ -3,7 +3,7 @@ include "../functions.php";
 if(isset($_POST['submit'])):
 	if($_POST['submit'] === "edit"){
 		$document = Document::findByID($_POST['document_id']);
-		
+
 		if($_POST['document_id'] == 0){
 			$document = new Document();
 			$document->created = date("Y-m-d H:i:s", time());
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])):
 			$document->based_on = 0;
 		}
 
-		$document->submit(); 
+		$document->submit();
 		if(isset($_POST['nodes'])){
 			$nodes = $_POST['nodes'];
 			$links = $document->getLinks();
@@ -31,6 +31,7 @@ if(isset($_POST['submit'])):
 					$object = new $class();
 				}
 				$object->parser($node);
+				$object->title = strtoupper($object->title);
 				$object->submit();
 
 				$link = new Document_Link();
@@ -41,7 +42,7 @@ if(isset($_POST['submit'])):
 				$link->submit();
 			}
 		}
-		Tag::saveTags($document,$_POST['tags']);		
+		Tag::saveTags($document,$_POST['tags']);
 		header("Location: /document_edit?document={$document->id}");
 	}
 	if($_POST['submit'] == "delete"){

@@ -16,6 +16,7 @@ if(isset($_POST['submit'])):
 			$module->modified = date("Y-m-d H:i:s", time());
 		}
 		$module->parser($_POST);
+		$module->title = strtoupper($module->title);
 		$module->submit();
 		Tag::saveTags($module,$_POST['tags']);
 		$module->modules_preview();

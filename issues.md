@@ -4,7 +4,7 @@
 - [ ] Order Ascending
 - [ ] Untitled text doesn't disappear automatically
 - [ ] "Based on" isn't recorded in the database
-- [ ] Non-caps are not present in the editor but do appear in the downloaded pdf
+- [x] Non-caps are not present in the editor but do appear in the downloaded pdf
 - [ ] " and other html characters break site functionality (This is invisible until adding htmlenities in the text)
 - [ ] No feedback is given when adding a new text
 - [ ] Unknown unicode characters come out as '?' in PDF
