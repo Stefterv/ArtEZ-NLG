@@ -202,6 +202,13 @@ input {
 input.module_title {
 	text-transform: uppercase;
 }
+.feedback{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 3px;
+	font-size: 0.8em;
+}
 @import "css/document";
 @import "css/document_edit";
 @import "css/module_edit";
