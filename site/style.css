@@ -260,8 +260,7 @@ input.module_title {
   position: absolute;
   top: 3px;
   right: 3px;
-  display: none;
-  display: inline-block; }
+  display: none; }
   .preview_buttons a {
     text-decoration: none; }
   .preview_buttons img {

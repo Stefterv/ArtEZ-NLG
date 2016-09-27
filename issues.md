@@ -1,0 +1,2 @@
+- [x] Removes datesetting from database
+- [x] Remove modify buttons when no document is selected
