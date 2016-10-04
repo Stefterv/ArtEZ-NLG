@@ -21,6 +21,14 @@ $("#addmodule").on('click', function(event) {
     el.addClass('open');
 		$("#nodes").append(el);
 		moduleEvent(el);
+    var target = el;
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 200
+        }, 200);
+        return false;
+      }
 	});
 });
 $("[data-trigger]").on('click', function(event) {
@@ -30,6 +38,10 @@ $("[data-trigger]").on('click', function(event) {
 });
 $(".module").each(function(index, el) {
 	moduleEvent($(this));
+});
+$(".module_move").on('click', function(event) {
+  event.preventDefault();
+  /* Act on the event */
 });
 
 
