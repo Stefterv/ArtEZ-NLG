@@ -1,5 +1,7 @@
 <?
-date_default_timezone_set('America/New_York'); 
+date_default_timezone_set('America/New_York');
+
+header("Content-type: text/html; charset=UTF-8");
 
 $documentspages = array("documents");
 $document_editpages = array("document_edit");

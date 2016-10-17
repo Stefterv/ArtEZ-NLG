@@ -1,8 +1,8 @@
 <?
 $module = false;
 if(isset($_GET['module'])){
-	$module = Module::findByID($_GET['module']); 
-} 
+	$module = Module::findByID($_GET['module']);
+}
 if(!$module){
 	$module = new Module();
 	$module->master = 1;
@@ -14,7 +14,7 @@ if(!$module){
 			<input type="hidden" name="module_id" value="<?=$module->id?>">
 			<input type="hidden" name="master" value="<?=$module->master?>">
 			<input type="text" name="title" value="<?=$module->title?>" placeholder="Title">
-			<input type="text" name="content" value="<?=$module->content?>" placeholder="Content"><br>
+			<textarea type="text" name="content" placeholder="Content"><?=$module->content?></textarea><br>
 			<button type="submit" name="submit" value="edit">Submit</button><br>
 			<button type="submit" name="submit" style="color: red" value="delete">Delete Module</button>
 		</form>

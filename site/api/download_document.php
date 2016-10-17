@@ -14,7 +14,7 @@ class MC_TCPDF extends TCPDF {
     $content = $file;
     $this->SetFont('Helvetica', '', 9);
     $this->SetTextColor(50, 50, 50);
-    $this->writeHTML($content, true, false, true, false, 'J');
+    $this->writeHTML($content, true, false, true, false, 'L');
     $this->Ln();
   }
 

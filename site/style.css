@@ -535,6 +535,9 @@ svg {
 #printDocument {
   cursor: pointer; }
 
+textarea[type='hidden'] {
+  display: none; }
+
 .title_edit {
   margin-bottom: 30px;
   font-size: 0.95em;
@@ -752,6 +755,9 @@ svg {
 @media print {
   body * {
     display: none; }
+
+  body {
+    height: auto; }
 
   main {
     display: block;

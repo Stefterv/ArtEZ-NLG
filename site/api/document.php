@@ -32,6 +32,7 @@ if(isset($_POST['submit'])):
 				}
 				$object->parser($node);
 				$object->title = strtoupper($object->title);
+				$object->content = strip_tags($object->content);
 				$object->submit();
 
 				$link = new Document_Link();

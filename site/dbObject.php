@@ -4,7 +4,7 @@
 <?
 class Object extends databaseObject{
 	protected static $dbName = "Objects";
-	public $variables;	
+	public $variables;
 }
 ?>
 	*/
@@ -16,6 +16,7 @@ class Object extends databaseObject{
 	if ($db->connect_errno) {
 	    echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 	}
+	$db->query("SET NAMES utf8");
 
 	class databaseObject{
 		public $id = 0;
@@ -39,7 +40,7 @@ class Object extends databaseObject{
 			return static::find("SELECT * FROM ".static::$dbName);
 		}
 		public static function findSingle($query=""){
-			$result = static::find($query); 
+			$result = static::find($query);
 			return !empty($result) ? array_shift($result) : false;
 		}
 		public static function findByAttr($array){
@@ -49,12 +50,12 @@ class Object extends databaseObject{
 			foreach ($array as $key => $value) {
 				if($first)$first=false;
 				else $query .= " AND ";
-				$query .= $key."'".$db->real_escape_string($value)."'";				
+				$query .= $key."'".$db->real_escape_string($value)."'";
 			}
 			return static::find($query);
 		}
 		public static function findSingleByAttr($array){
-			$result = static::findByAttr($array); 
+			$result = static::findByAttr($array);
 			return !empty($result) ? array_shift($result) : false;
 		}
 		private static function instance($record){
@@ -76,7 +77,7 @@ class Object extends databaseObject{
 			$added = false;
 			while($column = $columns->fetch_assoc()){
 				$variableName = $column['Field'];
-				
+
 				if(isset($this->$variableName)){
 					if($added){
 						$set .=", ";
@@ -84,7 +85,7 @@ class Object extends databaseObject{
 					$set .= $variableName."='".$db->real_escape_string($this->$variableName)."'";
 					$added = true;
 				}
-				
+
 			}
 			$query = "SELECT * FROM ".static::$dbName." WHERE id={$this->id}";
 			$result = $db->query($query);
@@ -93,7 +94,7 @@ class Object extends databaseObject{
 				$query = "UPDATE ".static::$dbName." ".$set. " WHERE id={$this->id}";
 				echo $echo?$query:"";
 				$result = $db->query($query);
-				
+
 			}else{
 				//Create the item in the database
 				$query = "INSERT INTO ".static::$dbName." ".$set;
@@ -134,7 +135,7 @@ class Object extends databaseObject{
 			}
 		}
 		public function input($valuename){
-			?>name="<?=$valuename?>" value="<?=$this->$valuename?>"<? 
+			?>name="<?=$valuename?>" value="<?=$this->$valuename?>"<?
 		}
 		function form($functionName){
 			?>

@@ -3,10 +3,13 @@
 - [x] Add default content
 - [ ] Order documents Ascending and Descending (FEATURE)
 - [x] Untitled text doesn't disappear automatically (BUG)
-- [ ] "Based on" isn't recorded in the database (FEATURE)
+- [x] "Based on" isn't recorded in the database (FEATURE)
 - [x] Non-caps are not present in the editor but do appear in the downloaded pdf
-- [ ] *"* and other html characters break site functionality (This is invisible until adding htmlenities in the text, maybe we can start using markdown or some other formatting language)
+- [x] *"* and other html characters break site functionality (This is invisible until adding htmlenities in the text, maybe we can start using markdown or some other formatting language. Just run it through striptags)
 - [x] No feedback is given when adding a new text (BUG)
-- [ ] Unknown unicode characters come out as '?' in PDF 
+- [x] Unknown unicode characters come out as '?' in PDF 
 - [x] Clicking on the dragging icon navigates to # (BUG)
-- [ ] pasting should default to non formatted text (FEATURE)
+- [x] pasting should default to non formatted text (FEATURE)
+- [x] Run text through striptags
+- [x] Move content away from attribute
+- [ ] Module don't show their tags before editor (OPTION)

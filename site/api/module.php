@@ -17,6 +17,7 @@ if(isset($_POST['submit'])):
 		}
 		$module->parser($_POST);
 		$module->title = strtoupper($module->title);
+		$module->content = strip_tags($module->content);
 		$module->submit();
 		Tag::saveTags($module,$_POST['tags']);
 		$module->modules_preview();

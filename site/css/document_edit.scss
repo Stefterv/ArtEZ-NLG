@@ -295,3 +295,6 @@ svg{
 #printDocument {
 	cursor:pointer;
 }
+textarea[type='hidden']{
+	display: none;
+}

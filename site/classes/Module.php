@@ -7,6 +7,7 @@ class Module extends databaseObject{
 	public $master;
 	public $created;
 	public $modified;
+	public $based_on;
 
 	function __construct(){
 		$this->created = date("Y-m-d H:i:s");
@@ -20,8 +21,9 @@ class Module extends databaseObject{
 		<div class="module">
 				<input type="hidden" name="nodes[<?=$key?>][class]" value="Module">
 				<input type="hidden" name="nodes[<?=$key?>][id]" value="<?=$this->id?>">
+				<input type="hidden" name="nodes[<?=$key?>][based_on]" value="<?=$this->based_on?>">
 				<input type="hidden" name="nodes[<?=$key?>][title]" data-inputname="title" value="<?=$this->title?>" placeholder="Title">
-				<input type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" value="<?=$this->content?>" placeholder="Content">
+				<textarea type="hidden" name="nodes[<?=$key?>][content]" data-inputname="content" placeholder="Content"><?=$this->content?></textarea>
 
 				<div>
 					<input type="text" class="module_title" data-inputvalue="title" placeholder="untitled" value="<?=$this->title;?>"/>
